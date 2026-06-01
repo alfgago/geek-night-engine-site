@@ -168,7 +168,7 @@ export const pricingTiers = [
     per: "Free forever",
     seats: "1 seat",
     credits: "5,000 credits / mo",
-    cta: "Start free",
+    cta: "Join waitlist",
     features: [
       "Browser-based game editing & template access",
       "Standard priority cloud build queue",

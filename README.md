@@ -10,6 +10,7 @@ The site is a faithful port of the reference prototype in `../design-reference/m
 - `/product` - Product architecture and module previews
 - `/how-it-works` - Four-stage production pipeline
 - `/pricing` - Plans, credits, add-ons, and FAQ
+- `/news` - Launch updates and product news
 - `/contact` - Support channels and workspace ticket form
 - `/privacy` - Privacy Policy
 - `/terms` - Terms & Conditions
@@ -33,9 +34,15 @@ http://127.0.0.1:3000
 
 ```text
 NEXT_PUBLIC_APP_URL=http://127.0.0.1:8000
+NEXT_PUBLIC_NEWSLETTER_PROVIDER=Kit
+NEXT_PUBLIC_NEWSLETTER_FORM_ACTION=https://YOUR_PROVIDER_FORM_POST_URL
+NEXT_PUBLIC_NEWSLETTER_FORM_METHOD=post
+NEXT_PUBLIC_NEWSLETTER_EMAIL_FIELD=email_address
 ```
 
-`NEXT_PUBLIC_APP_URL` controls the marketing CTA targets for demo, login, and workspace launch links. In production, set it to the deployed Laravel/Inertia app URL.
+`NEXT_PUBLIC_APP_URL` controls product-app/demo link targets. Launch, login, and registration-style CTAs currently point to the newsletter because product access is marked coming soon.
+
+`NEXT_PUBLIC_NEWSLETTER_*` controls the hosted newsletter form. Paste the public form `action` URL from your provider embed and keep private API keys out of `NEXT_PUBLIC_*` variables.
 
 The Laravel/Inertia app has the inverse variable:
 
@@ -55,11 +62,13 @@ app/
   product/page.jsx
   how-it-works/page.jsx
   pricing/page.jsx
+  news/page.jsx
   contact/page.jsx
   privacy/page.jsx
   terms/page.jsx
 components/marketing/
   chrome.jsx
+  newsletter-signup.jsx
   icons.jsx
   hero-product-mock.jsx
   module-previews.jsx
@@ -68,8 +77,11 @@ components/marketing/
   product-page.jsx
   how-it-works-page.jsx
   pricing-page.jsx
+  news-page.jsx
   contact-page.jsx
   legal-page.jsx
+data/
+  news-posts.js
 lib/
   site-links.js
 ```

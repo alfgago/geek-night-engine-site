@@ -15,9 +15,9 @@ export function HomePage() {
       <StudioBenefits />
       <SocialProof />
       <CtaStrip
-        heading="Unlock your studio's full creative velocity."
-        sub="Get 5,000 complimentary creation credits per month. No installation required."
-        cta="Launch project workspace"
+        heading="Product access is coming soon."
+        sub="Subscribe for launch windows, build notes, and early studio access."
+        cta="Subscribe for launch updates"
       />
       <SiteFooter />
     </>
@@ -77,8 +77,8 @@ function HomeHero() {
             and deploy high-fidelity 2D and 3D games using natural language.
           </p>
           <div className="gne-row" style={{ gap: 10, flexWrap: "wrap" }}>
-            <a href={routes.workspace} className="btn primary lg" style={{ minHeight: 44, padding: "0 22px", fontSize: 14.5, gap: 9 }}>
-              <Icon d={I.sparkles} size={14} /> Build your game free
+            <a href={routes.newsletter} className="btn primary lg" style={{ minHeight: 44, padding: "0 22px", fontSize: 14.5, gap: 9 }}>
+              <Icon d={I.bell} size={14} /> Join the launch newsletter
             </a>
             <Link href={routes.product} className="btn lg" style={{ minHeight: 44, padding: "0 18px", fontSize: 14, gap: 8 }}>
               <Icon d={I.layers} size={13} /> Explore studio features

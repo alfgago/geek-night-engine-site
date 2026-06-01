@@ -43,7 +43,7 @@ export function ContactPage() {
       />
       <SupportChannels />
       <ContactSplit />
-      <CtaStrip heading="Or just start building — it's free." sub="5,000 credits per month, no card. Talk to us once your studio outgrows it." cta="Launch workspace" />
+      <CtaStrip heading="Product access is coming soon." sub="Subscribe for launch notes, access windows, and founder updates." cta="Subscribe for updates" />
       <SiteFooter />
     </>
   );

@@ -554,12 +554,31 @@ a:hover {
   min-width: 0;
 }
 
+.news-article-grid {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 720px) 320px;
+  gap: 46px;
+  align-items: start;
+}
+
+.news-article-aside {
+  position: sticky;
+  top: 92px;
+}
+
 @media (max-width: 1040px) {
   .site-grid-2,
   .home-hero-grid,
-  .product-module-grid {
+  .product-module-grid,
+  .news-article-grid {
     grid-template-columns: 1fr !important;
     gap: 36px !important;
+  }
+
+  .news-article-aside {
+    position: static !important;
   }
 
   .product-module-copy.flip,

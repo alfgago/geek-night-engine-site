@@ -37,8 +37,7 @@ export function HowItWorksPage() {
         eyebrow="The production pipeline"
         heading="The science of error-free AI game synthesis."
         sub="How our structured orchestration layer turns conversational ideas into production-ready game builds without code regression."
-        primaryCta="Try the demo"
-        primaryHref={routes.demo}
+        primaryCta="Join launch newsletter"
         secondaryCta="See pricing"
         secondaryHref={routes.pricing}
       />
@@ -46,8 +45,8 @@ export function HowItWorksPage() {
       <PrinciplesGrid />
       <CtaStrip
         heading="Four stages, all auditable, all reversible."
-        sub="Snapshot before, snapshot after — and revert any moment your studio doesn't love."
-        cta="Build your first level"
+        sub="Snapshot before, snapshot after — and release notes before the product opens."
+        cta="Get build notes"
       />
       <SiteFooter />
     </>

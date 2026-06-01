@@ -20,7 +20,7 @@ const TIERS_JSON = [
       "Client-side local storage for default game saves",
       "Basic asset library uploads and generation features",
     ],
-    cta: "Start free",
+    cta: "Join waitlist",
   },
   {
     tier: "Core Creator",
@@ -37,7 +37,7 @@ const TIERS_JSON = [
       "Comprehensive snapshot version comparison tools",
       "Shared organization asset libraries",
     ],
-    cta: "Start Core Creator",
+    cta: "Join Core waitlist",
   },
   {
     tier: "Studio Pro",
@@ -53,7 +53,7 @@ const TIERS_JSON = [
       "Full raw project source-code zip extraction and downloading",
       "Extended build history retention window",
     ],
-    cta: "Talk to us",
+    cta: "Join Studio waitlist",
   },
 ];
 
@@ -69,7 +69,7 @@ export function PricingPage() {
       <PricingTiers />
       <AddOns />
       <PricingFAQ />
-      <CtaStrip heading="Start free. Scale only when the studio runs hot." cta="Launch workspace" />
+      <CtaStrip heading="Pricing is published. Access is coming soon." sub="Join the list and we will send the first availability window." cta="Subscribe for access" />
       <SiteFooter />
     </>
   );
@@ -141,7 +141,7 @@ function PricingTiers() {
                   </li>
                 ))}
               </ul>
-              <a href={routes.workspace} className={`btn lg ${tier.featured ? "primary" : ""}`} style={{ width: "100%", justifyContent: "center", marginTop: 8 }}>
+              <a href={routes.newsletter} className={`btn lg ${tier.featured ? "primary" : ""}`} style={{ width: "100%", justifyContent: "center", marginTop: 8 }}>
                 {tier.cta}
               </a>
             </div>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { routes } from "@/lib/site-links";
 import { Icon, I } from "./icons";
+import { NewsletterSignup } from "./newsletter-signup";
 
 export function GNEMark({ size = 36, glow = true }) {
   return (
@@ -54,6 +55,7 @@ const navLinks = [
   { id: "product", label: "Product", href: routes.product },
   { id: "how", label: "How it works", href: routes.how },
   { id: "pricing", label: "Pricing", href: routes.pricing },
+  { id: "news", label: "News", href: routes.news },
   { id: "contact", label: "Contact", href: routes.contact },
 ];
 
@@ -96,11 +98,11 @@ export function SiteNav({ current }) {
         </nav>
         <div style={{ flex: 1 }} />
         <div className="gne-row nav-actions">
-          <a href={routes.login} className="btn ghost sm">
-            Sign in
-          </a>
-          <a href={routes.workspace} className="btn primary sm">
-            <Icon d={I.sparkles} size={11} /> Launch workspace
+          <span className="chip amber">
+            <span className="dot amber" /> Coming soon
+          </span>
+          <a href={routes.newsletter} className="btn primary sm">
+            <Icon d={I.bell} size={11} /> Join newsletter
           </a>
         </div>
       </div>
@@ -152,11 +154,11 @@ export function PageHero({ eyebrow, heading, sub, primaryCta, secondaryCta, prim
           <div data-anim="reveal" className="gne-row" style={{ gap: 10, marginTop: 30, flexWrap: "wrap" }}>
             {primaryCta && (
               <a
-                href={primaryHref || routes.workspace}
+                href={primaryHref || routes.newsletter}
                 className="btn primary lg"
                 style={{ minHeight: 44, padding: "0 22px", fontSize: 14.5, gap: 9 }}
               >
-                <Icon d={I.sparkles} size={14} /> {primaryCta}
+                <Icon d={I.bell} size={14} /> {primaryCta}
               </a>
             )}
             {secondaryCta && (
@@ -188,7 +190,7 @@ const footerCols = [
       ["How it works", routes.how],
       ["Pricing", routes.pricing],
       ["Live demo", routes.demo],
-      ["Templates", routes.workspace],
+      ["Coming soon", routes.newsletter],
     ],
   },
   {
@@ -196,7 +198,7 @@ const footerCols = [
     links: [
       ["Docs", "#"],
       ["Guides", "#"],
-      ["Changelog", "#"],
+      ["News", routes.news],
       ["Status", "#"],
     ],
   },
@@ -204,7 +206,7 @@ const footerCols = [
     head: "Company",
     links: [
       ["About", "#"],
-      ["Blog", "#"],
+      ["Launch updates", routes.newsletter],
       ["Contact", routes.contact],
       ["Careers", "#"],
     ],
@@ -302,7 +304,7 @@ function FooterCol({ head, links }) {
   );
 }
 
-export function CtaStrip({ heading, sub, cta, href }) {
+export function CtaStrip({ heading, sub, cta }) {
   return (
     <section
       data-anim-section="cta"
@@ -325,6 +327,9 @@ export function CtaStrip({ heading, sub, cta, href }) {
         }}
       />
       <div style={{ position: "relative", maxWidth: 860, margin: "0 auto" }}>
+        <span className="chip amber" style={{ marginBottom: 18 }}>
+          <span className="dot amber" /> Coming soon
+        </span>
         <h2
           data-anim="reveal"
           className="balance"
@@ -341,13 +346,13 @@ export function CtaStrip({ heading, sub, cta, href }) {
             {sub}
           </p>
         )}
-        <div data-anim="reveal" className="gne-row" style={{ gap: 10, justifyContent: "center", flexWrap: "wrap" }}>
-          <a href={href || routes.workspace} className="btn primary lg" style={{ minHeight: 46, padding: "0 22px", fontSize: 15, gap: 9 }}>
-            <Icon d={I.sparkles} size={14} /> {cta || "Launch workspace"}
-          </a>
-          <a href={routes.demo} className="btn lg" style={{ minHeight: 46, padding: "0 22px", fontSize: 15, gap: 8 }}>
-            <Icon d={I.play} size={12} fill /> Open demo
-          </a>
+        <div style={{ maxWidth: 620, margin: "30px auto 0" }}>
+          <NewsletterSignup
+            eyebrow="Launch newsletter"
+            heading={cta || "Join the first-access list"}
+            sub="Get the first public build notes, launch access, and founder updates."
+            compact
+          />
         </div>
       </div>
     </section>

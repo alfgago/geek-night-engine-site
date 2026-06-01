@@ -80,7 +80,7 @@ export function ProductPage() {
         eyebrow="Product architecture"
         heading="The complete AI-native game studio, inside a browser tab."
         sub="From asset generation and script composition to telemetry collection and organization management — explore the full creative suite."
-        primaryCta="Launch workspace"
+        primaryCta="Join launch newsletter"
         secondaryCta="Open live demo"
       />
       {productModules.map((module) => (
@@ -88,8 +88,8 @@ export function ProductPage() {
       ))}
       <CtaStrip
         heading="Five modules, one shared game design document."
-        sub="Everything you ship lands in the same auditable model — so nothing the AI does is a black box."
-        cta="Launch workspace"
+        sub="Everything you ship lands in the same auditable model. Subscribe for release notes as the first access window opens."
+        cta="Subscribe for module updates"
       />
       <SiteFooter />
     </>

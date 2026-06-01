@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { MarketingAnimations } from "@/components/marketing/marketing-animations";
+import { buildMetadata, siteConfig } from "@/lib/seo";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -14,11 +15,14 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-export const metadata = {
-  title: "Geek Night Engine - AI-assisted Godot, in the browser",
-  description:
-    "The professional cloud workspace for AI-native game production.",
-};
+export const metadata = buildMetadata({
+  title: {
+    default: siteConfig.defaultTitle,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  canonical: "/",
+});
 
 export default function RootLayout({ children }) {
   return (
