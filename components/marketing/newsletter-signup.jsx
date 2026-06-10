@@ -3,10 +3,10 @@
 import { useId, useState } from "react";
 import { Icon, I } from "./icons";
 
-const provider = process.env.NEXT_PUBLIC_NEWSLETTER_PROVIDER || "Newsletter";
+const provider = process.env.NEXT_PUBLIC_NEWSLETTER_PROVIDER || "Brevo";
 const formAction = process.env.NEXT_PUBLIC_NEWSLETTER_FORM_ACTION || "";
 const formMethod = process.env.NEXT_PUBLIC_NEWSLETTER_FORM_METHOD || "post";
-const emailField = process.env.NEXT_PUBLIC_NEWSLETTER_EMAIL_FIELD || "email";
+const emailField = process.env.NEXT_PUBLIC_NEWSLETTER_EMAIL_FIELD || "EMAIL";
 const sourceField = process.env.NEXT_PUBLIC_NEWSLETTER_SOURCE_FIELD || "";
 const sourceValue = process.env.NEXT_PUBLIC_NEWSLETTER_SOURCE_VALUE || "next-site";
 const tagField = process.env.NEXT_PUBLIC_NEWSLETTER_TAG_FIELD || "";

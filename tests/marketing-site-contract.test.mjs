@@ -64,3 +64,17 @@ test("env example documents marketing and newsletter configuration", () => {
     assert.match(env, new RegExp(`^${key}=`, "m"));
   }
 });
+
+test("newsletter environment defaults are configured for Brevo hosted forms", () => {
+  const env = read(".env.example");
+  const readme = read("README.md");
+  const signup = read("components/marketing/newsletter-signup.jsx");
+
+  assert.match(env, /^NEXT_PUBLIC_NEWSLETTER_PROVIDER=Brevo$/m);
+  assert.match(env, /^NEXT_PUBLIC_NEWSLETTER_EMAIL_FIELD=EMAIL$/m);
+  assert.match(env, /YOUR_BREVO_FORM_ACTION_URL/);
+  assert.match(readme, /Brevo/i);
+  assert.match(readme, /300 daily email sends/i);
+  assert.match(signup, /NEXT_PUBLIC_NEWSLETTER_PROVIDER \|\| "Brevo"/);
+  assert.match(signup, /NEXT_PUBLIC_NEWSLETTER_EMAIL_FIELD \|\| "EMAIL"/);
+});

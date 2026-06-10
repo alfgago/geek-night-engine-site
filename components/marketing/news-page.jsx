@@ -46,7 +46,7 @@ function NewsIndex() {
           <div className="site-grid-2" style={{ alignItems: "stretch" }}>
             <div data-anim="reveal" className="card" style={{ padding: "30px 28px", background: "var(--bg-2)", border: "1px solid var(--border-1)" }}>
               <span className="chip amber" style={{ marginBottom: 18 }}>
-                <span className="dot amber" /> Coming soon
+                <span className="dot amber" /> Coming Soon
               </span>
               <h2 className="pretty" style={{ fontSize: 34, fontWeight: 600, letterSpacing: 0, margin: "0 0 14px", lineHeight: 1.1 }}>
                 No posts yet.

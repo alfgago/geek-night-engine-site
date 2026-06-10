@@ -99,7 +99,7 @@ export function SiteNav({ current }) {
         <div style={{ flex: 1 }} />
         <div className="gne-row nav-actions">
           <span className="chip amber">
-            <span className="dot amber" /> Coming soon
+            <span className="dot amber" /> Coming Soon
           </span>
           <a href={routes.newsletter} className="btn primary sm">
             <Icon d={I.bell} size={11} /> Join newsletter
@@ -190,7 +190,7 @@ const footerCols = [
       ["How it works", routes.how],
       ["Pricing", routes.pricing],
       ["Live demo", routes.demo],
-      ["Coming soon", routes.newsletter],
+      ["Coming Soon", routes.newsletter],
     ],
   },
   {
@@ -328,7 +328,7 @@ export function CtaStrip({ heading, sub, cta }) {
       />
       <div style={{ position: "relative", maxWidth: 860, margin: "0 auto" }}>
         <span className="chip amber" style={{ marginBottom: 18 }}>
-          <span className="dot amber" /> Coming soon
+          <span className="dot amber" /> Coming Soon
         </span>
         <h2
           data-anim="reveal"

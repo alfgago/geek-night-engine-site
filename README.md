@@ -34,15 +34,15 @@ http://127.0.0.1:3000
 
 ```text
 NEXT_PUBLIC_APP_URL=http://127.0.0.1:8000
-NEXT_PUBLIC_NEWSLETTER_PROVIDER=Kit
-NEXT_PUBLIC_NEWSLETTER_FORM_ACTION=https://YOUR_PROVIDER_FORM_POST_URL
+NEXT_PUBLIC_NEWSLETTER_PROVIDER=Brevo
+NEXT_PUBLIC_NEWSLETTER_FORM_ACTION=https://YOUR_BREVO_FORM_ACTION_URL
 NEXT_PUBLIC_NEWSLETTER_FORM_METHOD=post
-NEXT_PUBLIC_NEWSLETTER_EMAIL_FIELD=email_address
+NEXT_PUBLIC_NEWSLETTER_EMAIL_FIELD=EMAIL
 ```
 
 `NEXT_PUBLIC_APP_URL` controls product-app/demo link targets. Launch, login, and registration-style CTAs currently point to the newsletter because product access is marked coming soon.
 
-`NEXT_PUBLIC_NEWSLETTER_*` controls the hosted newsletter form. Paste the public form `action` URL from your provider embed and keep private API keys out of `NEXT_PUBLIC_*` variables.
+`NEXT_PUBLIC_NEWSLETTER_*` controls the hosted newsletter form. For an MVP, Brevo is the recommended default because its free tier is generous for early waitlists, including 300 daily email sends. Paste the public form `action` URL from your Brevo signup form embed and keep private API keys out of `NEXT_PUBLIC_*` variables. Brevo's default email field is commonly `EMAIL`; confirm the field name in the generated embed if you customize the form.
 
 The Laravel/Inertia app has the inverse variable:
 
