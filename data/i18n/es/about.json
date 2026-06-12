@@ -1,39 +1,39 @@
 {
   "seo": {
-    "title": "About — a small studio building an AI-native engine",
-    "description": "Geek Engine is a small Costa Rican studio building an AI-native game engine on Godot, so anyone can make a game by describing it instead of learning an engine first."
+    "title": "Acerca de — un pequeño estudio construyendo un motor nativo de IA",
+    "description": "Geek Engine es un pequeño estudio costarricense que construye un motor de juego nativo de IA en Godot, para que cualquiera pueda hacer un juego describiéndolo en lugar de aprender un motor primero."
   },
   "hero": {
-    "eyebrow": "Company · About",
-    "heading": "A small studio with one stubborn idea.",
-    "sub": "We think making a game should start with describing it, not with months of learning an engine. Geek Engine is our attempt to make that real — an AI-native game engine built on Godot, from a small team in Costa Rica."
+    "eyebrow": "Empresa · Acerca de",
+    "heading": "Un pequeño estudio con una idea obstinada.",
+    "sub": "Creemos que hacer un juego debe comenzar describiéndolo, no con meses de aprendizaje de un motor. Geek Engine es nuestro intento de hacerlo real — un motor de juego nativo de IA construido sobre Godot, de un pequeño equipo en Costa Rica."
   },
   "sections": [
     {
-      "title": "Why we're building this",
+      "title": "Por qué estamos construyendo esto",
       "body": [
-        "Game engines are extraordinary, and they're also a wall. Between the idea in your head and a thing you can actually play sits a long climb: scene trees, scripting languages, build pipelines, export settings. Plenty of people with great game ideas never get over that wall.",
-        "Geek Engine exists to lower it. You describe the game you want — the world, the mechanics, the feel — and an AI does the engine work: editing a structured game model, generating the art and sound, and compiling a real build you can play in your browser. The learning curve stops being the price of admission."
+        "Los motores de juego son extraordinarios, y también son una pared. Entre la idea en tu cabeza y una cosa que realmente puedas jugar hay una larga subida: árboles de escenas, lenguajes de script, pipelines de construcción, configuraciones de exportación. Muchas personas con grandes ideas de juegos nunca superan esa pared.",
+        "Geek Engine existe para bajarlo. Describes el juego que quieres — el mundo, las mecánicas, la sensación — y una IA hace el trabajo del motor: editar un modelo de juego estructurado, generar el arte y sonido, y compilar una compilación real que puedas jugar en tu navegador. La curva de aprendizaje deja de ser el precio de entrada."
       ]
     },
     {
-      "title": "What we actually are",
+      "title": "Qué somos realmente",
       "body": [
-        "We're a small studio in Costa Rica, not a large company with a marketing department. We'd rather be honest about that than invent a roster of fake executives. The product is real and being built carefully; the team behind it is small and focused.",
-        "We build on Godot, the open-source engine, because it's genuinely good and because we don't believe creators should be locked into a black box. Your game compiles to a real Godot web build — not a toy runtime we made up."
+        "Somos un pequeño estudio en Costa Rica, no una gran empresa con un departamento de marketing. Preferimos ser honestos al respecto que inventar un elenco de ejecutivos falsos. El producto es real y se está construyendo cuidadosamente; el equipo detrás es pequeño y enfocado.",
+        "Construimos sobre Godot, el motor de código abierto, porque es genuinamente bueno y porque no creemos que los creadores deban estar encerrados en una caja negra. Tu juego se compila a una compilación web Godot real — no un tiempo de ejecución de juguete que inventamos."
       ]
     },
     {
-      "title": "How we think about the work",
+      "title": "Cómo pensamos sobre el trabajo",
       "body": [
-        "AI-assisted doesn't mean AI-magic. Every change the system makes is structured, recorded as a snapshot, and inspectable, so you can always see what happened and roll it back. We'd rather the tool be honest and legible than impressively opaque.",
-        "We're pre-launch. That means we're choosing to ship something we trust rather than something we rushed. If you want to follow along, the launch newsletter is where the real updates land."
+        "Asistido por IA no significa magia de IA. Cada cambio que hace el sistema está estructurado, registrado como un snapshot e inspeccionar, para que siempre puedas ver qué sucedió y revertirlo. Preferimos que la herramienta sea honesta y legible que impresionantemente opaca.",
+        "Estamos pre-lanzamiento. Eso significa que estamos eligiendo enviar algo en lo que confiamos en lugar de algo que apresuramos. Si quieres seguir el progreso, el boletín de lanzamiento es donde llegan las actualizaciones reales."
       ]
     }
   ],
   "ctaStrip": {
-    "heading": "We're building in the open-ish.",
-    "sub": "Geek Engine isn't live yet. Subscribe for honest build notes and the first access window.",
-    "cta": "Follow the build"
+    "heading": "Estamos construyendo de forma algo abierta.",
+    "sub": "Geek Engine aún no está en vivo. Suscríbete para notas de compilación honestas y la primera ventana de acceso.",
+    "cta": "Sigue la compilación"
   }
 }

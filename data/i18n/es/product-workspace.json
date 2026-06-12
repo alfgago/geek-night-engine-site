@@ -1,57 +1,57 @@
 {
   "seo": {
-    "title": "Workspace — your multi-project hub and team",
-    "description": "The workspace hub manages all your game projects, organizations and team seats with roles, an activity feed, realtime presence, archive and restore, and project thumbnails from Vision QA."
+    "title": "Espacio de trabajo — tu centro de equipo y multi-proyecto",
+    "description": "El centro de espacio de trabajo gestiona todos tus proyectos de juego, organizaciones y asientos de equipo con roles, una fuente de actividad, presencia en tiempo real, archivo y restauración, y miniaturas de proyecto de Vision QA."
   },
   "hero": {
-    "eyebrow": "Product · Workspace",
-    "heading": "One hub for every project and teammate.",
-    "sub": "The workspace is your command centre: a dashboard of all your games, organizations with team seats and roles, a live activity feed, realtime presence, and archive and restore. Project cards show thumbnails captured by Vision QA, so the dashboard reflects what your games actually look like.",
-    "primaryCta": "Join launch newsletter",
-    "secondaryCta": "See how it works"
+    "eyebrow": "Producto · Espacio de trabajo",
+    "heading": "Un centro para cada proyecto y compañero de equipo.",
+    "sub": "El espacio de trabajo es tu centro de mando: un panel de control de todos tus juegos, organizaciones con asientos de equipo y roles, una fuente de actividad en vivo, presencia en tiempo real y archivo y restauración. Las tarjetas de proyecto muestran miniaturas capturadas por Vision QA, por lo que el panel de control refleja cómo se ven realmente tus juegos.",
+    "primaryCta": "Unirse al boletín de lanzamiento",
+    "secondaryCta": "Ver cómo funciona"
   },
   "sections": [
     {
-      "title": "A multi-project dashboard",
-      "body": "Every game you build lives on one dashboard. Cards show project status and a thumbnail captured by Vision QA on the last successful deploy, so you can tell at a glance which projects are ready, building, or need attention. Archive a project to get it out of the way and restore it whenever you come back to it.",
+      "title": "Un panel de control de varios proyectos",
+      "body": "Cada juego que construyes vive en un panel de control. Las tarjetas muestran el estado del proyecto y una miniatura capturada por Vision QA en el último despliegue exitoso, para que puedas decir de un vistazo qué proyectos están listos, construyéndose o necesitan atención. Archiva un proyecto para sacarlo del camino y restáuralo cuando vuelvas a él.",
       "caps": [
-        ["All your games in one view", "Switch between projects from a single hub instead of scattered links."],
-        ["Archive and restore", "Tuck a project away without losing it, and bring it back intact."]
+        ["Todos tus juegos en una vista", "Cambia entre proyectos desde un único centro en lugar de enlaces dispersos."],
+        ["Archivo y restauración", "Guarda un proyecto sin perderlo y tráelo de vuelta intacto."]
       ]
     },
     {
-      "title": "Organizations, seats, and roles",
-      "body": "Projects belong to organizations, and organizations have seats your teammates fill. Roles control who can do what — owners and admins manage the org, editors build, and viewers and playtesters get scoped access. Your plan sets how many seats you have, and you can add more as your team grows.",
+      "title": "Organizaciones, asientos y roles",
+      "body": "Los proyectos pertenecen a organizaciones, y las organizaciones tienen asientos que llenan tus compañeros de equipo. Los roles controlan quién puede hacer qué — propietarios y administradores administran la organización, editores construyen, y espectadores y probadores de juego obtienen acceso limitado. Tu plan establece cuántos asientos tienes, y puedes agregar más cuando tu equipo crece.",
       "caps": [
-        ["Role-based access", "Owner, admin, editor, viewer, and playtester roles scope what each member can do."],
-        ["Seats that scale", "Each plan includes seats; add more when the team expands."]
+        ["Acceso basado en roles", "Los roles de propietario, administrador, editor, espectador y probador de juego limitan lo que cada miembro puede hacer."],
+        ["Asientos que escalan", "Cada plan incluye asientos; agrega más cuando el equipo se expande."]
       ]
     },
     {
-      "title": "Activity feed and audit trail",
-      "body": "The workspace keeps a running activity feed of what's happening — prompts, builds, snapshots, invitations, and billing actions. It doubles as an audit trail, so a team can see who changed what and when without anyone having to ask.",
+      "title": "Fuente de actividad y pista de auditoría",
+      "body": "El espacio de trabajo mantiene una fuente de actividad en ejecución de lo que está sucediendo — prompts, compilaciones, snapshots, invitaciones y acciones de facturación. También funciona como una pista de auditoría, por lo que un equipo puede ver quién cambió qué y cuándo sin que nadie tenga que preguntar.",
       "caps": [
-        ["See what's happening", "A live feed of meaningful events across your projects."],
-        ["Accountable by default", "The feed is an audit trail, so history is always available."]
+        ["Ve qué está pasando", "Una fuente en vivo de eventos significativos en todos tus proyectos."],
+        ["Responsable por defecto", "La fuente es una pista de auditoría, por lo que el historial siempre está disponible."]
       ]
     },
     {
-      "title": "Realtime presence",
-      "body": "When teammates are in the same workspace, you can see it. Realtime presence shows who's around, so collaboration feels live rather than asynchronous guesswork — useful when two people are steering the same project through the Architect.",
+      "title": "Presencia en tiempo real",
+      "body": "Cuando los compañeros de equipo están en el mismo espacio de trabajo, puedes verlo. La presencia en tiempo real muestra quién está por aquí, por lo que la colaboración se siente en vivo en lugar de conjeturas asincrónicas — útil cuando dos personas dirigen el mismo proyecto a través del Arquitecto.",
       "caps": [
-        ["See who's here", "Presence shows active teammates in the workspace."],
-        ["Built for collaboration", "Presence keeps a shared project from turning into a coordination problem."]
+        ["Ve quién está aquí", "La presencia muestra compañeros de equipo activos en el espacio de trabajo."],
+        ["Construido para colaboración", "La presencia mantiene un proyecto compartido de convertirse en un problema de coordinación."]
       ]
     }
   ],
   "connect": {
-    "label": "How it connects",
-    "heading": "The hub ties every module together.",
-    "body": "From the workspace you open a project into the Architect, inspect it in Scenes, generate art in the asset studios, and share it through Playtest. Seats, roles, credits, and storage are all managed at the organization level, so the whole team works from one shared foundation."
+    "label": "Cómo se conecta",
+    "heading": "El centro une cada módulo.",
+    "body": "Desde el espacio de trabajo abres un proyecto al Arquitecto, lo inspeccionas en Escenas, generas arte en los estudios de activos y lo compartes a través de Prueba de juego. Los asientos, roles, créditos y almacenamiento se administran a nivel de organización, por lo que todo el equipo trabaja desde una base compartida."
   },
   "ctaStrip": {
-    "heading": "Run your studio from one place.",
-    "sub": "Geek Engine isn't live yet. Subscribe and we'll send the first access window and build notes.",
-    "cta": "Subscribe for launch updates"
+    "heading": "Ejecuta tu estudio desde un lugar.",
+    "sub": "Geek Engine aún no está en vivo. Suscríbete y te enviaremos la primera ventana de acceso y las notas de compilación.",
+    "cta": "Suscribirse para actualizaciones de lanzamiento"
   }
 }

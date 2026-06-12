@@ -1,45 +1,45 @@
 {
   "seo": {
-    "title": "Careers — no open roles yet, but say hello",
-    "description": "Geek Engine has no open roles yet. Here's what working at a small AI-native game studio will look like, and how to reach us if you'd be a fit later."
+    "title": "Carreras — sin roles abiertos aún, pero saluda",
+    "description": "Geek Engine no tiene roles abiertos aún. Aquí está cómo será trabajar en un pequeño estudio de motor de juego nativo de IA, y cómo comunicarte con nosotros si serías un buen ajuste más tarde."
   },
   "hero": {
-    "eyebrow": "Company · Careers",
-    "heading": "No open roles yet. Worth a conversation anyway.",
-    "sub": "We're a small pre-launch studio, and we're not hiring right now. We'd still rather meet good people early than scramble later — so if what we're building resonates, reach out."
+    "eyebrow": "Empresa · Carreras",
+    "heading": "Sin roles abiertos aún. Vale la pena una conversación de todas formas.",
+    "sub": "Somos un pequeño estudio pre-lanzamiento, y no estamos contratando ahora. Aun así, preferimos conocer a buenas personas temprano que apresurarnos más tarde — así que si lo que estamos construyendo resuena, comunícate."
   },
   "sections": [
     {
-      "title": "Where we are",
+      "title": "Donde estamos",
       "body": [
-        "Geek Engine is pre-launch and deliberately small. We don't have job postings, a hiring pipeline, or a headcount target to fill. Pretending otherwise would waste your time, so we won't.",
-        "What we do have is a product we believe in and a clear sense of the kind of people who'd thrive building it. When roles open, this is where they'll appear first."
+        "Geek Engine está en pre-lanzamiento y deliberadamente pequeño. No tenemos anuncios de trabajo, un pipeline de contratación o un objetivo de personal para llenar. Pretender lo contrario sería desperdiciar tu tiempo, así que no lo haremos.",
+        "Lo que sí tenemos es un producto en el que creemos y una comprensión clara del tipo de personas que prosperarían construyéndolo. Cuando se abran roles, aquí es donde aparecerán primero."
       ]
     },
     {
-      "title": "What working here will look like",
+      "title": "Cómo será trabajar aquí",
       "body": [
-        "Small team, real ownership. With a team this size, there's no hiding behind layers — people own meaningful surfaces of the product and see their work reach users directly.",
-        "Honest engineering. We build on open foundations like Godot, we keep changes structured and inspectable, and we'd rather ship something we trust than something that demos well and breaks quietly. We expect the same instinct from anyone who joins.",
-        "Async-friendly and outcomes-first. We care about what gets made, not hours logged. Costa Rica is home base; thoughtful collaboration across time zones matters more than a shared desk."
+        "Pequeño equipo, verdadera propiedad. Con un equipo de este tamaño, no hay dónde esconderse detrás de capas — las personas son dueñas de superficies significativas del producto y ven su trabajo llegar a los usuarios directamente.",
+        "Ingeniería honesta. Construimos sobre fundamentos abiertos como Godot, mantenemos los cambios estructurados e inspeccionar, y preferimos enviar algo en lo que confiamos que algo que demostramos bien y se rompe silenciosamente. Esperamos el mismo instinto de cualquiera que se una.",
+        "Amigable con asincrónico y orientado a resultados. Nos importa lo que se hace, no las horas registradas. Costa Rica es la base; la colaboración reflexiva a través de zonas horarias es más importante que un escritorio compartido."
       ]
     },
     {
-      "title": "If you'd be a fit later",
+      "title": "Si fueras un buen ajuste más tarde",
       "body": [
-        "If you're an engineer, designer, or game-maker who lights up at the idea of making game creation accessible to everyone, we'd like to know you exist.",
-        "Send a short note about what you do and what you'd want to build. We read everything, and we'll keep good introductions on file for when the time is right."
+        "Si eres un ingeniero, diseñador o creador de juegos que se ilumina con la idea de hacer la creación de juegos accesible para todos, nos gustaría saber que existes.",
+        "Envía una nota corta sobre lo que haces y qué quieres construir. Leemos todo, y guardaremos las buenas presentaciones en el archivo para cuando sea el momento adecuado."
       ]
     }
   ],
   "contactCard": {
-    "label": "Say hello",
-    "lead": "Introduce yourself at",
-    "detail": "↳ a few honest sentences beat a perfect résumé"
+    "label": "Saluda",
+    "lead": "Preséntate en",
+    "detail": "↳ algunas oraciones honestas valen más que un currículum perfecto"
   },
   "ctaStrip": {
-    "heading": "Not hiring yet. Still worth knowing you.",
-    "sub": "Geek Engine isn't live yet. Subscribe to follow the build and catch roles when they open.",
-    "cta": "Follow the build"
+    "heading": "No estamos contratando aún. Aún vale la pena conocerte.",
+    "sub": "Geek Engine aún no está en vivo. Suscríbete para seguir la compilación y atrapar roles cuando se abran.",
+    "cta": "Sigue la compilación"
   }
 }

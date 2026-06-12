@@ -1,69 +1,69 @@
 {
   "seo": {
-    "title": "Guides — get things done with Geek Engine",
-    "description": "Task-oriented guides for Geek Engine: build your first game in ten minutes, iterate with the Architect, run a playtest with real players, and manage your team and credits."
+    "title": "Guías — haz cosas con Geek Engine",
+    "description": "Guías orientadas a tareas para Geek Engine: construye tu primer juego en diez minutos, itera con el Arquitecto, ejecuta una prueba de juego con jugadores reales, y administra tu equipo y créditos."
   },
   "hero": {
-    "eyebrow": "Learn · Guides",
-    "heading": "Guides for getting things done.",
-    "sub": "Short, step-by-step walkthroughs for the things you'll actually do in Geek Engine. Each one is honest about what the tool does today.",
-    "primaryCta": "Subscribe for updates",
-    "secondaryCta": "Read the docs"
+    "eyebrow": "Aprende · Guías",
+    "heading": "Guías para hacer cosas.",
+    "sub": "Tutoriales cortos y paso a paso para las cosas que realmente harás en Geek Engine. Cada uno es honesto sobre lo que la herramienta hace hoy.",
+    "primaryCta": "Suscribirse para actualizaciones",
+    "secondaryCta": "Leer la documentación"
   },
-  "tocLabel": "Guides",
+  "tocLabel": "Guías",
   "guides": [
     {
       "id": "first-game",
-      "title": "Build your first game in 10 minutes",
-      "intro": "From a blank workspace to a playable web build, using the guided wizard.",
+      "title": "Construye tu primer juego en 10 minutos",
+      "intro": "Desde un espacio de trabajo en blanco a una compilación web jugable, utilizando el asistente guiado.",
       "steps": [
-        ["Start a project and describe your idea", "Open a new project and write what you want to make in plain language — the world, the goal, the feel. This is the Idea step; don't overthink it."],
-        ["Answer the AI interview", "The wizard asks about Gameplay, Style, and Scope. Your answers tell the engine what kind of game you're really building, so be specific where it matters."],
-        ["Pick a foundation template", "The engine suggests a Foundation template based on your answers. Accept the suggestion or choose another to start from solid ground."],
-        ["Refine the build plan", "Review the editable build plan and use the refine chat to adjust anything before it's committed. Nothing is built until you're happy with the plan."],
-        ["Approve the GDD and play", "Do the final Game Design Document review, let the engine compile your Godot web build, and play it in the browser the moment it's ready."]
+        ["Inicia un proyecto y describe tu idea", "Abre un proyecto nuevo y escribe lo que quieres hacer en lenguaje natural — el mundo, el objetivo, la sensación. Este es el paso de Idea; no lo pienses demasiado."],
+        ["Responde la entrevista de IA", "El asistente pregunta sobre Juego, Estilo y Alcance. Tus respuestas le dicen al motor qué tipo de juego estás realmente construyendo, así que sé específico donde importe."],
+        ["Elige una plantilla de fundación", "El motor sugiere una plantilla de Fundación basada en tus respuestas. Acepta la sugerencia o elige otra para comenzar desde un terreno sólido."],
+        ["Refina el plan de compilación", "Revisa el plan de compilación editable y usa el chat de refinamiento para ajustar cualquier cosa antes de que se comprometa. Nada se construye hasta que estés feliz con el plan."],
+        ["Aprueba el GDD y juega", "Haz la revisión final del documento de diseño de juego, deja que el motor compile tu compilación web Godot y juégala en el navegador en el momento en que esté lista."]
       ]
     },
     {
       "id": "iterate-architect",
-      "title": "Iterate with the Architect",
-      "intro": "Change your game by describing changes, and verify the result.",
+      "title": "Itera con el Arquitecto",
+      "intro": "Cambia tu juego describiendo cambios e verifica el resultado.",
       "steps": [
-        ["Describe the change", "In the Architect chat, say what you want — \"add three pickup gems near each checkpoint with a collect sound,\" for example. Keep each request focused."],
-        ["Let it apply typed operations", "The Architect turns your request into typed operations on the Game Design Document and snapshots the state before and after, so the change is recorded and reversible."],
-        ["Inspect in Scenes", "Open the Scenes inspector to walk the node tree, check properties, and read generated scripts, confirming the change matches what you asked for."],
-        ["Recover from a failed build", "If a compile fails, let the Architect read the error and attempt one credit-checked self-heal. If it's still not right, describe a correction and try again."],
-        ["Roll back if needed", "Because every change is snapshotted, you can revert to any earlier state without losing your place."]
+        ["Describe el cambio", "En el chat del Arquitecto, di qué quieres — \"agrega tres gemas de recolección cerca de cada checkpoint con un sonido de recolección,\" por ejemplo. Mantén cada solicitud enfocada."],
+        ["Deja que aplique operaciones tipadas", "El Arquitecto convierte tu solicitud en operaciones tipadas en el documento de diseño de juego y captura el estado antes y después, por lo que el cambio se registra y es reversible."],
+        ["Inspecciona en Escenas", "Abre el inspector de Escenas para caminar por el árbol de nodos, verificar propiedades y leer scripts generados, confirmando que el cambio coincide con lo que pediste."],
+        ["Recuperarse de una compilación fallida", "Si una compilación falla, deja que el Arquitecto lea el error e intente una única auto-reparación verificada por créditos. Si aún no es correcto, describe una corrección e intenta de nuevo."],
+        ["Revierte si es necesario", "Porque cada cambio se captura, puedes volver a cualquier estado anterior sin perder tu lugar."]
       ]
     },
     {
       "id": "run-playtest",
-      "title": "Run a playtest with real players",
-      "intro": "Get a build in front of testers and learn from how they play.",
+      "title": "Ejecuta una prueba de juego con jugadores reales",
+      "intro": "Pon una compilación frente a probadores y aprende de cómo juegan.",
       "steps": [
-        ["Compile a build", "Make sure your latest changes are compiled. A successful build is a hosted web game, ready to share."],
-        ["Let Vision QA verify it", "After deploy, Vision QA screenshots the build to confirm it actually rendered. A pass also becomes your project thumbnail."],
-        ["Create a share link", "Generate a share link for the build. Add an optional password if you want to limit it to chosen testers; leave it open if you don't."],
-        ["Send it to testers", "Share the link. Testers don't need an account — they can play in the browser and leave feedback against the build."],
-        ["Read feedback and telemetry", "Review tester comments and the telemetry the game emitted — events, sessions, and completion signals — summarized on your dashboard, then plan your next change."]
+        ["Compila una compilación", "Asegúrate de que tus últimos cambios estén compilados. Una compilación exitosa es un juego web alojado, listo para compartir."],
+        ["Deja que Vision QA lo verifique", "Después del despliegue, Vision QA captura una pantalla de la compilación para confirmar que realmente se renderizó. Un pase también se convierte en tu miniatura de proyecto."],
+        ["Crea un enlace de compartir", "Genera un enlace de compartir para la compilación. Agrega una contraseña opcional si quieres limitarlo a probadores elegidos; déjalo abierto si no."],
+        ["Envíalo a los probadores", "Comparte el enlace. Los probadores no necesitan una cuenta — pueden jugar en el navegador y dejar retroalimentación contra la compilación."],
+        ["Lee retroalimentación y telemetría", "Revisa comentarios de probadores y la telemetría que emitió el juego — eventos, sesiones y señales de finalización — resumidas en tu panel de control, luego planifica tu próximo cambio."]
       ]
     },
     {
       "id": "team-and-credits",
-      "title": "Manage your team and credits",
-      "intro": "Set up your organization, invite people, and keep an eye on usage.",
+      "title": "Administra tu equipo y créditos",
+      "intro": "Configura tu organización, invita a personas y mantén un ojo en el uso.",
       "steps": [
-        ["Set up your organization", "Projects live in an organization. Your plan determines how many seats it includes; add more seats as your team grows."],
-        ["Invite teammates with roles", "Invite people and assign roles — owner, admin, editor, viewer, or playtester — so each member's access matches what they need to do."],
-        ["Share the credit pool", "Credits are pooled at the organization level. Everyone draws from the same balance, so coordinate heavier work like asset generation and self-heals."],
-        ["Top up when busy", "When a project hits a busy stretch, buy a top-up to keep working without waiting for your monthly refill."],
-        ["Watch the activity feed", "The activity feed records prompts, builds, snapshots, invitations, and billing actions, giving the whole team a shared, auditable view of what's happening."]
+        ["Configura tu organización", "Los proyectos viven en una organización. Tu plan determina cuántos asientos incluye; agrega más asientos cuando tu equipo crece."],
+        ["Invita compañeros de equipo con roles", "Invita a personas y asigna roles — propietario, administrador, editor, espectador o probador de juego — para que el acceso de cada miembro coincida con lo que necesitan hacer."],
+        ["Comparte el fondo de créditos", "Los créditos se agrupan a nivel de organización. Todos extraen del mismo saldo, así que coordina el trabajo más pesado como la generación de activos y auto-reparaciones."],
+        ["Recarga cuando esté ocupado", "Cuando un proyecto experimenta un período ocupado, compra una recarga para continuar sin esperar tu reembolso mensual."],
+        ["Mira el feed de actividad", "El feed de actividad registra prompts, compilaciones, snapshots, invitaciones y acciones de facturación, dándole al equipo completo una vista compartida y auditable de lo que está sucediendo."]
       ]
     }
   ],
   "ctaStrip": {
-    "heading": "More guides on the way.",
-    "sub": "Geek Engine isn't live yet. Subscribe for the first access window and new walkthroughs.",
-    "cta": "Subscribe for updates"
+    "heading": "Más guías en camino.",
+    "sub": "Geek Engine aún no está en vivo. Suscríbete para la primera ventana de acceso y nuevos tutoriales.",
+    "cta": "Suscribirse para actualizaciones"
   }
 }

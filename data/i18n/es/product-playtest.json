@@ -1,57 +1,57 @@
 {
   "seo": {
-    "title": "Playtest — share builds and capture feedback",
-    "description": "Playtest hosts your Godot web build, share links with optional passwords, captures external tester feedback and telemetry, and runs Vision QA to verify every deploy actually rendered."
+    "title": "Prueba de juego — comparte compilaciones y captura retroalimentación",
+    "description": "Prueba de juego aloja tu compilación web Godot, comparte enlaces con contraseñas opcionales, captura retroalimentación y telemetría de probadores externos, y ejecuta Vision QA para verificar que cada despliegue se renderizó realmente."
   },
   "hero": {
-    "eyebrow": "Product · Playtest",
-    "heading": "Ship a link. Watch how people play.",
-    "sub": "Every successful build is a hosted web game you can play in the browser and share with real testers. Send a link, optionally protect it with a password, collect feedback and telemetry, and let Vision QA confirm each deploy actually rendered before anyone sees it.",
-    "primaryCta": "Join launch newsletter",
-    "secondaryCta": "See how it works"
+    "eyebrow": "Producto · Prueba de juego",
+    "heading": "Envía un enlace. Mira cómo juegan las personas.",
+    "sub": "Cada compilación exitosa es un juego web alojado que puedes jugar en el navegador y compartir con probadores reales. Envía un enlace, opcionalmente protégelo con una contraseña, recopila retroalimentación y telemetría, y deja que Vision QA confirme que cada despliegue se renderizó realmente antes de que alguien lo vea.",
+    "primaryCta": "Unirse al boletín de lanzamiento",
+    "secondaryCta": "Ver cómo funciona"
   },
   "sections": [
     {
-      "title": "Hosted web builds",
-      "body": "When a compile succeeds, the result is a playable Godot web export hosted for you — no exporting, uploading, or wiring up a server. You can play it in the workspace the moment it's ready, then hand it to testers as a link.",
+      "title": "Compilaciones web alojadas",
+      "body": "Cuando una compilación tiene éxito, el resultado es una exportación web de Godot jugable alojada para ti — sin exportar, cargar o conectar un servidor. Puedes jugarla en el espacio de trabajo en el momento en que esté lista, luego entrégasela a los probadores como un enlace.",
       "caps": [
-        ["Playable immediately", "A successful build is a web game you can open right away."],
-        ["Nothing to host yourself", "The build is served for you; you just share the link."]
+        ["Jugable inmediatamente", "Una compilación exitosa es un juego web que puedes abrir de inmediato."],
+        ["Nada que alojar tú mismo", "La compilación se entrega para ti; solo compartes el enlace."]
       ]
     },
     {
-      "title": "Share links, optionally protected",
-      "body": "Generate a share link for any build and send it to external testers. Links can carry an optional password, so you decide whether a build is open to anyone with the URL or gated to the people you choose. Testers don't need an account to play and respond.",
+      "title": "Comparte enlaces, opcionalmente protegidos",
+      "body": "Genera un enlace de compartir para cualquier compilación y envíalo a probadores externos. Los enlaces pueden llevar una contraseña opcional, por lo que decides si una compilación está abierta a cualquiera con la URL o restringida a las personas que eliges. Los probadores no necesitan una cuenta para jugar y responder.",
       "caps": [
-        ["Optional password", "Gate a build to chosen testers, or leave it open — your call."],
-        ["No account needed", "External testers play from the link without signing up."]
+        ["Contraseña opcional", "Bloquea una compilación a probadores elegidos, o déjala abierta — tú decides."],
+        ["Sin necesidad de cuenta", "Los probadores externos juegan desde el enlace sin registrarse."]
       ]
     },
     {
-      "title": "Feedback and telemetry",
-      "body": "External testers can leave feedback against a build, and the game emits telemetry as they play — events, sessions, and completion signals are captured and summarized on your dashboard. You get a real picture of how a build performs in the wild instead of guessing.",
+      "title": "Retroalimentación y telemetría",
+      "body": "Los probadores externos pueden dejar retroalimentación sobre una compilación, y el juego emite telemetría mientras juegan — eventos, sesiones y señales de finalización se capturan y resumen en tu panel de control. Obtienes una imagen real de cómo se desempeña una compilación en la naturaleza en lugar de adivinar.",
       "caps": [
-        ["Tester feedback", "Collect comments and reports tied to the build that produced them."],
-        ["Telemetry capture", "Gameplay events and sessions are recorded and summarized for you."]
+        ["Retroalimentación del probador", "Recopila comentarios e informes vinculados a la compilación que los produjo."],
+        ["Captura de telemetría", "Los eventos de juego y las sesiones se registran y resumen para ti."]
       ]
     },
     {
-      "title": "Vision QA on every deploy",
-      "body": "After a successful deploy, Vision QA opens the hosted build in a headless browser, screenshots it, and asks a vision model whether the game actually rendered. It captures two frames to catch frozen games, marks the result PASS or FAIL in the build log, and on a pass stores the screenshot as your project thumbnail. A fail can trigger one credit-checked self-heal.",
+      "title": "Vision QA en cada despliegue",
+      "body": "Después de un despliegue exitoso, Vision QA abre la compilación alojada en un navegador sin interfaz, la captura de pantalla, y le pregunta a un modelo de visión si el juego se renderizó realmente. Captura dos fotogramas para detectar juegos congelados, marca el resultado PASS o FAIL en el registro de compilación, y en un pase almacena la captura de pantalla como tu miniatura de proyecto. Un fallo puede desencadenar una auto-reparación verificada por créditos.",
       "caps": [
-        ["Did it actually render?", "Vision QA verifies the deploy visually, not just that the build exited cleanly."],
-        ["Thumbnails and heals", "A pass becomes your dashboard thumbnail; a fail can prompt one repair attempt."]
+        ["¿Se renderizó realmente?", "Vision QA verifica el despliegue visualmente, no solo que la compilación se cerrara limpiamente."],
+        ["Miniaturas y reparaciones", "Un pase se convierte en tu miniatura del panel de control; un fallo puede solicitar un intento de reparación."]
       ]
     }
   ],
   "connect": {
-    "label": "How it connects",
-    "heading": "From a chat request to a public link.",
-    "body": "The Architect builds, the compiler produces a web export, Vision QA verifies it, and Playtest hands it to your testers. Their feedback and telemetry flow back into the workspace, where you describe the next change and run the loop again."
+    "label": "Cómo se conecta",
+    "heading": "De una solicitud de chat a un enlace público.",
+    "body": "El Arquitecto construye, el compilador produce una exportación web, Vision QA lo verifica, y Prueba de juego lo entrega a tus probadores. Su retroalimentación y telemetría fluyen de vuelta al espacio de trabajo, donde describes el siguiente cambio y ejecutas el bucle nuevamente."
   },
   "ctaStrip": {
-    "heading": "Put builds in front of real players.",
-    "sub": "Geek Engine isn't live yet. Subscribe and we'll send the first access window and build notes.",
-    "cta": "Subscribe for launch updates"
+    "heading": "Pon compilaciones delante de jugadores reales.",
+    "sub": "Geek Engine aún no está en vivo. Suscríbete y te enviaremos la primera ventana de acceso y las notas de compilación.",
+    "cta": "Suscribirse para actualizaciones de lanzamiento"
   }
 }

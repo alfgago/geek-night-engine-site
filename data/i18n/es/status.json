@@ -1,27 +1,27 @@
 {
   "seo": {
-    "title": "Status — is Geek Engine up?",
-    "description": "Live status for Geek Engine. We probe the app platform from our edge and report whether it's operational, plus the status of this marketing site."
+    "title": "Estado — ¿está Geek Engine en funcionamiento?",
+    "description": "Estado en vivo para Geek Engine. Sondeamos la plataforma de la aplicación desde nuestro borde e informamos si está operativa, más el estado de este sitio de marketing."
   },
   "hero": {
-    "eyebrow": "Status",
-    "heading": "Is everything running?",
-    "sub": "We check the app platform from our edge every minute or so and report what we see — honestly, including when we can't reach it."
+    "eyebrow": "Estado",
+    "heading": "¿Está todo funcionando?",
+    "sub": "Verificamos la plataforma de la aplicación desde nuestro borde cada minuto o así e informamos lo que vemos — honestamente, incluyendo cuando no podemos alcanzarlo."
   },
   "rows": {
-    "label": "Live checks",
-    "appPlatform": "App platform",
-    "marketingSite": "Marketing site",
-    "marketingValue": "you're reading it",
-    "operational": "operational",
-    "degraded": "unreachable from our edge",
-    "unknown": "status unknown",
-    "lastChecked": "Last checked {time}"
+    "label": "Verificaciones en vivo",
+    "appPlatform": "Plataforma de aplicación",
+    "marketingSite": "Sitio de marketing",
+    "marketingValue": "lo estás leyendo",
+    "operational": "operacional",
+    "degraded": "inaccesible desde nuestro borde",
+    "unknown": "estado desconocido",
+    "lastChecked": "Última verificación {time}"
   },
-  "note": "This check probes a lightweight health endpoint on the app platform. An amber result means our edge couldn't reach it just now; it doesn't always mean the platform is down for everyone.",
+  "note": "Esta verificación sondea un punto de extremo de salud ligero en la plataforma de la aplicación. Un resultado ámbar significa que nuestro borde no pudo alcanzarlo en este momento; no siempre significa que la plataforma esté caída para todos.",
   "ctaStrip": {
-    "heading": "Want incident notes?",
-    "sub": "Geek Engine isn't live yet. Subscribe for launch and reliability updates.",
-    "cta": "Subscribe for updates"
+    "heading": "¿Quieres notas de incidente?",
+    "sub": "Geek Engine aún no está en vivo. Suscríbete para lanzamiento y actualizaciones de confiabilidad.",
+    "cta": "Suscribirse para actualizaciones"
   }
 }

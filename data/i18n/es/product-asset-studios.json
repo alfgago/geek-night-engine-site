@@ -1,57 +1,57 @@
 {
   "seo": {
-    "title": "Asset Studios — generate sprites, sound, and 3D",
-    "description": "Asset studios generate sprites, sound effects, and 3D models with AI, accept your own uploads and BYO files, and bind everything to your game — all inside your storage quota."
+    "title": "Estudios de activos — genera sprites, sonido y 3D",
+    "description": "Los estudios de activos generan sprites, efectos de sonido y modelos 3D con IA, aceptan tus propias cargas y archivos BYO, y vinculan todo a tu juego — todo dentro de tu cuota de almacenamiento."
   },
   "hero": {
-    "eyebrow": "Product · Asset studios",
-    "heading": "Make the art without leaving the tab.",
-    "sub": "The asset studios generate sprites, sound effects, and 3D models with AI, accept your own uploads and bring-your-own files, and bind it all into your game. Everything you create or import counts toward your organization's storage quota, so the costs stay visible.",
-    "primaryCta": "Join launch newsletter",
-    "secondaryCta": "See how it works"
+    "eyebrow": "Producto · Estudios de activos",
+    "heading": "Haz el arte sin salir de la pestaña.",
+    "sub": "Los estudios de activos generan sprites, efectos de sonido y modelos 3D con IA, aceptan tus propias cargas y traen tus propios archivos, y vinculan todo a tu juego. Todo lo que creas o importes cuenta hacia la cuota de almacenamiento de tu organización, por lo que los costos se mantienen visibles.",
+    "primaryCta": "Unirse al boletín de lanzamiento",
+    "secondaryCta": "Ver cómo funciona"
   },
   "sections": [
     {
       "title": "Sprite forge",
-      "body": "Describe the sprite you need and the forge generates it — characters, items, tiles, and backgrounds — from a text prompt. Generated art lands in your asset library and can be bound directly to the nodes that use it, so a request like \"give the boss a roar\" or \"add three pickup gems\" can produce both the structure and the art it needs.",
+      "body": "Describe el sprite que necesitas y la forja lo genera — personajes, objetos, baldosas y fondos — a partir de un prompt de texto. El arte generado llega a tu biblioteca de activos y puede vincularse directamente a los nodos que lo usan, por lo que una solicitud como \"dale al jefe un rugido\" o \"agrega tres gemas de recolección\" puede producir tanto la estructura como el arte que necesita.",
       "caps": [
-        ["Text to sprite", "Generate 2D art from a description, right inside the workspace."],
-        ["Bind to nodes", "Generated sprites attach to the scene nodes that reference them."]
+        ["Texto a sprite", "Genera arte 2D a partir de una descripción, directamente dentro del espacio de trabajo."],
+        ["Vincula a nodos", "Los sprites generados se adjuntan a los nodos de escena que los referencian."]
       ]
     },
     {
       "title": "SFX synth",
-      "body": "The sound studio synthesizes sound effects for your game — pickups, hits, jumps, and ambience — so you can score moments without sourcing audio elsewhere. Like every other asset, generated sound is tracked in your library and can be bound into the game model.",
+      "body": "El estudio de sonido sintetiza efectos de sonido para tu juego — recolecciones, golpes, saltos y ambiente — para que puedas puntuar momentos sin obtener audio en otro lugar. Como cualquier otro activo, el sonido generado se rastrea en tu biblioteca y puede vincularse al modelo de juego.",
       "caps": [
-        ["Generate effects", "Create sound effects on demand for the moments that need them."],
-        ["Tracked and bindable", "SFX live in your library and bind to the game like any other asset."]
+        ["Genera efectos", "Crea efectos de sonido bajo demanda para los momentos que los necesitan."],
+        ["Rastreados y vinculables", "Los efectos de sonido viven en tu biblioteca y se vinculan al juego como cualquier otro activo."]
       ]
     },
     {
-      "title": "3D model generation",
-      "body": "For 3D projects, the model studio generates meshes from AI and accepts industry-standard 3D files you upload. Models can be placed and transformed in the scene through the same typed-operation system the Architect uses, including 3D transforms, so your imported and generated assets share one consistent pipeline.",
+      "title": "Generación de modelos 3D",
+      "body": "Para proyectos 3D, el estudio de modelos genera mallas de IA y acepta archivos 3D estándar de la industria que cargas. Los modelos se pueden colocar y transformar en la escena a través del mismo sistema de operaciones tipadas que usa el Arquitecto, incluyendo transformaciones 3D, por lo que tus activos importados y generados comparten un pipeline consistente.",
       "caps": [
-        ["AI and upload", "Generate models with AI or bring your own 3D files."],
-        ["Transform in scene", "Position and orient models through typed 3D-transform operations."]
+        ["IA y carga", "Genera modelos con IA o trae tus propios archivos 3D."],
+        ["Transforma en la escena", "Posiciona y orienta modelos a través de operaciones de transformación 3D tipadas."]
       ]
     },
     {
-      "title": "Bring your own files, mind your storage",
-      "body": "Beyond generated and uploaded assets, you can store arbitrary bring-your-own files alongside your project. Everything is organized in a per-project file tree derived from each asset's path and type. Storage is metered per organization — a free tier with a hard cap, paid tiers with included storage and metered overage — so you always know what you're using.",
+      "title": "Trae tus propios archivos, cuida tu almacenamiento",
+      "body": "Más allá de activos generados y cargados, puedes almacenar archivos BYO arbitrarios junto a tu proyecto. Todo está organizado en un árbol de archivos por proyecto derivado del tipo y ruta de cada activo. El almacenamiento se mide por organización — un nivel gratuito con un límite máximo, niveles pagados con almacenamiento incluido y excedente medido — para que siempre sepas qué estás usando.",
       "caps": [
-        ["Typed and BYO files", "Keep generated assets, uploads, and arbitrary files together, organized by folder."],
-        ["Quota-aware", "Storage is counted per organization, with clear included amounts and overage."]
+        ["Archivos tipados y BYO", "Mantén activos generados, cargas y archivos arbitrarios juntos, organizados por carpeta."],
+        ["Consciente de cuota", "El almacenamiento se cuenta por organización, con cantidades incluidas claras y excedentes."]
       ]
     }
   ],
   "connect": {
-    "label": "How it connects",
-    "heading": "Assets bind into the same game model.",
-    "body": "Every asset you generate or upload can be bound to a node by the Architect and inspected in Scenes. The GDD stays the source of truth — assets attach to the structure, and the compiled Godot build pulls them in automatically."
+    "label": "Cómo se conecta",
+    "heading": "Los activos se vinculan al mismo modelo de juego.",
+    "body": "Cada activo que generes o cargues puede vincularse a un nodo por el Arquitecto e inspeccionarse en Escenas. El GDD permanece como la fuente de verdad — los activos se adjuntan a la estructura, y la compilación Godot compilada los extrae automáticamente."
   },
   "ctaStrip": {
-    "heading": "Art, audio, and 3D in one workspace.",
-    "sub": "Geek Engine isn't live yet. Subscribe and we'll send the first access window and build notes.",
-    "cta": "Subscribe for launch updates"
+    "heading": "Arte, audio y 3D en un espacio de trabajo.",
+    "sub": "Geek Engine aún no está en vivo. Suscríbete y te enviaremos la primera ventana de acceso y las notas de compilación.",
+    "cta": "Suscribirse para actualizaciones de lanzamiento"
   }
 }

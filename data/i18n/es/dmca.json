@@ -1,57 +1,57 @@
 {
   "seo": {
-    "title": "DMCA — copyright notice and counter-notice",
-    "description": "How to send a DMCA copyright infringement notice or counter-notice to Geek Engine, what a valid notice must include, and where to reach our designated contact."
+    "title": "DMCA — aviso de derechos de autor y contranotificación",
+    "description": "Cómo enviar un aviso de infracción de derechos de autor DMCA o contranotificación a Geek Engine, qué debe incluir un aviso válido y dónde comunicarte con nuestro contacto designado."
   },
   "hero": {
     "eyebrow": "Legal · DMCA",
-    "heading": "Copyright notice and counter-notice.",
-    "sub": "If you believe content hosted through Geek Engine infringes your copyright, this page explains how to tell us, what a valid notice needs to include, and how a user can respond. Our Terms also describe copyright handling."
+    "heading": "Aviso de derechos de autor y contranotificación.",
+    "sub": "Si crees que el contenido alojado a través de Geek Engine infringe tus derechos de autor, esta página explica cómo contarnos, qué necesita incluir un aviso válido, y cómo un usuario puede responder. Nuestros Términos también describen el manejo de derechos de autor."
   },
   "sections": [
     {
-      "title": "1. Reporting alleged infringement",
+      "title": "1. Reportar infracción supuesta",
       "body": [
-        "If you are a copyright owner, or authorized to act on behalf of one, and you believe material hosted through Geek Engine infringes your copyright, send a written notice to our copyright contact at {dmcaEmail}.",
-        "Submitting a knowingly false notice may expose you to liability. If you are unsure whether material is infringing, consider seeking legal advice before sending a notice."
+        "Si eres propietario de derechos de autor, o estás autorizado a actuar en nombre de uno, y crees que material alojado a través de Geek Engine infringe tus derechos de autor, envía un aviso escrito a nuestro contacto de derechos de autor en {dmcaEmail}.",
+        "Enviar un aviso deliberadamente falso puede exponerte a responsabilidad. Si no estás seguro de si material infringe, considera buscar asesoramiento legal antes de enviar un aviso."
       ]
     },
     {
-      "title": "2. What a valid notice must include",
+      "title": "2. Qué debe incluir un aviso válido",
       "list": [
-        "Identification of the copyrighted work you claim has been infringed.",
-        "Identification of the material that is claimed to be infringing, with enough detail for us to locate it, such as the project, build, share link, or asset.",
-        "Your contact information, including name, address, telephone number, and email address.",
-        "A statement that you have a good-faith belief that the use is not authorized by the copyright owner, its agent, or the law.",
-        "A statement, made under penalty of perjury, that the information in your notice is accurate and that you are the copyright owner or authorized to act on the owner's behalf.",
-        "Your physical or electronic signature."
+        "Identificación de la obra con derechos de autor que reclamas que ha sido infringida.",
+        "Identificación del material que se afirma que infringe, con suficiente detalle para que podamos localizarlo, como el proyecto, compilación, enlace de compartir o activo.",
+        "Tu información de contacto, incluyendo nombre, dirección, número de teléfono y correo electrónico.",
+        "Una declaración de que tienes una creencia de buena fe de que el uso no está autorizado por el propietario de derechos de autor, su agente o la ley.",
+        "Una declaración, hecha bajo pena de perjurio, de que la información en tu aviso es exacta y que eres el propietario de derechos de autor o estás autorizado a actuar en nombre del propietario.",
+        "Tu firma física o electrónica."
       ]
     },
     {
-      "title": "3. How we respond",
+      "title": "3. Cómo respondemos",
       "body": [
-        "When we receive a valid notice, we may remove or disable access to the material identified in the notice and take reasonable steps to notify the affected user. We may also act on repeat-infringer situations as appropriate.",
-        "We aim to handle valid notices promptly. Incomplete notices may delay our ability to act."
+        "Cuando recibimos un aviso válido, podemos eliminar o deshabilitar el acceso al material identificado en el aviso y tomar pasos razonables para notificar al usuario afectado. También podemos actuar en situaciones de infractor reincidente según sea apropiado.",
+        "Nos esforzamos por manejar avisos válidos con prontitud. Los avisos incompletos pueden retrasar nuestra capacidad de actuar."
       ]
     },
     {
-      "title": "4. Counter-notice",
+      "title": "4. Contranotificación",
       "body": [
-        "If you are a user whose material was removed and you believe the removal was a mistake or misidentification, you may send a counter-notice to {dmcaEmail}.",
-        "A valid counter-notice should identify the removed material and its prior location, include a statement under penalty of perjury that you have a good-faith belief the material was removed by mistake or misidentification, include your contact information and consent to jurisdiction as required by applicable law, and include your physical or electronic signature."
+        "Si eres un usuario cuyo material fue eliminado y crees que la eliminación fue un error o identificación errónea, puedes enviar una contranotificación (counter-notice) a {dmcaEmail}.",
+        "Una contranotificación válida debe identificar el material eliminado y su ubicación anterior, incluir una declaración bajo pena de perjurio de que tienes una creencia de buena fe de que el material fue eliminado por error o identificación errónea, incluir tu información de contacto y consentimiento de jurisdicción según lo requerido por la ley aplicable, e incluir tu firma física o electrónica."
       ]
     },
     {
-      "title": "5. Designated contact and safe harbor",
+      "title": "5. Contacto designado y puerto seguro",
       "body": [
-        "Send all copyright notices and counter-notices to {dmcaEmail}. For other legal matters, contact {legalEmail}.",
-        "If Geek Engine seeks U.S. DMCA safe-harbor protection for hosted user content, it should maintain a designated agent registered with the U.S. Copyright Office and keep that agent's contact information current. This page and our Terms describe the contact route for copyright notices."
+        "Envía todos los avisos de derechos de autor y contranotificaciones a {dmcaEmail}. Para otros asuntos legales, comunícate con {legalEmail}.",
+        "Si Geek Engine busca protección de puerto seguro DMCA de EE.UU. para contenido alojado de usuario, debe mantener un agente designado registrado con la Oficina de Derechos de Autor de EE.UU. y mantener la información de ese agente actual. Esta página y nuestros Términos describen la ruta de contacto para avisos de derechos de autor."
       ]
     }
   ],
   "ctaStrip": {
-    "heading": "Other legal questions?",
-    "sub": "For matters beyond copyright, reach our legal contact. Subscribe for product launch updates.",
-    "cta": "Subscribe for updates"
+    "heading": "¿Otras preguntas legales?",
+    "sub": "Para asuntos más allá de derechos de autor, comunícate con nuestro contacto legal. Suscríbete para actualizaciones de lanzamiento de producto.",
+    "cta": "Suscribirse para actualizaciones"
   }
 }

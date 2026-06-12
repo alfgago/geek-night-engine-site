@@ -1,58 +1,58 @@
 {
   "seo": {
-    "title": "Security — how we protect your account and work",
-    "description": "How Geek Engine protects your account and projects: encrypted transit, Stripe-handled card data, org-scoped access roles, signed webhooks, env-gated error tracking, and clear data rights."
+    "title": "Seguridad — cómo protegemos tu cuenta y tu trabajo",
+    "description": "Cómo Geek Engine protege tu cuenta y proyectos: tránsito cifrado, datos de tarjeta manejados por Stripe, roles de acceso limitado a la organización, webhooks firmados, rastreo de errores limitado a entorno, y derechos de datos claros."
   },
   "hero": {
-    "eyebrow": "Security",
-    "heading": "Security practices, stated plainly.",
-    "sub": "Here's how we protect your account and your work today — and, just as importantly, what we don't claim. We're a pre-launch studio, so this page describes real practices, not certifications we haven't earned."
+    "eyebrow": "Seguridad",
+    "heading": "Prácticas de seguridad, expresadas claramente.",
+    "sub": "Aquí está cómo protegemos tu cuenta y tu trabajo hoy — y, igual de importante, qué no afirmamos. Somos un estudio pre-lanzamiento, por lo que esta página describe prácticas reales, no certificaciones que no hemos ganado."
   },
   "sections": [
     {
-      "title": "Encrypted in transit",
+      "title": "Cifrado en tránsito",
       "body": [
-        "Traffic between your browser and Geek Engine is served over HTTPS, so data moving across the network is encrypted in transit. Realtime connections used for presence and live updates run over the same secured transport."
+        "El tráfico entre tu navegador y Geek Engine se entrega sobre HTTPS, por lo que los datos que se mueven a través de la red están cifrados en tránsito. Las conexiones en tiempo real utilizadas para presencia y actualizaciones en vivo se ejecutan sobre el mismo transporte asegurado."
       ]
     },
     {
-      "title": "Card data never touches our servers",
+      "title": "Los datos de tarjeta nunca tocan nuestros servidores",
       "body": [
-        "Payments are handled by Stripe. Your full card details go directly to Stripe and are never stored on Geek Engine's servers. We work with payment identifiers and subscription status, not raw card numbers, which keeps the most sensitive financial data out of our systems entirely.",
-        "Billing webhooks from Stripe are signed and verified before we act on them, so we don't trust unverified billing events."
+        "Los pagos son manejados por Stripe. Los detalles completos de tu tarjeta van directamente a Stripe y nunca se almacenan en los servidores de Geek Engine. Trabajamos con identificadores de pago y estado de suscripción, no con números de tarjeta sin procesar, lo que mantiene los datos financieros más sensibles fuera de nuestros sistemas.",
+        "Los webhooks de facturación de Stripe se firman y verifican antes de que actúemos sobre ellos, por lo que no confiamos en eventos de facturación no verificados."
       ]
     },
     {
-      "title": "Org-scoped access and roles",
+      "title": "Acceso limitado a la organización y roles",
       "body": [
-        "Projects belong to organizations, and access is scoped by role — owner, admin, editor, viewer, and playtester. What a member can see and do follows their role, so access is least-privilege by design rather than all-or-nothing.",
-        "Share links for playtest builds are controlled by your team and can be protected with an optional password, so you decide who can reach a build."
+        "Los proyectos pertenecen a organizaciones, y el acceso se limita por rol — propietario, administrador, editor, espectador y probador de juego. Lo que un miembro puede ver y hacer sigue su rol, por lo que el acceso es de menor privilegio por diseño en lugar de todo o nada.",
+        "Los enlaces de compartir para compilaciones de prueba de juego se controlan por tu equipo y se pueden proteger con una contraseña opcional, por lo que decides quién puede alcanzar una compilación."
       ]
     },
     {
-      "title": "Error tracking, off by default",
+      "title": "Rastreo de errores, desactivado por defecto",
       "body": [
-        "Our error tracking is environment-gated. It stays disabled unless explicitly configured, so diagnostics are an opt-in operational tool rather than something quietly running against your account from day one."
+        "Nuestro rastreo de errores es limitado por entorno. Se mantiene desactivado a menos que se configure explícitamente, por lo que el diagnóstico es una herramienta operacional de inclusión en lugar de algo que se ejecute silenciosamente contra tu cuenta desde el primer día."
       ]
     },
     {
-      "title": "Your data rights",
+      "title": "Tus derechos de datos",
       "body": [
-        "We support data-rights requests in line with modern privacy expectations, including access, correction, and deletion where applicable. Requests are handled through our privacy contact, where we may verify identity before acting.",
-        "To make a request or ask a security question, email {privacyEmail}. Our Privacy Policy describes how we handle your information in full."
+        "Apoyamos solicitudes de derechos de datos en línea con las expectativas de privacidad modernas, incluyendo acceso, corrección y eliminación donde sea aplicable. Las solicitudes se manejan a través de nuestro contacto de privacidad, donde podemos verificar la identidad antes de actuar.",
+        "Para hacer una solicitud o hacer una pregunta de seguridad, envía un correo a {privacyEmail}. Nuestra Política de privacidad describe cómo manejamos tu información en su totalidad."
       ]
     },
     {
-      "title": "What we don't claim",
+      "title": "Lo que no afirmamos",
       "body": [
-        "We're not going to overstate this. Geek Engine does not currently hold SOC 2 or ISO certifications, and we are not advertising third-party penetration-test attestations. If that changes, we'll say so here with specifics rather than vague badges.",
-        "No system is perfectly secure. You're responsible for protecting your account credentials and for managing the roles and share links inside your organization."
+        "No vamos a exagerar esto. Geek Engine actualmente no tiene certificaciones SOC 2 o ISO, y no estamos publicitando atestaciones de pruebas de penetración de terceros. Si eso cambia, lo diremos aquí con especificidades en lugar de insignias vagas.",
+        "Ningún sistema es perfectamente seguro. Eres responsable de proteger tus credenciales de cuenta y de administrar los roles y enlaces de compartir dentro de tu organización."
       ]
     }
   ],
   "ctaStrip": {
-    "heading": "Questions about security?",
-    "sub": "Reach our privacy contact, or subscribe for launch notes as we harden the platform toward release.",
-    "cta": "Subscribe for updates"
+    "heading": "¿Preguntas sobre seguridad?",
+    "sub": "Comunícate con nuestro contacto de privacidad, o suscríbete para notas de lanzamiento mientras endurecemos la plataforma hacia el lanzamiento.",
+    "cta": "Suscribirse para actualizaciones"
   }
 }

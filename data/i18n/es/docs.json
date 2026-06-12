@@ -1,93 +1,93 @@
 {
   "seo": {
-    "title": "Docs — how Geek Engine works",
-    "description": "Documentation for Geek Engine: getting started, the wizard, the Architect chat, scenes and the GDD, asset studios, playtests and telemetry, credits and billing, and storage and teams."
+    "title": "Documentación — cómo funciona Geek Engine",
+    "description": "Documentación para Geek Engine: inicio rápido, el asistente, el chat Arquitecto, escenas y el GDD, estudios de activos, pruebas de juego y telemetría, créditos y facturación, y almacenamiento y equipos."
   },
   "hero": {
-    "eyebrow": "Learn · Docs",
-    "heading": "How Geek Engine works.",
-    "sub": "A practical tour of the product, from your first project to teams and billing. Everything here describes what the engine actually does today.",
-    "primaryCta": "Subscribe for updates",
-    "secondaryCta": "See how it works"
+    "eyebrow": "Aprende · Documentación",
+    "heading": "Cómo funciona Geek Engine.",
+    "sub": "Un recorrido práctico del producto, desde tu primer proyecto hasta equipos y facturación. Todo aquí describe lo que el motor realmente hace hoy.",
+    "primaryCta": "Suscribirse para actualizaciones",
+    "secondaryCta": "Ver cómo funciona"
   },
-  "tocLabel": "On this page",
+  "tocLabel": "En esta página",
   "articles": [
     {
       "id": "getting-started",
-      "title": "Getting started",
+      "title": "Inicio rápido",
       "body": [
-        "Geek Engine turns a description of a game into a playable build. You start a project, describe what you want, and the engine does the engine work — editing a structured game model, generating assets, and compiling a real Godot web build you can play in your browser.",
-        "Everything happens in one workspace tab. There's nothing to install, no engine to learn first, and no export pipeline to configure. Your job is to describe and steer; the engine handles the structure, code, and build.",
-        "Because Geek Engine is pre-launch, access opens in waves. Subscribing to the launch newsletter is how you get the first availability window."
+        "Geek Engine convierte una descripción de un juego en una compilación jugable. Inicias un proyecto, describes lo que quieres, y el motor hace el trabajo del motor — editar un modelo de juego estructurado, generar activos, y compilar una compilación web Godot real que puedas jugar en tu navegador.",
+        "Todo sucede en una pestaña de espacio de trabajo. No hay nada que instalar, ningún motor que aprender primero, y ningún pipeline de exportación que configurar. Tu trabajo es describir y dirigir; el motor maneja la estructura, código y compilación.",
+        "Porque Geek Engine está en pre-lanzamiento, el acceso se abre en oleadas. Suscribirse al boletín de lanzamiento es cómo obtienes la primera ventana de disponibilidad."
       ]
     },
     {
       "id": "the-wizard",
-      "title": "The wizard",
+      "title": "El asistente",
       "body": [
-        "New projects begin with a 7-step guided wizard that turns a loose idea into a structured plan. It starts with your Idea, then runs an AI interview covering Gameplay, Style, and Scope to understand what you're really making.",
-        "From your answers, the engine suggests a Foundation template to build on. It then drafts an editable build plan you can refine through a chat before anything is committed, and finishes with a Game Design Document review so you approve the shape of the project before it's built.",
-        "Wizard steps consume a small number of credits each, on the order of a few to a couple dozen, because they involve AI work. The result is a Game Design Document the rest of the tools operate on."
+        "Los proyectos nuevos comienzan con un asistente guiado de 7 pasos que convierte una idea suelta en un plan estructurado. Comienza con tu Idea, luego ejecuta una entrevista de IA que cubre Juego, Estilo y Alcance para entender qué estás realmente haciendo.",
+        "A partir de tus respuestas, el motor sugiere una plantilla de Fundación en la que construir. Luego redacta un plan de compilación editable que puedes refinar a través de un chat antes de que cualquier cosa se comprometa, y termina con una revisión del documento de diseño de juego para que apruebes la forma del proyecto antes de que se construya.",
+        "Los pasos del asistente consumen una pequeña cantidad de créditos cada uno, en el orden de algunos a un par de docenas, porque implican trabajo de IA. El resultado es un documento de diseño de juego en el que operan el resto de las herramientas."
       ]
     },
     {
       "id": "architect-chat",
-      "title": "Architect chat",
+      "title": "Chat del Arquitecto",
       "body": [
-        "The Architect is the AI chat you use to change your game after the wizard. You describe a change in plain language, and the Architect translates it into typed operations against the Game Design Document — adding nodes, setting properties, attaching scripts, binding assets, adding mechanics, and more.",
-        "Every change is snapshotted before and after, so the full history is preserved and reversible. When a compile fails, the Architect can read the error log and attempt a single credit-checked self-heal before rebuilding.",
-        "Chat requests are metered, starting around 20 credits, with heavier work costing more. You always work against one auditable model rather than a pile of disconnected edits."
+        "El Arquitecto es el chat de IA que usas para cambiar tu juego después del asistente. Describes un cambio en lenguaje natural, y el Arquitecto lo traduce a operaciones tipadas contra el documento de diseño de juego — agregar nodos, establecer propiedades, adjuntar scripts, vincular activos, agregar mecánicas y más.",
+        "Cada cambio se captura antes y después, por lo que el historial completo se conserva y es reversible. Cuando una compilación falla, el Arquitecto puede leer el registro de errores e intentar una única auto-reparación verificada por créditos antes de recompilar.",
+        "Las solicitudes de chat se miden, comenzando alrededor de 20 créditos, con trabajo más pesado costando más. Siempre trabajas contra un modelo auditable en lugar de un montón de ediciones desconectadas."
       ]
     },
     {
       "id": "scenes-and-the-gdd",
-      "title": "Scenes & the GDD",
+      "title": "Escenas y el GDD",
       "body": [
-        "The Game Design Document is the single source of truth for your project. It holds the structure, scripts, mechanics, and asset bindings, and everything else — the compiled build, the Scenes inspector, the assets — derives from it.",
-        "The Scenes inspector is your window into that model. You can walk the scene-node tree, inspect node properties and mechanics, and read generated scripts to confirm the AI built what you asked for.",
-        "Generated source code isn't hand-edited. You change the game by describing changes to the Architect, which re-derives the structure and regenerates code, so there's never a drifting hand edit to reconcile against the model."
+        "El documento de diseño de juego es la única fuente de verdad para tu proyecto. Contiene la estructura, scripts, mecánicas y vinculaciones de activos, y todo lo demás — la compilación compilada, el inspector de Escenas, los activos — se deriva de él.",
+        "El inspector de Escenas es tu ventana a ese modelo. Puedes caminar por el árbol de nodos de la escena, inspeccionar propiedades de nodos y mecánicas, y leer scripts generados para confirmar que la IA construyó lo que pediste.",
+        "El código fuente generado no se edita manualmente. Cambias el juego describiendo cambios al Arquitecto, que re-deriva la estructura y regenera código, por lo que nunca hay una edición manual a la deriva para reconciliar contra el modelo."
       ]
     },
     {
       "id": "asset-studios",
-      "title": "Asset studios",
+      "title": "Estudios de activos",
       "body": [
-        "The asset studios let you create and manage the media your game uses without leaving the workspace. The sprite forge generates 2D art from a text description, the SFX synth generates sound effects, and the 3D studio generates models with AI or accepts industry-standard files you upload.",
-        "You can also store arbitrary bring-your-own files alongside a project. Everything is organized in a per-project file tree derived from each asset's path and type, and assets can be bound to nodes so the compiled build picks them up.",
-        "Generated and uploaded assets count toward your organization's storage quota, so the cost of your media library stays visible."
+        "Los estudios de activos te permiten crear y administrar los medios que tu juego utiliza sin salir del espacio de trabajo. La forja de sprites genera arte 2D a partir de una descripción de texto, el sintetizador de SFX genera efectos de sonido, y el estudio 3D genera modelos con IA o acepta archivos estándar de la industria que cargas.",
+        "También puedes almacenar archivos BYO arbitrarios junto a un proyecto. Todo está organizado en un árbol de archivos por proyecto derivado de la ruta y tipo de cada activo, y los activos se pueden vincular a nodos para que la compilación compilada los recoja.",
+        "Los activos generados y cargados cuentan para la cuota de almacenamiento de tu organización, por lo que el costo de tu biblioteca de medios permanece visible."
       ]
     },
     {
       "id": "playtests-and-telemetry",
-      "title": "Playtests & telemetry",
+      "title": "Pruebas de juego y telemetría",
       "body": [
-        "When a build succeeds, it's a hosted web game you can play immediately and share with testers. Share links can carry an optional password, and external testers don't need an account to play and respond.",
-        "Testers can leave feedback against a build, and the game emits telemetry as they play — events, sessions, and completion signals that are captured and summarized on your dashboard.",
-        "After each deploy, Vision QA screenshots the hosted build and asks a vision model whether it actually rendered, capturing two frames to catch frozen games. A pass becomes your project thumbnail; a fail can trigger one credit-checked self-heal."
+        "Cuando una compilación tiene éxito, es un juego web alojado que puedes jugar inmediatamente y compartir con probadores. Los enlaces de compartir pueden llevar una contraseña opcional, y los probadores externos no necesitan una cuenta para jugar y responder.",
+        "Los probadores pueden dejar retroalimentación contra una compilación, y el juego emite telemetría mientras juegan — eventos, sesiones y señales de finalización que se capturan y resumen en tu panel de control.",
+        "Después de cada despliegue, Vision QA captura una pantalla de la compilación alojada y le pregunta a un modelo de visión si realmente se renderizó, capturando dos fotogramas para detectar juegos congelados. Un pase se convierte en tu miniatura de proyecto; un fallo puede desencadenar una única auto-reparación verificada por créditos."
       ]
     },
     {
       "id": "credits-and-billing",
-      "title": "Credits & billing",
+      "title": "Créditos y facturación",
       "body": [
-        "AI work in Geek Engine is measured in credits. Wizard steps, Architect chat, asset generation, compiles, and store exports each draw from your balance, with the cost tied to how heavy the work is — small edits cost little, large generations cost more.",
-        "Your plan includes a monthly credit pool shared across your organization, and you can buy top-ups when a project hits a busy stretch. Credits measure consumption; they aren't cash or stored value.",
-        "Plans run from a free Hobbyist tier through Core Creator and Studio Pro, with Studio Pro adding commercial store export, source ZIP downloads, advanced 3D, and isolated build workers. See the pricing page for the current numbers."
+        "El trabajo de IA en Geek Engine se mide en créditos. Los pasos del asistente, chat del Arquitecto, generación de activos, compilaciones y exportaciones de tienda se extraen del saldo, con el costo vinculado a lo pesado del trabajo — las ediciones pequeñas cuestan poco, las generaciones grandes cuestan más.",
+        "Tu plan incluye un fondo de créditos mensual compartido en tu organización, y puedes comprar recargas cuando un proyecto experimenta un período ocupado. Los créditos miden el consumo; no son dinero o valor almacenado.",
+        "Los planes van desde un nivel Hobbyist gratuito pasando Core Creator y Studio Pro, con Studio Pro agregando exportación de tienda comercial, descargas de ZIP de código fuente, 3D avanzado y trabajadores de compilación aislados. Consulta la página de precios para los números actuales."
       ]
     },
     {
       "id": "storage-and-teams",
-      "title": "Storage & teams",
+      "title": "Almacenamiento y equipos",
       "body": [
-        "Storage is metered per organization. The free tier has a hard cap, while paid tiers include a storage allowance and bill metered overage beyond it. Billable storage counts your uploaded and generated assets and the latest compiled build per project.",
-        "Teams work through organizations and seats. Roles — owner, admin, editor, viewer, and playtester — scope what each member can do, and your plan sets how many seats you have. An activity feed records prompts, builds, snapshots, invitations, and billing actions as a shared audit trail.",
-        "Realtime presence shows who's active in a workspace, so collaborating on the same project stays coordinated rather than guesswork."
+        "El almacenamiento se mide por organización. El nivel gratuito tiene un límite máximo, mientras que los niveles pagados incluyen una asignación de almacenamiento y facturan el excedente medido. El almacenamiento facturable cuenta tus activos cargados y generados y la compilación compilada más reciente por proyecto.",
+        "Los equipos funcionan a través de organizaciones y asientos. Los roles — propietario, administrador, editor, espectador y probador de juego — limitan lo que cada miembro puede hacer, y tu plan establece cuántos asientos tienes. Un feed de actividad registra prompts, compilaciones, snapshots, invitaciones y acciones de facturación como una pista de auditoría compartida.",
+        "La presencia en tiempo real muestra quién está activo en un espacio de trabajo, para que colaborar en el mismo proyecto permanezca coordinado en lugar de conjetura."
       ]
     }
   ],
   "ctaStrip": {
-    "heading": "Docs grow with the product.",
-    "sub": "Geek Engine isn't live yet. Subscribe for the first access window and expanded documentation.",
-    "cta": "Subscribe for updates"
+    "heading": "La documentación crece con el producto.",
+    "sub": "Geek Engine aún no está en vivo. Suscríbete para la primera ventana de acceso y documentación expandida.",
+    "cta": "Suscribirse para actualizaciones"
   }
 }

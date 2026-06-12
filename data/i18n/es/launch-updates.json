@@ -1,44 +1,44 @@
 {
   "seo": {
-    "title": "Launch updates — what's built and what's next",
-    "description": "A truthful look at where Geek Engine stands: the wizard, Architect, playtesting, billing, and i18n are built; launch and expanded docs are next. Subscribe for the first access window."
+    "title": "Actualizaciones de lanzamiento — qué se construyó y qué viene",
+    "description": "Un vistazo honesto a dónde se encuentra Geek Engine: el asistente, Arquitecto, prueba de juego, facturación e i18n están construidos; el lanzamiento y documentación expandida vienen después. Suscríbete para la primera ventana de acceso."
   },
   "hero": {
-    "eyebrow": "Company · Launch updates",
-    "heading": "Where the build actually stands.",
-    "sub": "No vapor, no vague promises. Here's what's already working inside Geek Engine, what we're heading toward, and how to be first in line when access opens.",
-    "primaryCta": "Subscribe for updates",
-    "secondaryCta": "Read the build log"
+    "eyebrow": "Empresa · Actualizaciones de lanzamiento",
+    "heading": "Donde la compilación realmente se encuentra.",
+    "sub": "Sin vapor, sin promesas vagas. Aquí está lo que ya funciona dentro de Geek Engine, hacia dónde nos dirigimos y cómo ser el primero en la fila cuando se abre el acceso.",
+    "primaryCta": "Suscribirse para actualizaciones",
+    "secondaryCta": "Leer el registro de compilación"
   },
   "built": {
-    "label": "Shipped",
-    "heading": "What's built today",
+    "label": "Enviado",
+    "heading": "Qué se construyó hoy",
     "items": [
-      ["The 7-step wizard", "Describe a game and move through Idea, an AI interview on gameplay, style, and scope, an AI-suggested foundation template, an editable build plan with a refine chat, and a final Game Design Document review."],
-      ["The Architect", "AI chat that edits the Game Design Document through typed operations, snapshots every change, and runs a credit-checked self-heal when a build fails."],
-      ["Scenes and the GDD", "A scene-node tree inspector with node properties, mechanics, and a script viewer, all derived from the GDD as the single source of truth."],
-      ["Asset studios", "Sprite, sound, and 3D generation alongside uploads and bring-your-own files, organized in a per-project file tree and counted against storage."],
-      ["Playtest and Vision QA", "Hosted web builds, share links with optional passwords, tester feedback and telemetry, and Vision QA that screenshots each deploy to confirm it rendered."],
-      ["Billing and credits", "Plans, a shared credit pool, top-ups, and per-organization storage quotas with metered overage."],
-      ["English and Spanish", "The product and this site are built for both English and Spanish from the ground up."]
+      ["El asistente de 7 pasos", "Describe un juego y avanza a través de Idea, una entrevista de IA sobre juego, estilo y alcance, una plantilla de fundación sugerida por IA, un plan de compilación editable con un chat de refinamiento, y una revisión final del documento de diseño de juego."],
+      ["El Arquitecto", "Chat de IA que edita el documento de diseño de juego a través de operaciones tipadas, snapshots cada cambio, y ejecuta una auto-reparación verificada por créditos cuando falla una compilación."],
+      ["Escenas y el GDD", "Un inspector de árbol de nodos de escena con propiedades de nodos, mecánicas y un visor de scripts, todo derivado del GDD como la única fuente de verdad."],
+      ["Estudios de activos", "Generación de sprites, sonido y 3D junto con cargas y archivos BYO, organizados en un árbol de archivos por proyecto y contados contra el almacenamiento."],
+      ["Prueba de juego y Vision QA", "Compilaciones web alojadas, enlaces de compartir con contraseñas opcionales, retroalimentación del probador y telemetría, y Vision QA que captura pantalla cada despliegue para confirmar que se renderizó."],
+      ["Facturación y créditos", "Planes, un fondo de créditos compartido, recargas y cuotas de almacenamiento por organización con excedentes medidos."],
+      ["Inglés y español", "El producto y este sitio están construidos para inglés y español desde el principio."]
     ]
   },
   "next": {
-    "label": "In progress",
-    "heading": "What's next",
+    "label": "En progreso",
+    "heading": "Qué viene después",
     "items": [
-      ["Public launch", "We're working toward opening access. The launch newsletter is where the first window will be announced."],
-      ["Expanded documentation", "Deeper guides and reference material as more creators come on board and tell us where the gaps are."],
-      ["More build-log writing", "In-depth articles on how the engine works, published over on the news page."]
+      ["Lanzamiento público", "Estamos trabajando hacia la apertura del acceso. El boletín de lanzamiento es donde se anunciará la primera ventana."],
+      ["Documentación expandida", "Guías más profundas y material de referencia a medida que más creadores se unan y nos cuenten dónde están los espacios en blanco."],
+      ["Más escritura de registros de compilación", "Artículos detallados sobre cómo funciona el motor, publicados en la página de noticias."]
     ]
   },
   "distinct": {
-    "label": "Note",
-    "body": "This page is the short, honest changelog. For long-form, behind-the-scenes build-log articles, head to the news page."
+    "label": "Nota",
+    "body": "Esta página es el registro de cambios corto y honesto. Para artículos largos y detrás de las escenas del registro de compilación, dirígete a la página de noticias."
   },
   "ctaStrip": {
-    "heading": "Be first when access opens.",
-    "sub": "Geek Engine isn't live yet. Subscribe and we'll send the first availability window and milestone notes.",
-    "cta": "Subscribe for updates"
+    "heading": "Sé el primero cuando se abra el acceso.",
+    "sub": "Geek Engine aún no está en vivo. Suscríbete y te enviaremos la primera ventana de disponibilidad y notas de hito.",
+    "cta": "Suscribirse para actualizaciones"
   }
 }

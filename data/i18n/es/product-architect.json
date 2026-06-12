@@ -1,57 +1,57 @@
 {
   "seo": {
-    "title": "Architect — AI chat that builds your game",
-    "description": "The Architect is Geek Engine's AI chat builder. Describe a change in plain language and it edits your Game Design Document through typed operations, with snapshots and self-healing builds."
+    "title": "Arquitecto — chat de IA que construye tu juego",
+    "description": "El Arquitecto es el generador de chat de IA de Geek Engine. Describe un cambio en lenguaje natural y edita tu documento de diseño de juego a través de operaciones tipadas, con snapshots y compilaciones auto-reparadas."
   },
   "hero": {
-    "eyebrow": "Product · Architect",
-    "heading": "Describe the change. The Architect builds it.",
-    "sub": "The Architect is the AI chat at the centre of Geek Engine. You type what you want in plain language; it edits your game's Game Design Document through typed operations, snapshots every change, and compiles a fresh Godot web build you can play.",
-    "primaryCta": "Join launch newsletter",
-    "secondaryCta": "See how it works"
+    "eyebrow": "Producto · Arquitecto",
+    "heading": "Describe el cambio. El Arquitecto lo construye.",
+    "sub": "El Arquitecto es el chat de IA en el centro de Geek Engine. Escribes lo que quieres en lenguaje natural; edita el documento de diseño de juego (GDD) de tu juego a través de operaciones tipadas, realiza un snapshot de cada cambio, y compila una nueva compilación web de Godot que puedes jugar.",
+    "primaryCta": "Unirse al boletín de lanzamiento",
+    "secondaryCta": "Ver cómo funciona"
   },
   "sections": [
     {
-      "title": "Typed operations, not loose code edits",
-      "body": "Every request the Architect acts on becomes a list of explicit, typed operations against your JSON Game Design Document — add a node, set a property, attach a script, bind an asset, add a mechanic, reorder nodes, set a 3D transform. Because each operation is validated before it is applied, the AI can't quietly corrupt your project: changes are structured, reviewable, and reversible.",
+      "title": "Operaciones tipadas, no ediciones de código sueltas",
+      "body": "Cada solicitud en la que actúa el Arquitecto se convierte en una lista de operaciones explícitas y tipadas contra tu documento de diseño de juego JSON — agregar un nodo, establecer una propiedad, adjuntar un script, vincular un activo, agregar una mecánica, reordenar nodos, establecer una transformación 3D. Porque cada operación se valida antes de aplicarse, la IA no puede corromper silenciosamente tu proyecto: los cambios son estructurados, revisables y reversibles.",
       "caps": [
-        ["A defined vocabulary", "Operations cover the real shape of a Godot project: nodes, properties, scripts, mechanics, asset bindings, and transforms."],
-        ["Validated before applied", "Each operation passes through a validator and applier, so malformed changes are rejected instead of breaking your build."]
+        ["Un vocabulario definido", "Las operaciones cubren la forma real de un proyecto Godot: nodos, propiedades, scripts, mecánicas, vinculaciones de activos y transformaciones."],
+        ["Validadas antes de aplicarse", "Cada operación pasa por un validador y aplicador, por lo que los cambios malformados se rechazan en lugar de romper tu compilación."]
       ]
     },
     {
-      "title": "Snapshots before and after every change",
-      "body": "The Architect records a snapshot of your Game Design Document before it touches anything and another once the change lands. The full history is append-only, so you can always see what a request did and roll back to any earlier state. Snapshots are tagged by what triggered them — a chat turn, a self-heal, a manual save, or a revert.",
+      "title": "Snapshots antes y después de cada cambio",
+      "body": "El Arquitecto registra un snapshot de tu documento de diseño de juego antes de tocar cualquier cosa y otro una vez que el cambio se aplica. El historial completo es de solo-anexo, por lo que siempre puedes ver qué hizo una solicitud y volver a cualquier estado anterior. Los snapshots están etiquetados por lo que los desencadenó — un turno de chat, una auto-reparación, un guardado manual, o una reversión.",
       "caps": [
-        ["Append-only history", "Nothing is overwritten. Every meaningful state is preserved so you can compare and revert."],
-        ["Honest provenance", "Snapshots are tagged by trigger so you know whether the AI, a heal, or you made the change."]
+        ["Historial de solo-anexo", "Nada se sobrescribe. Cada estado significativo se conserva para que puedas comparar y revertir."],
+        ["Procedencia honesta", "Los snapshots están etiquetados por desencadenador para que sepas si la IA, una reparación, o tú hiciste el cambio."]
       ]
     },
     {
-      "title": "Self-healing when a build fails",
-      "body": "Compiling a real Godot project doesn't always succeed on the first try. When a build fails, the Architect can read the compile log, reason about the error, and attempt a fix — then rebuild. It's a credit-checked, bounded loop, not an infinite retry, so a failing build gets one honest repair attempt rather than silently burning your balance.",
+      "title": "Auto-reparación cuando falla una compilación",
+      "body": "Compilar un proyecto Godot real no siempre tiene éxito en el primer intento. Cuando falla una compilación, el Arquitecto puede leer el registro de compilación, razonar sobre el error e intentar una solución — luego recompila. Es un bucle limitado y verificado por créditos, no un reintento infinito, por lo que una compilación que falla obtiene un intento de reparación honesto en lugar de quemar silenciosamente tu saldo.",
       "caps": [
-        ["Reads the actual error", "The self-heal step works from the real compile log, not a guess about what might have gone wrong."],
-        ["Bounded and metered", "Healing is credit-checked and limited, so recovery is predictable instead of runaway."]
+        ["Lee el error real", "El paso de auto-reparación funciona a partir del registro de compilación real, no de una suposición sobre qué podría haber salido mal."],
+        ["Limitado y medido", "La reparación se verifica por créditos y está limitada, por lo que la recuperación es predecible en lugar de descontrolada."]
       ]
     },
     {
-      "title": "Metered so you stay in control",
-      "body": "Architect actions consume credits, and the cost is tied to the work: a chat request starts around 20 credits, a compile is 10, and heavier jobs cost more. Your plan includes a monthly credit pool, and you can top up when a project hits a busy stretch. You always know roughly what a request will draw down before you send it.",
+      "title": "Medido para que mantengas el control",
+      "body": "Las acciones del Arquitecto consumen créditos, y el costo está vinculado al trabajo: una solicitud de chat comienza alrededor de 20 créditos, una compilación es 10, y los trabajos más pesados cuestan más. Tu plan incluye un fondo de créditos mensual, y puedes recargar cuando un proyecto tiene un período ocupado. Siempre sabes aproximadamente qué consumirá una solicitud antes de enviarla.",
       "caps": [
-        ["Cost follows the work", "Small edits cost little; large generations or heals cost more. Nothing is hidden."],
-        ["Shared team pool", "Credits live at the organization level, so your whole team draws from one balance."]
+        ["El costo sigue el trabajo", "Las ediciones pequeñas cuestan poco; las generaciones o reparaciones grandes cuestan más. Nada está oculto."],
+        ["Fondo compartido del equipo", "Los créditos viven a nivel de organización, por lo que todo tu equipo extrae de un saldo."]
       ]
     }
   ],
   "connect": {
-    "label": "How it connects",
-    "heading": "The Architect feeds the rest of the workspace.",
-    "body": "Everything the Architect does lands in the same Game Design Document that powers the Scene inspector, the asset studios, and your playtest builds. Edit in chat, inspect the result in Scenes, and play it in the browser — one source of truth, no copy-paste between tools."
+    "label": "Cómo se conecta",
+    "heading": "El Arquitecto alimenta el resto del espacio de trabajo.",
+    "body": "Todo lo que hace el Arquitecto llega al mismo documento de diseño de juego que alimenta el inspector de escenas, los estudios de activos y tus compilaciones de prueba de juego. Edita en chat, inspecciona el resultado en Escenas y juega en el navegador — una fuente única de verdad, sin copiar y pegar entre herramientas."
   },
   "ctaStrip": {
-    "heading": "Build by describing. Verify by inspecting.",
-    "sub": "Geek Engine isn't live yet. Subscribe and we'll send the first access window and build notes.",
-    "cta": "Subscribe for launch updates"
+    "heading": "Construye describiendo. Verifica inspeccionando.",
+    "sub": "Geek Engine aún no está en vivo. Suscríbete y te enviaremos la primera ventana de acceso y las notas de compilación.",
+    "cta": "Suscribirse para actualizaciones de lanzamiento"
   }
 }

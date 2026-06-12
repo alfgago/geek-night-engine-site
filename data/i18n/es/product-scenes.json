@@ -1,57 +1,57 @@
 {
   "seo": {
-    "title": "Scenes — inspect the structure of your game",
-    "description": "The Scenes inspector exposes your Godot scene tree, node properties, mechanics, and scripts. The Game Design Document stays the source of truth while you audit exactly what the AI built."
+    "title": "Escenas — inspecciona la estructura de tu juego",
+    "description": "El inspector de Escenas expone tu árbol de escenas de Godot, propiedades de nodos, mecánicas y scripts. El documento de diseño de juego permanece como la fuente de verdad mientras verificas exactamente qué construyó la IA."
   },
   "hero": {
-    "eyebrow": "Product · Scenes",
-    "heading": "See exactly what the AI built.",
-    "sub": "Scenes is the inspector for your game's structure. Walk the scene-node tree, read node properties and mechanics, and view generated scripts — so a chat request is never a black box. The Game Design Document remains the single source of truth.",
-    "primaryCta": "Join launch newsletter",
-    "secondaryCta": "See how it works"
+    "eyebrow": "Producto · Escenas",
+    "heading": "Ve exactamente qué construyó la IA.",
+    "sub": "Escenas es el inspector de la estructura de tu juego. Camina por el árbol de nodos de la escena, lee las propiedades de los nodos y mecánicas, y visualiza scripts generados — así una solicitud de chat nunca es una caja negra. El documento de diseño de juego permanece como la única fuente de verdad.",
+    "primaryCta": "Unirse al boletín de lanzamiento",
+    "secondaryCta": "Ver cómo funciona"
   },
   "sections": [
     {
-      "title": "A real scene-node tree",
-      "body": "Scenes mirrors the structure of your Godot project as a navigable node tree. Expand parents, follow children, and see the node types behind each part of your game — the player body, the tilemap, spawn points, the HUD layer. It's the same hierarchy the Architect mutates, rendered so you can actually read it.",
+      "title": "Un árbol de nodos de escena real",
+      "body": "Escenas refleja la estructura de tu proyecto Godot como un árbol de nodos navegable. Expande padres, sigue hijos, y ve los tipos de nodos detrás de cada parte de tu juego — el cuerpo del jugador, el tilemap, los puntos de aparición, la capa HUD. Es la misma jerarquía que el Arquitecto muta, renderizada para que realmente puedas leerla.",
       "caps": [
-        ["Parent and child nodes", "Navigate the full hierarchy the way it exists in the compiled project."],
-        ["Typed nodes", "Each node shows its Godot type, so the structure stays legible at a glance."]
+        ["Nodos padre e hijo", "Navega la jerarquía completa tal como existe en el proyecto compilado."],
+        ["Nodos tipados", "Cada nodo muestra su tipo Godot, por lo que la estructura permanece legible de un vistazo."]
       ]
     },
     {
-      "title": "Node properties and mechanics",
-      "body": "Select a node to inspect its properties — position, speed, timing values, and the rest of the configuration that defines how it behaves. Mechanics attached to the project are listed alongside the tree, so you can confirm that the rule you described in chat actually exists in the model.",
+      "title": "Propiedades de nodos y mecánicas",
+      "body": "Selecciona un nodo para inspeccionar sus propiedades — posición, velocidad, valores de tiempo, y el resto de la configuración que define cómo se comporta. Las mecánicas adjuntas al proyecto se enumeran junto al árbol, para que puedas confirmar que la regla que describiste en chat realmente existe en el modelo.",
       "caps": [
-        ["Inspect any node", "Properties are surfaced per node, so you can verify values without reading source."],
-        ["Mechanics in view", "The mechanics the Architect added are visible and tied to the structure they affect."]
+        ["Inspecciona cualquier nodo", "Las propiedades se exponen por nodo, para que puedas verificar valores sin leer el código."],
+        ["Mecánicas a la vista", "Las mecánicas que agregó el Arquitecto son visibles y están vinculadas a la estructura que afectan."]
       ]
     },
     {
-      "title": "Read the generated script",
-      "body": "When a node carries behaviour, you can open the generated script and read exactly what runs. The script viewer is for understanding and trust — it shows the logic the AI produced from your intent so you can confirm it matches what you asked for.",
+      "title": "Lee el script generado",
+      "body": "Cuando un nodo tiene comportamiento, puedes abrir el script generado y leer exactamente qué se ejecuta. El visor de scripts es para entender y confiar — muestra la lógica que la IA produjo a partir de tu intención para que puedas confirmar que coincide con lo que pediste.",
       "caps": [
-        ["See the logic", "Open generated scripts to understand the behaviour behind a node."],
-        ["No surprises", "What you read in the viewer is what the compiled build runs."]
+        ["Ve la lógica", "Abre scripts generados para entender el comportamiento detrás de un nodo."],
+        ["Sin sorpresas", "Lo que lees en el visor es lo que la compilación compilada ejecuta."]
       ]
     },
     {
-      "title": "The GDD is the source of truth",
-      "body": "Generated source code isn't hand-edited in Geek Engine. The Game Design Document is authoritative — you change the game by describing changes to the Architect, which re-derives the structure and regenerates code. Scenes is your window into that model, kept honest and consistent because there's only one place the truth lives.",
+      "title": "El GDD es la fuente de verdad",
+      "body": "El código fuente generado no se edita manualmente en Geek Engine. El documento de diseño de juego es autoridad — cambias el juego describiendo cambios al Arquitecto, que re-deriva la estructura y regenera código. Escenas es tu ventana a ese modelo, mantenida honesta y consistente porque solo hay un lugar donde vive la verdad.",
       "caps": [
-        ["One model, one truth", "Structure, scripts, and assets all derive from the same GDD."],
-        ["Inspect, don't hand-patch", "You verify in Scenes and steer through chat — no drifting hand edits to reconcile."]
+        ["Un modelo, una verdad", "Estructura, scripts y activos se derivan todos del mismo GDD."],
+        ["Inspecciona, no parches manuales", "Verificas en Escenas y diriges a través del chat — sin ediciones manuales a la deriva para reconciliar."]
       ]
     }
   ],
   "connect": {
-    "label": "How it connects",
-    "heading": "Inspect here, steer in the Architect.",
-    "body": "Scenes shows you the result of every Architect operation, snapshot, and self-heal. When something isn't right, you describe the fix to the Architect, watch the new snapshot land, and re-inspect — a tight loop between seeing and building."
+    "label": "Cómo se conecta",
+    "heading": "Inspecciona aquí, dirige en el Arquitecto.",
+    "body": "Escenas te muestra el resultado de cada operación del Arquitecto, snapshot y auto-reparación. Cuando algo no es correcto, describes la solución al Arquitecto, ves el nuevo snapshot llegar y re-inspeccionas — un bucle cerrado entre ver y construir."
   },
   "ctaStrip": {
-    "heading": "Transparency, built into the structure.",
-    "sub": "Geek Engine isn't live yet. Subscribe and we'll send the first access window and build notes.",
-    "cta": "Subscribe for launch updates"
+    "heading": "Transparencia, integrada en la estructura.",
+    "sub": "Geek Engine aún no está en vivo. Suscríbete y te enviaremos la primera ventana de acceso y las notas de compilación.",
+    "cta": "Suscribirse para actualizaciones de lanzamiento"
   }
 }
