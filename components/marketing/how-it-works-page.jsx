@@ -1,77 +1,54 @@
-import { routes } from "@/lib/site-links";
+import { localizedRoutes } from "@/lib/site-links";
+import { getDictionary } from "@/lib/i18n";
 import { CtaStrip, PageHero, SiteFooter, SiteNav } from "./chrome";
 import { Icon, I } from "./icons";
 
-const STEPS_JSON = [
-  {
-    n: "01",
-    l: "Blueprint",
-    t: "Scaffolding from templates or prompt blueprints",
-    c: "Initialize your project via a blank slate or select from our curated production templates — including 2D/3D platformers, top-down tactical setups, endless runners, and shooter frameworks. Tell the AI Architect your thematic goals, and it auto-populates your target design rules, global variables, and starter asset libraries.",
-  },
-  {
-    n: "02",
-    l: "Decompose",
-    t: "Modular task breakdown and ticket ordering",
-    c: "Our pipeline prevents the system from getting overwhelmed by complex instructions. When you prompt a massive system modification, the platform splits the intent into atomic execution tickets on an interactive kanban board. You review the board, reorder tasks to set priorities, add design image assets, and approve execution step-by-step.",
-  },
-  {
-    n: "03",
-    l: "Compile",
-    t: "Headless cloud assembly and self-correction",
-    c: "The approved tasks are pulled into our cloud worker architecture. The system safely builds scenes, writes clean logic scripts, and compiles a headless distribution target. If the compiler encounters an error, our pre-flight environment checks and self-healing systems analyze the error log, update the faulty logic pattern, and re-compile instantly.",
-  },
-  {
-    n: "04",
-    l: "Deploy",
-    t: "Continuous deployment and version snapshots",
-    c: "Every successful build generates an absolute snapshot of the entire game design model. You can label, pin, or revert to past snapshots at any time, protecting your work. The finalized code is securely routed to high-speed cloud distribution storage, delivering a live URL to your playtest iframe and external testers.",
-  },
-];
+const stepNumbers = ["01", "02", "03", "04"];
+const principleIcons = [I.layers, I.doctor, I.history, I.users];
 
-export function HowItWorksPage() {
+export function HowItWorksPage({ lang }) {
+  const t = getDictionary(lang, "how-it-works");
+  const r = localizedRoutes(lang);
+
   return (
     <>
-      <SiteNav current="how" />
+      <SiteNav lang={lang} current="how" />
       <PageHero
-        eyebrow="The production pipeline"
-        heading="The science of error-free AI game synthesis."
-        sub="How our structured orchestration layer turns conversational ideas into production-ready game builds without code regression."
-        primaryCta="Join launch newsletter"
-        secondaryCta="See pricing"
-        secondaryHref={routes.pricing}
+        lang={lang}
+        eyebrow={t.hero.eyebrow}
+        heading={t.hero.heading}
+        sub={t.hero.sub}
+        primaryCta={t.hero.primaryCta}
+        secondaryCta={t.hero.secondaryCta}
+        secondaryHref={r.pricing}
       />
-      <PipelineSection />
-      <PrinciplesGrid />
-      <CtaStrip
-        heading="Four stages, all auditable, all reversible."
-        sub="Snapshot before, snapshot after — and release notes before the product opens."
-        cta="Get build notes"
-      />
-      <SiteFooter />
+      <PipelineSection t={t} />
+      <PrinciplesGrid t={t} />
+      <CtaStrip lang={lang} heading={t.ctaStrip.heading} sub={t.ctaStrip.sub} cta={t.ctaStrip.cta} />
+      <SiteFooter lang={lang} />
     </>
   );
 }
 
-function PipelineSection() {
+function PipelineSection({ t }) {
   return (
     <section data-anim-section="how" style={{ position: "relative", background: "var(--bg-0)", borderBottom: "1px solid var(--border-1)" }}>
       <div style={{ height: "440vh", position: "relative" }}>
         <div data-anim-pin style={{ position: "sticky", top: 0, height: "100vh", overflow: "hidden", display: "flex", flexDirection: "column" }}>
           <div style={{ padding: "40px 32px 18px", maxWidth: 1280, margin: "0 auto", width: "100%" }}>
             <div className="label-cap" style={{ marginBottom: 10 }}>
-              The pipeline · live
+              {t.pipeline.label}
             </div>
             <h2 className="pretty" style={{ fontSize: 32, fontWeight: 600, letterSpacing: 0, margin: 0, lineHeight: 1.1 }}>
-              Four stages, all auditable, all reversible.
+              {t.pipeline.heading}
             </h2>
           </div>
 
           <div style={{ maxWidth: 1280, margin: "0 auto", width: "100%", padding: "0 32px 12px" }}>
             <div className="gne-row" data-anim-steps style={{ gap: 12 }}>
-              {STEPS_JSON.map((step, index) => (
+              {t.steps.map((step, index) => (
                 <div
-                  key={step.n}
+                  key={stepNumbers[index]}
                   data-step={index}
                   className="gne-col"
                   style={{
@@ -103,10 +80,10 @@ function PipelineSection() {
                         transition: "all 0.4s",
                       }}
                     >
-                      {step.n}
+                      {stepNumbers[index]}
                     </span>
                     <span data-step-label style={{ fontSize: 14, fontWeight: 500, color: "var(--fg-1)", transition: "color 0.4s" }}>
-                      {step.l}
+                      {step.label}
                     </span>
                   </div>
                   <div
@@ -123,7 +100,7 @@ function PipelineSection() {
                       WebkitBoxOrient: "vertical",
                     }}
                   >
-                    {step.t}
+                    {step.title}
                   </div>
                 </div>
               ))}
@@ -141,6 +118,11 @@ function PipelineSection() {
   );
 }
 
+/**
+ * Pinned-scrub product mock. The strings below simulate the in-app build
+ * pipeline UI (which ships in English), so — like a screenshot — they are
+ * deliberately not translated.
+ */
 function PipelineStages() {
   return (
     <>
@@ -153,7 +135,7 @@ function PipelineStages() {
           <span className="title">SCAFFOLDING · CHOOSE A STARTER</span>
         </div>
         <div style={{ padding: 24, display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 12, height: "calc(100% - 41px)", overflow: "hidden" }}>
-          {["2D platformer", "3D platformer", "Top-down", "Shooter", "Puzzle", "Endless run", "Blank 2D", "From prompt"].map((title, index) => (
+          {["2D platformer", "3D platformer", "Top-down", "Shooter", "Puzzle", "3D collectathon", "Endless run", "From prompt"].map((title, index) => (
             <div key={title} className="card" style={{ padding: 0, overflow: "hidden", borderColor: index === 7 ? "var(--lime-edge)" : "var(--border-1)" }}>
               <div className="placeholder" style={{ height: 60, borderRadius: 0, border: 0, background: "linear-gradient(135deg, rgba(200,247,60,0.08), transparent)" }}>
                 {index === 7 ? (
@@ -320,31 +302,25 @@ function PipelineStages() {
   );
 }
 
-function PrinciplesGrid() {
-  const items = [
-    { i: I.layers, t: "Atomic, not monolithic", d: "Every prompt is split into typed operations. Nothing is a black box; nothing overwrites accidentally." },
-    { i: I.doctor, t: "Self-correcting", d: "Pre-flight checks + automated error analysis patch broken builds without your team noticing." },
-    { i: I.history, t: "Snapshot before & after", d: "Every successful build captures the full GDD. Roll back to any state in one click." },
-    { i: I.users, t: "Audit-trailed", d: "Prompts, builds, snapshots, settings, billing — every action lands in the immutable log." },
-  ];
+function PrinciplesGrid({ t }) {
   return (
     <section data-anim-section="features" className="site-section" style={{ background: "var(--bg-1)" }}>
       <div className="site-wrap">
         <div data-anim="reveal" className="label-cap" style={{ marginBottom: 14 }}>
-          Principles
+          {t.principles.label}
         </div>
-        <h2 data-anim="reveal" className="pretty" style={{ fontSize: 36, fontWeight: 600, letterSpacing: 0, margin: "0 0 48px", lineHeight: 1.1, maxWidth: 780 }}>
-          Built so the AI never costs you a regression.
+        <h2 data-anim="reveal" className="balance display" style={{ fontSize: "clamp(30px, 4vw, 40px)", fontWeight: 600, margin: "0 0 48px", lineHeight: 1.04, maxWidth: 780 }}>
+          {t.principles.heading}
         </h2>
         <div data-anim-grid className="site-grid-4">
-          {items.map((principle) => (
-            <div key={principle.t} data-anim-card className="card" style={{ padding: "22px 22px", background: "var(--bg-2)", border: "1px solid var(--border-1)" }}>
+          {t.principles.items.map((principle, index) => (
+            <div key={principle.title} data-anim-card className="card spotlight" style={{ padding: "22px 22px", background: "var(--bg-2)", border: "1px solid var(--border-1)" }}>
               <div style={{ width: 36, height: 36, borderRadius: 8, marginBottom: 16, background: "var(--lime-bg)", border: "1px solid var(--lime-edge)", color: "var(--lime)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <Icon d={principle.i} size={16} />
+                <Icon d={principleIcons[index]} size={16} />
               </div>
-              <h3 style={{ fontSize: 16, fontWeight: 600, margin: "0 0 8px", letterSpacing: 0 }}>{principle.t}</h3>
+              <h3 style={{ fontSize: 16, fontWeight: 600, margin: "0 0 8px", letterSpacing: 0 }}>{principle.title}</h3>
               <p className="pretty" style={{ fontSize: 13, lineHeight: 1.55, color: "var(--fg-1)", margin: 0 }}>
-                {principle.d}
+                {principle.body}
               </p>
             </div>
           ))}

@@ -1,6 +1,8 @@
 "use client";
 
 import { useId, useState } from "react";
+import { getDictionary, format } from "@/lib/i18n";
+import { contacts } from "@/data/marketing-data";
 import { Icon, I } from "./icons";
 
 const provider = process.env.NEXT_PUBLIC_NEWSLETTER_PROVIDER || "Brevo";
@@ -12,10 +14,11 @@ const sourceValue = process.env.NEXT_PUBLIC_NEWSLETTER_SOURCE_VALUE || "next-sit
 const tagField = process.env.NEXT_PUBLIC_NEWSLETTER_TAG_FIELD || "";
 const tagValue = process.env.NEXT_PUBLIC_NEWSLETTER_TAG_VALUE || "";
 
-export function NewsletterSignup({ id = "newsletter", eyebrow = "Newsletter", heading, sub, compact = false }) {
+export function NewsletterSignup({ lang = "en", id = "newsletter", eyebrow, heading, sub, compact = false }) {
   const emailId = useId();
   const [status, setStatus] = useState("");
   const isConfigured = Boolean(formAction);
+  const t = getDictionary(lang, "common").newsletter;
 
   function handleSubmit(event) {
     if (isConfigured) {
@@ -23,7 +26,7 @@ export function NewsletterSignup({ id = "newsletter", eyebrow = "Newsletter", he
     }
 
     event.preventDefault();
-    setStatus("Newsletter signup is almost ready. Check back soon or email hey@geeknight.engine.");
+    setStatus(format(t.fallbackStatus, { supportEmail: contacts.support }));
   }
 
   return (
@@ -40,7 +43,7 @@ export function NewsletterSignup({ id = "newsletter", eyebrow = "Newsletter", he
       }}
     >
       <div className="label-cap" style={{ marginBottom: 10, color: "var(--lime)" }}>
-        {eyebrow}
+        {eyebrow || t.eyebrow}
       </div>
       {heading && (
         <h2
@@ -69,7 +72,7 @@ export function NewsletterSignup({ id = "newsletter", eyebrow = "Newsletter", he
         style={{ gap: 8, alignItems: "stretch", flexWrap: "wrap" }}
       >
         <label htmlFor={emailId} className="label-cap" style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", clip: "rect(0 0 0 0)" }}>
-          Email address
+          {t.emailLabel}
         </label>
         <input
           id={emailId}
@@ -78,17 +81,17 @@ export function NewsletterSignup({ id = "newsletter", eyebrow = "Newsletter", he
           type="email"
           autoComplete="email"
           required
-          placeholder="you@studio.com"
+          placeholder={t.placeholder}
           style={{ minHeight: 42, flex: "1 1 260px", background: "rgba(12,12,10,0.72)" }}
         />
         {sourceField && <input type="hidden" name={sourceField} value={sourceValue} />}
         {tagField && tagValue && <input type="hidden" name={tagField} value={tagValue} />}
         <button type="submit" className="btn primary lg" style={{ minHeight: 42, padding: "0 18px", flex: "0 0 auto" }}>
-          <Icon d={I.bell} size={13} /> Subscribe
+          <Icon d={I.bell} size={13} /> {t.subscribe}
         </button>
       </form>
       <div className="mono" style={{ marginTop: 12, fontSize: 11, lineHeight: 1.5, color: "var(--fg-3)" }}>
-        {status || `Product access is coming soon. Subscribe for launch notes through ${provider}.`}
+        {status || format(t.footer, { provider })}
       </div>
     </div>
   );

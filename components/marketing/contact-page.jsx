@@ -1,70 +1,46 @@
 "use client";
 
+import { getDictionary, format } from "@/lib/i18n";
+import { contacts } from "@/data/marketing-data";
 import { CtaStrip, PageHero, SiteFooter, SiteNav } from "./chrome";
 import { Icon, I } from "./icons";
 
-const CHANNELS_JSON = [
-  {
-    i: I.user,
-    t: "Creator help desk",
-    d: "Have questions about credit balances, seat licensing top-ups, or workspace permissions management?",
-    cta: "Submit workspace ticket",
-    reply: "Avg reply · 4h",
-    color: "lime",
-  },
-  {
-    i: I.layers,
-    t: "Enterprise studio relations",
-    d: "Request custom build environments, elevated storage thresholds, or white-label distribution agreements.",
-    cta: "Request studio consultation",
-    reply: "Avg reply · same business day",
-    color: "cyan",
-  },
-  {
-    i: I.sparkles,
-    t: "Feature & community feedback",
-    d: "Have recommendations for our task board pipeline, asset synthesizers, or self-healing error catchers?",
-    cta: "Share feature request",
-    reply: "Reviewed weekly · public roadmap",
-    color: "violet",
-  },
-];
+const channelIcons = [I.user, I.layers, I.sparkles];
+const channelColors = ["lime", "cyan", "violet"];
 
 const linkStyle = { color: "var(--lime)", textDecoration: "none" };
 
-export function ContactPage() {
+export function ContactPage({ lang }) {
+  const t = getDictionary(lang, "contact");
+
   return (
     <>
-      <SiteNav current="contact" />
-      <PageHero
-        eyebrow="Get in touch"
-        heading="Let's optimize your development velocity."
-        sub="Whether you're an independent creator needing help with billing or a multi-team game studio requiring bespoke workflow infrastructure — we're here to help."
-      />
-      <SupportChannels />
-      <ContactSplit />
-      <CtaStrip heading="Product access is coming soon." sub="Subscribe for launch notes, access windows, and founder updates." cta="Subscribe for updates" />
-      <SiteFooter />
+      <SiteNav lang={lang} current="contact" />
+      <PageHero lang={lang} eyebrow={t.hero.eyebrow} heading={t.hero.heading} sub={t.hero.sub} />
+      <SupportChannels t={t} />
+      <ContactSplit t={t} />
+      <CtaStrip lang={lang} heading={t.ctaStrip.heading} sub={t.ctaStrip.sub} cta={t.ctaStrip.cta} />
+      <SiteFooter lang={lang} />
     </>
   );
 }
 
-function SupportChannels() {
+function SupportChannels({ t }) {
   return (
     <section data-anim-section="features" className="site-section" style={{ background: "var(--bg-1)" }}>
       <div className="site-wrap">
         <div data-anim="reveal" className="label-cap" style={{ marginBottom: 14 }}>
-          Pick a channel
+          {t.channels.label}
         </div>
-        <h2 data-anim="reveal" className="pretty" style={{ fontSize: 36, fontWeight: 600, letterSpacing: 0, margin: "0 0 40px", lineHeight: 1.1, maxWidth: 760 }}>
-          Three routes in, real humans on the other end.
+        <h2 data-anim="reveal" className="balance display" style={{ fontSize: "clamp(30px, 4vw, 40px)", fontWeight: 600, margin: "0 0 40px", lineHeight: 1.04, maxWidth: 760 }}>
+          {t.channels.heading}
         </h2>
         <div data-anim-grid className="site-grid-3">
-          {CHANNELS_JSON.map((channel) => (
+          {t.channels.items.map((channel, index) => (
             <div
-              key={channel.t}
+              key={channel.title}
               data-anim-card
-              className="card"
+              className="card spotlight"
               style={{ padding: "26px 26px", background: "var(--bg-2)", border: "1px solid var(--border-1)", display: "flex", flexDirection: "column", gap: 14 }}
             >
               <div
@@ -72,19 +48,19 @@ function SupportChannels() {
                   width: 44,
                   height: 44,
                   borderRadius: 8,
-                  background: `var(--${channel.color}-bg)`,
-                  border: `1px solid var(--${channel.color}-edge, var(--border-2))`,
-                  color: `var(--${channel.color})`,
+                  background: `var(--${channelColors[index]}-bg)`,
+                  border: `1px solid var(--${channelColors[index]}-edge, var(--border-2))`,
+                  color: `var(--${channelColors[index]})`,
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                 }}
               >
-                <Icon d={channel.i} size={20} />
+                <Icon d={channelIcons[index]} size={20} />
               </div>
-              <h3 style={{ fontSize: 19, fontWeight: 600, margin: 0, letterSpacing: 0 }}>{channel.t}</h3>
+              <h3 style={{ fontSize: 19, fontWeight: 600, margin: 0, letterSpacing: 0 }}>{channel.title}</h3>
               <p className="pretty" style={{ fontSize: 14, lineHeight: 1.6, color: "var(--fg-1)", margin: 0, flex: 1 }}>
-                {channel.d}
+                {channel.body}
               </p>
               <div className="mono" style={{ fontSize: 11, color: "var(--fg-3)" }}>
                 ↳ {channel.reply}
@@ -100,81 +76,81 @@ function SupportChannels() {
   );
 }
 
-function ContactSplit() {
+function ContactSplit({ t }) {
   return (
     <section data-anim-section="contact" className="site-section" style={{ background: "var(--bg-0)" }}>
       <div className="site-wrap site-grid-2" style={{ maxWidth: 1180 }}>
         <div>
           <div data-anim="reveal" className="label-cap" style={{ marginBottom: 14 }}>
-            Direct routes
+            {t.direct.label}
           </div>
           <h2 data-anim="reveal" className="pretty" style={{ fontSize: 32, fontWeight: 600, letterSpacing: 0, margin: "0 0 30px", lineHeight: 1.1, maxWidth: 480 }}>
-            Prefer email or live? Reach us directly.
+            {t.direct.heading}
           </h2>
 
-          <ContactCard label="Support email" value="hey@geeknight.engine" detail="↳ for billing, accounts, and account-related issues" />
-          <ContactCard label="Enterprise relations" value="studios@geeknight.engine" detail="↳ for custom builds, white-label, and procurement" />
+          <ContactCard label={t.direct.supportLabel} value={contacts.support} detail={t.direct.supportDetail} />
+          <ContactCard label={t.direct.enterpriseLabel} value={contacts.studios} detail={t.direct.enterpriseDetail} />
 
           <div data-anim="reveal" className="card" style={{ padding: "18px 22px", background: "var(--bg-2)", marginBottom: 12 }}>
             <div className="label-cap" style={{ marginBottom: 6 }}>
-              Community
+              {t.direct.communityLabel}
             </div>
             <div className="gne-row mono" style={{ gap: 14, fontSize: 13, color: "var(--fg-1)", flexWrap: "wrap" }}>
               <a href="#" style={linkStyle}>
-                Discord ↗
+                {t.direct.communityLinks.discord}
               </a>
               <a href="#" style={linkStyle}>
-                GitHub ↗
+                {t.direct.communityLinks.github}
               </a>
               <a href="#" style={linkStyle}>
-                Roadmap ↗
+                {t.direct.communityLinks.roadmap}
               </a>
               <a href="#" style={linkStyle}>
-                Changelog ↗
+                {t.direct.communityLinks.changelog}
               </a>
             </div>
           </div>
 
           <div data-anim="reveal" className="mono" style={{ marginTop: 24, fontSize: 11, color: "var(--fg-3)", lineHeight: 1.7 }}>
-            <span className="dot lime" style={{ marginRight: 6 }} /> all systems operational · status.geeknight.engine
+            <span className="dot lime" style={{ marginRight: 6 }} /> {format(t.direct.statusLine, { statusHost: contacts.statusHost })}
             <br />
-            <span style={{ marginLeft: 14 }}>↳ Istanbul · Tokyo · Toronto · async-friendly</span>
+            <span style={{ marginLeft: 14 }}>{t.direct.locations}</span>
           </div>
         </div>
 
         <form data-anim="reveal" className="card" style={{ padding: 24, background: "var(--bg-2)" }} onSubmit={(event) => event.preventDefault()}>
           <div className="label-cap" style={{ marginBottom: 14 }}>
-            Workspace ticket
+            {t.form.label}
           </div>
-          <FormField label="What can we help with?">
+          <FormField label={t.form.topicLabel}>
             <select className="input" style={{ background: "var(--bg-3)" }} defaultValue="billing">
-              <option value="billing">Billing or credits</option>
-              <option value="workspace">Workspace permissions</option>
-              <option value="enterprise">Enterprise consultation</option>
-              <option value="feature">Feature request</option>
-              <option value="bug">Bug report</option>
+              <option value="billing">{t.form.topics.billing}</option>
+              <option value="workspace">{t.form.topics.workspace}</option>
+              <option value="enterprise">{t.form.topics.enterprise}</option>
+              <option value="feature">{t.form.topics.feature}</option>
+              <option value="bug">{t.form.topics.bug}</option>
             </select>
           </FormField>
-          <FormField label="Your email">
-            <input className="input" type="email" defaultValue="you@geeknightstudio.co" />
+          <FormField label={t.form.emailLabel}>
+            <input className="input" type="email" defaultValue="you@geekengine.ai" />
           </FormField>
-          <FormField label="Workspace (optional)">
-            <input className="input" defaultValue="geek-night-studio" />
+          <FormField label={t.form.workspaceLabel}>
+            <input className="input" defaultValue="geek-engine" />
           </FormField>
-          <FormField label="Tell us a bit more">
-            <textarea className="input" style={{ height: 130, padding: "10px 12px", resize: "none", lineHeight: 1.5 }} placeholder="Project, plan, error messages, what you're trying to do..." />
+          <FormField label={t.form.messageLabel}>
+            <textarea className="input" style={{ height: 130, padding: "10px 12px", resize: "none", lineHeight: 1.5 }} placeholder={t.form.messagePlaceholder} />
           </FormField>
           <div className="gne-row" style={{ gap: 8, marginTop: 8, flexWrap: "wrap" }}>
             <button type="button" className="btn">
-              <Icon d={I.upload} size={12} /> Attach screenshot
+              <Icon d={I.upload} size={12} /> {t.form.attach}
             </button>
             <div style={{ flex: 1 }} />
             <button type="submit" className="btn primary">
-              <Icon d={I.send} size={12} /> Submit ticket
+              <Icon d={I.send} size={12} /> {t.form.submit}
             </button>
           </div>
           <div className="mono" style={{ fontSize: 10.5, color: "var(--fg-3)", marginTop: 14 }}>
-            ↳ tickets land in our Linear board with the same audit hygiene as your studio's
+            {t.form.footnote}
           </div>
         </form>
       </div>

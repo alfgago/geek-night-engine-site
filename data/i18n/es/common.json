@@ -1,0 +1,109 @@
+{
+  "seo": {
+    "defaultTitle": "Geek Engine - Godot asistido por IA, en el navegador",
+    "description": "El espacio de trabajo profesional en la nube para la producción de juegos Godot nativa a IA."
+  },
+  "og": {
+    "alt": "Geek Engine - Godot asistido por IA en el navegador",
+    "kicker": "Producción Godot nativa a IA",
+    "headline": "Imagina el juego. Hablalo para que cobre vida.",
+    "footer": "Espacio de trabajo en navegador. Tickets de IA estructurados. Compilaciones en la nube. Pruebas de juego."
+  },
+  "nav": {
+    "home": "Inicio",
+    "product": "Producto",
+    "how": "Cómo funciona",
+    "pricing": "Precios",
+    "news": "Noticias",
+    "contact": "Contacto"
+  },
+  "aria": {
+    "homeLink": "Inicio de Geek Engine",
+    "marketingNav": "Marketing",
+    "mobileNav": "Móvil",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "siteMenu": "Menú del sitio",
+    "languageSwitcher": "Idioma"
+  },
+  "langSwitch": {
+    "en": "EN",
+    "es": "ES",
+    "enFull": "English",
+    "esFull": "Español"
+  },
+  "chips": {
+    "comingSoon": "Próximamente"
+  },
+  "cta": {
+    "joinNewsletter": "Unirse al boletín"
+  },
+  "ctaStrip": {
+    "newsletterEyebrow": "Lanzar boletín",
+    "defaultHeading": "Únete a la lista de acceso prioritario",
+    "newsletterSub": "Obtén las primeras notas de compilación públicas, acceso al lanzamiento y actualizaciones del fundador."
+  },
+  "newsletter": {
+    "eyebrow": "Boletín",
+    "emailLabel": "Correo electrónico",
+    "placeholder": "tu@estudio.com",
+    "subscribe": "Suscribirse",
+    "fallbackStatus": "El registro al boletín casi está listo. Vuelve pronto o envía un correo a {supportEmail}.",
+    "footer": "El acceso al producto próximamente. Suscríbete para recibir notas de lanzamiento a través de {provider}."
+  },
+  "footer": {
+    "blurb": "El espacio de trabajo profesional en la nube para la producción de juegos nativa a IA.",
+    "cols": {
+      "product": {
+        "head": "Producto",
+        "links": {
+          "architect": "Arquitecto",
+          "scene": "Inspector de escena",
+          "assets": "Estudios de activos",
+          "playtest": "Prueba de juego",
+          "hub": "Centro del espacio de trabajo"
+        }
+      },
+      "studio": {
+        "head": "Estudio",
+        "links": {
+          "how": "Cómo funciona",
+          "pricing": "Precios",
+          "comingSoon": "Próximamente"
+        }
+      },
+      "learn": {
+        "head": "Aprende",
+        "links": {
+          "docs": "Documentación",
+          "guides": "Guías",
+          "news": "Noticias",
+          "status": "Estado"
+        }
+      },
+      "company": {
+        "head": "Empresa",
+        "links": {
+          "about": "Acerca de",
+          "updates": "Actualizaciones de lanzamiento",
+          "contact": "Contacto",
+          "careers": "Carreras"
+        }
+      },
+      "legal": {
+        "head": "Legal",
+        "links": {
+          "privacy": "Privacidad",
+          "terms": "Términos",
+          "security": "Seguridad",
+          "dmca": "DMCA"
+        }
+      }
+    },
+    "copyright": "© 2026 Geek Engine",
+    "privacy": "privacidad",
+    "terms": "términos",
+    "security": "seguridad",
+    "status": "todos los sistemas operativos"
+  }
+}

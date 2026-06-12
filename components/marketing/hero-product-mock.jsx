@@ -30,7 +30,7 @@ export function HeroProductMock() {
           <span style={{ width: 9, height: 9, borderRadius: 999, background: "#febc2e" }} />
           <span style={{ width: 9, height: 9, borderRadius: 999, background: "#28c840" }} />
           <span className="mono" style={{ marginLeft: 6, fontSize: 11, color: "var(--fg-2)" }}>
-            geeknight.engine / pebble-punks <span style={{ color: "var(--fg-4)" }}>/</span>{" "}
+            geekengine.ai / pebble-punks <span style={{ color: "var(--fg-4)" }}>/</span>{" "}
             <span style={{ color: "var(--lime)" }}>Architect</span>
           </span>
           <div style={{ flex: 1 }} />

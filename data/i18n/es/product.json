@@ -1,0 +1,71 @@
+{
+  "seo": {
+    "title": "Producto",
+    "description": "Explora el Arquitecto de Juegos de IA de Geek Engine, inspector de escena Godot, laboratorios de activos, compilador en la nube, pruebas de juego y módulos de telemetría."
+  },
+  "hero": {
+    "eyebrow": "Arquitectura del producto",
+    "heading": "El estudio de juegos nativo de IA completo, dentro de una pestaña del navegador.",
+    "sub": "Desde generación de activos y composición de scripts hasta recopilación de telemetría y gestión de organización — explora la suite creativa completa.",
+    "primaryCta": "Unirse al boletín de lanzamiento",
+    "secondaryCta": "Abrir demo en vivo"
+  },
+  "moduleLabel": "Módulo",
+  "modules": {
+    "hub": {
+      "title": "Centro de espacio de trabajo y organización",
+      "desc": "Gestiona entornos de múltiples proyectos desde un único centro de control. Organiza el trabajo individual o crea límites de espacio de trabajo aislados con configuraciones de equipo granulares.",
+      "caps": [
+        ["Centro de múltiples proyectos", "Crea, duplica, archiva, elimina o transfiere la propiedad de proyectos de juegos 2D y 3D independientes limpiamente."],
+        ["Gobernanza organizacional", "Asigna roles distintos (Propietario, Administrador, Editor, Espectador, Probador) y gestiona rutas de acceso seguro del equipo."],
+        ["Insignias de salud del proyecto", "Rastrear instantáneamente qué sistemas están listos, compilándose, fallidos o esperando atención del desarrollador en toda la organización."],
+        ["Registros de actividad en tiempo real", "Una pista de auditoría completa e inmutable que rastrea prompts, compilaciones, cambios de snapshot, actualizaciones de configuración y acciones de facturación."]
+      ]
+    },
+    "ai": {
+      "title": "Arquitecto de juegos de IA y sistema de tickets",
+      "desc": "Comunica mecánicas de juego complejas a un núcleo especializado de múltiples agentes que desglosa visiones grandes en pasos estructurados muy confiables.",
+      "caps": [
+        ["Tickets de características atómicas", "Transforma conversaciones continuas en tickets de desarrollo explícitos y arrastrables para evitar sobrescrituras de código."],
+        ["Salidas estructuradas", "La intención natural llena automáticamente un árbol de documento de diseño de juego interactivo y visual que cubre escenas, lógica y variables globales."],
+        ["Tareas multimodales", "Adjunta wireframes de UI, hojas de personajes o dibujos de diseño directamente a tickets para que el sistema pueda extraer direcciones artísticas exactas."],
+        ["Bucles de código autocorrector", "Si una compilación falla en segundo plano, nuestro bucle de recuperación automatizado lee el registro de errores, deduce el conflicto raíz y repara el script antes de que notes un fallo."]
+      ]
+    },
+    "scene": {
+      "title": "Inspector de escena y sistema de mutación estructural",
+      "desc": "Expone y manipula tu modelo de diseño de juego subyacente con controles de ingeniería de alta precisión.",
+      "caps": [
+        ["Árboles de nodos visuales", "Audita gráficos de escena estructurales, sistemas de nodos padre-hijo y vectores de propiedades del sistema instantáneamente."],
+        ["Operaciones tipadas", "Aplica propiedades seguras, actualiza datos de scripts, manipula dimensiones espaciales 3D y reordena jerarquías estructurales sin problemas."],
+        ["Inspector de scripts", "Lee y verifica la lógica de comportamiento subyacente a través de lecturas profundas y atajos de scripts automatizados."],
+        ["Presencia de autoría compartida", "Rastrear cursores de equipos remotos, prompts compartidos y selecciones de nodos activos dentro de un lienzo de espacio de trabajo sincronizado."]
+      ]
+    },
+    "assets": {
+      "title": "Generación de activos y laboratorios sintetizadores",
+      "desc": "Crea, carga, almacena y vincula propiedades de medios digitales directamente a nodos de juego sin abandonar tu entorno.",
+      "caps": [
+        ["Arte de píxeles procedural", "Genera texturas 2D personalizadas, tilesets, sprites y fondos ambientales a partir de descripciones de texto."],
+        ["Sintetizador de audio", "Construye efectos de sonido retro y elementos de puntuación chiptune directamente dentro de un panel de parámetros interactivos."],
+        ["Gestión de modelos 3D", "Carga y analiza activos 3D estándar de la industria, mapeando materiales complejos y modelos a instancias de malla."],
+        ["Biblioteca de activos inteligente", "Seguimiento automático del peso de almacenamiento, control de versiones de activos, filtros de búsqueda global y detección de activos no utilizados."]
+      ]
+    },
+    "playtest": {
+      "title": "Pruebas de juego en navegador y telemetría en tiempo real",
+      "desc": "Prueba mecánicas directamente dentro de tu interfaz de creador o distribuye compilaciones de sandbox a probadores externos para cosechar información de rendimiento.",
+      "caps": [
+        ["Superficie web instantánea", "Lanza compilaciones interactivas responsivas y de pantalla completa dentro de tu centro de control en el momento en que finaliza una tarea de compilación."],
+        ["Enlaces de revisión compartibles", "Enlaces públicos o restringidos por contraseña construidos explícitamente para distribución a probadores externos."],
+        ["Panel de telemetría", "Recopila seguimiento de sesiones, recuentos de frecuencia de eventos, umbrales de finalización y registros de ejecución de jugadores activos."],
+        ["Discusión contextual", "Fija comentarios, carga capturas de pantalla de errores y organiza comentarios colaborativos vinculados a compilaciones o snapshots específicos."]
+      ]
+    }
+  },
+  "ctaStrip": {
+    "heading": "Cinco módulos, un documento de diseño de juego compartido.",
+    "sub": "Todo lo que envíes cae en el mismo modelo auditable. Suscríbete a las notas de lanzamiento cuando se abra la primera ventana de acceso.",
+    "cta": "Suscribirse para actualizaciones de módulos"
+  }
+}

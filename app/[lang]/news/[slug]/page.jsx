@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { NewsArticlePage } from "@/components/marketing/news-article-page";
 import { getNewsPost, newsPosts } from "@/data/news-posts";
+import { getDictionary } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
@@ -8,18 +9,21 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const { slug } = await params;
-  const post = getNewsPost(slug);
+  const { lang, slug } = await params;
+  const post = getNewsPost(slug, lang);
 
   if (!post) {
+    const t = getDictionary(lang, "news");
     return buildMetadata({
-      title: "News",
-      description: "Launch updates and product news from Geek Night Engine.",
+      lang,
+      title: t.article.fallbackSeo.title,
+      description: t.article.fallbackSeo.description,
       canonical: "/news",
     });
   }
 
   return buildMetadata({
+    lang,
     title: post.title,
     description: post.excerpt,
     canonical: `/news/${post.slug}`,
@@ -32,12 +36,12 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function Page({ params }) {
-  const { slug } = await params;
-  const post = getNewsPost(slug);
+  const { lang, slug } = await params;
+  const post = getNewsPost(slug, lang);
 
   if (!post) {
     notFound();
   }
 
-  return <NewsArticlePage post={post} />;
+  return <NewsArticlePage lang={lang} post={post} />;
 }

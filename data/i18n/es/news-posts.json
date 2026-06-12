@@ -1,0 +1,130 @@
+{
+  "build-log-001-game-studio-we-needed": {
+    "title": "Registro de compilación 001: El estudio de juegos que necesitábamos hace diez años",
+    "eyebrow": "Registro de compilación 001",
+    "date": "1 de junio de 2026",
+    "readTime": "7 min lectura",
+    "category": "Construcción pública",
+    "excerpt": "Por qué Build with Gemini XPRIZE finalmente nos dio una razón para convertir un sueño de estudio indie de una década en una plataforma Godot nativa de web.",
+    "dek": "Geek Engine es nuestro intento de hacer el estudio de juegos que deseábamos que existiera cuando primero intentamos construir uno: nativo del navegador, asistido por IA, compilado en la nube y con precios para que la falta de recursos no sea lo que termine una buena idea.",
+    "heroStats": [
+      ["Hackathon", "Build with Gemini XPRIZE"],
+      ["Stack", "Godot 4, Laravel, React, Google Cloud"],
+      ["Objetivo", "Juegos jugables desde tickets de IA estructurados"]
+    ],
+    "sourceLabels": [
+      "Build with Gemini XPRIZE",
+      "Anuncio de XPRIZE",
+      "Aspectos destacados de desarrolladores de Google I/O 2026"
+    ],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "Hoy es 1 de junio de 2026, y este es el primer registro de compilación público para Geek Engine. Todavía se siente extraño escribirlo. Entré en ingeniería de software hace 12 años porque quería construir videojuegos. No paneles de control. No herramientas internas. No otro flujo de trabajo empresarial con una mejor barra de búsqueda. Juegos."
+      },
+      {
+        "type": "paragraph",
+        "text": "La vida, como siempre, tenía otros planes. Fui al desarrollo web personalizado, luego a sistemas empresariales, luego a integraciones de IA, luego trabajo de agencia. Aprendí cómo entregar software serio para negocios serios. También seguí llevando la misma vieja idea: ¿y si un equipo pequeño pudiera construir juegos sin necesidad de capital a nivel de estudio antes de que el primer prototipo existiera?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Hace unos diez años, unos pocos amigos cercanos e yo intentamos comenzar un estudio de juegos indie. Teníamos la energía y las ideas, pero las matemáticas eran brutales. El desarrollo de juegos era fragmentado, costoso e implacable. Cada disciplina necesitaba tiempo, hardware, herramientas y conocimiento especializado. No se nos acabó la imaginación. Se nos acabó la pista."
+      },
+      {
+        "type": "heading",
+        "text": "El plazo que hizo la idea real"
+      },
+      {
+        "type": "paragraph",
+        "text": "Cuando Google y XPRIZE anunciaron Build with Gemini XPRIZE, el tiempo se sintió imposible de ignorar. El desafío no está pidiendo a los equipos que hagan una demostración inteligente y desaparezcan. Es un empujón de 90 días para construir un negocio real con usuarios reales, ingresos reales y operaciones nativas de IA. Esa restricción es exactamente por qué estamos construyendo esto en público."
+      },
+      {
+        "type": "paragraph",
+        "text": "Geek Engine es un espacio de trabajo de producción de juegos nativo de web, multi-inquilino y asistido por IA para juegos Godot 2D y 3D. El atajo más fácil es Replit o Lovable para Godot, pero eso minimiza la parte difícil. Los proyectos de juegos no son aplicaciones CRUD normales. Un prompt único puede tocar árboles de escena, scripts, activos, estado de animación, formas de colisión, compilaciones exportadas y comportamiento de tiempo de ejecución enfrentado al jugador. Una caja de chat solamente no es suficiente."
+      },
+      {
+        "type": "heading",
+        "text": "Por qué esto no puede ser solo otra ventana de chat de IA"
+      },
+      {
+        "type": "paragraph",
+        "text": "La mayoría de las herramientas de codificación de IA se sienten impresionantes para los primeros prompts y luego comienzan a perder el hilo. En el desarrollo de juegos, ese modo de fallo es especialmente costoso. La deriva de contexto se convierte en scripts sobrescritos. Una ruta de nodo faltante se convierte en una escena rota. Un pequeño error de sintaxis se convierte en una compilación que nunca llega a un jugador."
+      },
+      {
+        "type": "paragraph",
+        "text": "Así que no estamos construyendo un juguete suelto de prompt a código. Estamos construyendo una canalización de tickets modulares. Cuando un creador describe una mecánica, nivel, activo o cambio de sistema, el Arquitecto de Juegos de IA descompone esa solicitud en tickets atómicos en un tablero visual. El usuario puede reordenarlos, aprobarlos uno por uno y adjuntar imágenes de referencia o diseños aproximados a la tarea exacta que los necesita."
+      },
+      {
+        "type": "paragraph",
+        "text": "Gemini 3.5 Flash maneja la capa de razonamiento de alta velocidad para estas tareas estructuradas. En lugar de pedir al modelo que improvise en todo un proyecto, restringimos el trabajo: producir operaciones tipadas, respetar esquemas, preservar snapshots y dejar que el compilador pruebe si la salida es real."
+      },
+      {
+        "type": "heading",
+        "text": "La canalización bajo el capó"
+      },
+      {
+        "type": "list",
+        "items": [
+          "La interfaz se construye con Laravel 13, Inertia.js, React y Tailwind 4, dando al producto una sensación de IDE basada en navegador sin dividir la aplicación en un proyecto SPA y API separado.",
+          "La capa de IA convierte la entrada de chat y asistente en tickets estructurados, matrices de operaciones y actualizaciones del documento de diseño de juego en lugar de verter código bruto directamente al proyecto.",
+          "El puente de Godot utiliza Summer Engine, un marco CLI de código abierto, para mutar archivos de escena de texto Godot 4 y activos GDScript de una manera controlada.",
+          "El bucle de compilación se ejecuta a través de colas de Laravel, Redis, sandboxes Docker y Godot sin interfaz. Las compilaciones WebGL/WASM exitosas se empujan a Google Cloud Storage y se transmiten de vuelta al panel a través de Laravel Reverb."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "El objetivo es un bucle apretado: describe un cambio, revisa los tickets, aprueba el trabajo, compila el juego y juégalo en el navegador. No algún día después de una larga ceremonia de exportación. No después de clonar un repo y configurar un motor local. Allí mismo en el espacio de trabajo."
+      },
+      {
+        "type": "heading",
+        "text": "El bucle de autocorrección"
+      },
+      {
+        "type": "paragraph",
+        "text": "La sintaxis del motor de juego tiene muy poca tolerancia para agitar las manos. Si un script generado hace referencia a un nodo faltante o Godot rechaza un archivo de escena, la plataforma no debería encogerse de hombros y entregar el error al creador. Nuestro backend intercepta la salida del compilador Godot sin interfaz, pasa el rastreo de pila y el código ofensivo de vuelta a través de la ruta de reparación de IA, reescribe el fallo estrecho e intenta la compilación de nuevo."
+      },
+      {
+        "type": "paragraph",
+        "text": "Eso no significa que la IA mágicamente se vuelva perfecta. Significa que tratamos el fracaso como parte del bucle de productos. Toda herramienta creativa seria necesita una ruta de recuperación, y el software nativo de IA necesita uno aún más."
+      },
+      {
+        "type": "heading",
+        "text": "Un modelo de negocio que tiene que sobrevivir al uso real"
+      },
+      {
+        "type": "paragraph",
+        "text": "Los criterios de XPRIZE nos impulsaron a pensar más allá de una superficie técnica cool. Si esto va a ayudar a creadores reales, tiene que sobrevivir a costos de cómputo reales. La compilación en la nube, el razonamiento de IA, la generación de activos y las compilaciones alojadas pueden volverse costosas rápidamente si el modelo de precios es vago."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Los créditos se asignan directamente al costo de la plataforma: 1,000 créditos equivalen a $1.00 de presupuesto de API y cómputo.",
+          "El nivel gratuito está diseñado alrededor de 5,000 créditos mensuales para que los constructores solitarios puedan comenzar sin tarjeta.",
+          "La colaboración pagada comienza cuando los equipos necesitan espacios de trabajo compartidos, coautería en tiempo real y grupos de crédito más grandes.",
+          "La publicación en web permanece accesible porque las compilaciones de navegador son más baratas de alojar, mientras que la exportación nativa para Steam y dispositivos móviles pertenece a un nivel de procesamiento más alto.",
+          "La persistencia en línea se convierte en un complemento, para que los creadores solo paguen por bases de datos en la nube cuando sus juegos realmente necesitan tablas de clasificación, cuentas o guardos en la nube."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Ese precio puede evolucionar a medida que medimos el uso real, pero el principio no: los creadores deben saber qué está haciendo la máquina y por qué cuesta lo que cuesta."
+      },
+      {
+        "type": "heading",
+        "text": "Dónde estamos hoy"
+      },
+      {
+        "type": "paragraph",
+        "text": "Tenemos las capas de base de datos estructuradas, las compilaciones Tailwind 4 en ejecución, la carcasa del producto en su lugar y Docker haciendo girar compilaciones Godot sin interfaz con éxito en la infraestructura de Google Cloud. El siguiente hito es un video público que muestra el flujo de trabajo de múltiples agentes construyendo un juego jugable desde cero."
+      },
+      {
+        "type": "paragraph",
+        "text": "Esta plataforma no es solo una herramienta para nosotros. Es la incubadora que queríamos hace una década. Si Geek Engine funciona, un desarrollador solitario con un fin de semana, una mecánica y gusto obstinado debería poder llegar mucho más lejos antes de que el dinero se convierte en el factor decisivo."
+      },
+      {
+        "type": "paragraph",
+        "text": "Estamos construyendo en público para el hackathon porque los compromisos importan: qué se rompe, qué compila, qué los usuarios realmente intentan, qué cuesta demasiado y qué convierte una demostración prometedora en un negocio. El primer registro de compilación comienza aquí."
+      }
+    ]
+  }
+}

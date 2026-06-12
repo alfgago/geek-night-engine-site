@@ -1,19 +1,21 @@
-# Geek Night Engine Marketing Site
+# Geek Engine Marketing Site
 
-Public marketing and legal site for Geek Night Engine, implemented in Next.js App Router.
+Public marketing and legal site for Geek Engine, implemented in Next.js App Router.
 
 The site is a faithful port of the reference prototype in `../design-reference/marketing-site/*`. Keep that directory as the visual and copy source of truth when making future changes.
 
 ## Routes
 
-- `/` - Home
-- `/product` - Product architecture and module previews
-- `/how-it-works` - Four-stage production pipeline
-- `/pricing` - Plans, credits, add-ons, and FAQ
-- `/news` - Launch updates and product news
-- `/contact` - Support channels and workspace ticket form
-- `/privacy` - Privacy Policy
-- `/terms` - Terms & Conditions
+All marketing routes are served under a locale segment (`/en/...` and `/es/...`). Requests without a locale prefix are 307-redirected by `middleware.js` using the `NEXT_LOCALE` cookie when present, otherwise the `Accept-Language` header (`es*` → `/es`, default `/en`).
+
+- `/{lang}` - Home
+- `/{lang}/product` - Product architecture and module previews
+- `/{lang}/how-it-works` - Four-stage production pipeline
+- `/{lang}/pricing` - Plans, credits, add-ons, and FAQ
+- `/{lang}/news` - Launch updates and product news
+- `/{lang}/contact` - Support channels and workspace ticket form
+- `/{lang}/privacy` - Privacy Policy
+- `/{lang}/terms` - Terms & Conditions
 
 ## Commands
 
@@ -55,19 +57,26 @@ That value controls the Privacy Policy and Terms & Conditions links rendered in 
 ## Structure
 
 ```text
+middleware.js            locale redirect (cookie -> Accept-Language -> en)
 app/
-  layout.jsx
   globals.css
-  page.jsx
-  product/page.jsx
-  how-it-works/page.jsx
-  pricing/page.jsx
-  news/page.jsx
-  contact/page.jsx
-  privacy/page.jsx
-  terms/page.jsx
+  sitemap.js             lists /en and /es trees with hreflang alternates
+  robots.js
+  [lang]/
+    layout.jsx           html shell, fonts, generateStaticParams(en|es)
+    page.jsx
+    opengraph-image.jsx  per-locale OG image (dictionary copy)
+    product/page.jsx
+    how-it-works/page.jsx
+    pricing/page.jsx
+    news/page.jsx
+    news/[slug]/page.jsx
+    contact/page.jsx
+    privacy/page.jsx
+    terms/page.jsx
 components/marketing/
   chrome.jsx
+  language-switcher.jsx
   newsletter-signup.jsx
   icons.jsx
   hero-product-mock.jsx
@@ -81,10 +90,23 @@ components/marketing/
   contact-page.jsx
   legal-page.jsx
 data/
-  news-posts.js
+  marketing-data.js      canonical pricing numbers + contact emails
+  news-posts.js          canonical post records (slug, dates, source URLs)
+  i18n/{en,es}/*.json    per-namespace dictionaries (identical key trees)
 lib/
+  locales.js             locale list, Accept-Language parser, path helper
+  i18n.js                static dictionary import map + getDictionary/format
   site-links.js
 ```
+
+## Internationalization
+
+- Locales: `en` (default) and `es`. `lib/i18n.js` resolves namespaced dictionaries (`common`, `home`, `product`, `how-it-works`, `pricing`, `contact`, `legal`, `news`, `news-posts`) through static imports, so SSG works without runtime fs access.
+- `data/i18n/es/*` must keep the exact key structure of `data/i18n/en/*`; `tests/i18n-contract.test.mjs` enforces recursive key parity and placeholder parity.
+- Pricing numbers, storage quotas, and contact emails live only in `data/marketing-data.js` and are interpolated into dictionary strings via `{placeholders}` — never hard-code them in dictionaries.
+- The language switcher (`components/marketing/language-switcher.jsx`) sets the `NEXT_LOCALE` cookie for a year and navigates to the same path under the other locale. The middleware only reads the cookie.
+- Product-UI mockups (`hero-product-mock.jsx`, `module-previews.jsx`, `previews.jsx`, and the pinned pipeline stages) deliberately stay in English: they simulate the in-app workspace, which ships in English.
+- The Spanish dictionaries currently contain English copy as structural placeholders awaiting translation. Spanish legal copy (`data/i18n/es/legal.json`) must be reviewed by counsel before launch.
 
 ## Design System
 
@@ -119,7 +141,7 @@ Page modules keep repeated copy in arrays and map to card/module components for 
 - footer wordmark rise
 - CTA glow pulse
 
-The animation component is client-only and mounted once from `app/layout.jsx`.
+The animation component is client-only and mounted once from `app/[lang]/layout.jsx`. It re-binds on `usePathname()` changes, which include the locale segment, so triggers tear down and rebuild correctly when switching languages.
 
 ## Legal Pages
 

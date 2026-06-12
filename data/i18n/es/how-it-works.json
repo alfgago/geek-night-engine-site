@@ -1,0 +1,66 @@
+{
+  "seo": {
+    "title": "Cómo funciona",
+    "description": "Ve cómo Geek Engine convierte ideas de juegos en tickets de IA estructurados, mutaciones seguras de Godot, compilaciones en la nube, snapshots y pruebas de juego en navegador."
+  },
+  "hero": {
+    "eyebrow": "La canalización de producción",
+    "heading": "La ciencia de la síntesis de juegos de IA libre de errores.",
+    "sub": "Cómo nuestra capa de orquestación estructurada convierte ideas conversacionales en compilaciones de juego listas para producción sin regresión de código.",
+    "primaryCta": "Unirse al boletín de lanzamiento",
+    "secondaryCta": "Ver precios"
+  },
+  "pipeline": {
+    "label": "La canalización · en vivo",
+    "heading": "Cuatro etapas, todas auditable, todas reversibles."
+  },
+  "steps": [
+    {
+      "label": "Plano",
+      "title": "Andamiaje de plantillas o planos de prompts",
+      "copy": "Inicializa tu proyecto con un estado en blanco o elige de nuestras plantillas de producción seleccionadas — incluyendo plataformas 2D/3D, configuraciones tácticas de arriba hacia abajo, juegos de colección 3D, corredores sin fin y marcos de disparadores. Cuéntale al Arquitecto de IA tus objetivos temáticos, y poblará automáticamente tus reglas de diseño objetivo, variables globales y librerías de activos iniciales."
+    },
+    {
+      "label": "Descomponer",
+      "title": "Desglose modular de tareas y ordenamiento de tickets",
+      "copy": "Nuestra canalización evita que el sistema se abrume por instrucciones complejas. Cuando solicitas una modificación masiva del sistema, la plataforma divide la intención en tickets de ejecución atómicos en un tablero kanban interactivo. Revisa el tablero, reordena tareas para establecer prioridades, añade activos de imagen de diseño y aprueba la ejecución paso a paso."
+    },
+    {
+      "label": "Compilar",
+      "title": "Ensamblaje sin interfaz en la nube y autocorrección",
+      "copy": "Los tickets aprobados se extraen a nuestra arquitectura de trabajador en la nube. El sistema construye escenas de forma segura, escribe scripts de lógica limpia y compila un objetivo de distribución sin interfaz. Si el compilador encuentra un error, nuestros sistemas de autorreparación y verificaciones previas de entorno analizan el registro de errores, actualizan el patrón de lógica defectuoso y recompilan al instante."
+    },
+    {
+      "label": "Implementar",
+      "title": "Implementación continua y snapshots de versión",
+      "copy": "Cada compilación exitosa genera un snapshot absoluto de todo el modelo de diseño del juego. Puedes etiquetar, anclar o revertir a snapshots anteriores en cualquier momento, protegiendo tu trabajo. El código finalizado se enruta de forma segura al almacenamiento de distribución en la nube de alta velocidad, entregando una URL en vivo a tu iframe de prueba de juego y a probadores externos."
+    }
+  ],
+  "principles": {
+    "label": "Principios",
+    "heading": "Construido para que la IA nunca te cueste una regresión.",
+    "items": [
+      {
+        "title": "Atómico, no monolítico",
+        "body": "Cada prompt se divide en operaciones tipadas. Nada es una caja negra; nada se sobrescribe accidentalmente."
+      },
+      {
+        "title": "Autocorrector",
+        "body": "Verificaciones previas + análisis de errores automatizado parchea compilaciones rotas sin que tu equipo lo note."
+      },
+      {
+        "title": "Snapshot antes y después",
+        "body": "Cada compilación exitosa captura el GDD completo. Retrocede a cualquier estado con un clic."
+      },
+      {
+        "title": "Con pista de auditoría",
+        "body": "Prompts, compilaciones, snapshots, configuraciones, facturación — cada acción cae en el registro inmutable."
+      }
+    ]
+  },
+  "ctaStrip": {
+    "heading": "Cuatro etapas, todas auditable, todas reversibles.",
+    "sub": "Snapshot antes, snapshot después — y notas de lanzamiento antes de que el producto abra.",
+    "cta": "Obtener notas de compilación"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "seo": {
+    "title": "AI-assisted Godot, in the browser",
+    "description": "Build, compile, playtest, and publish Godot games from a browser-native AI production workspace."
+  },
+  "hero": {
+    "chipCloud": "Multi-tenant cloud · public beta",
+    "chipGodot": "Godot 4.6",
+    "h1": {
+      "pre": "Imagine the game.",
+      "highlight": "Speak it",
+      "italic": "into existence."
+    },
+    "sub": "The world's first browser-based, multi-tenant AI game production workspace. Design, edit, compile, playtest, and deploy high-fidelity 2D and 3D games using natural language.",
+    "primaryCta": "Join the launch newsletter",
+    "secondaryCta": "Explore studio features",
+    "micro": {
+      "credits": "{credits} credits / mo free",
+      "noInstall": "· no installation",
+      "godot": "· runs on Godot 4.6"
+    }
+  },
+  "positioning": {
+    "label": "Market positioning",
+    "heading": {
+      "pre": "The entire game development lifecycle, ",
+      "highlight": "consolidated"
+    },
+    "body": "Geek Engine replaces fragmented local development suites with a centralized, web-native creative workspace. By unifying an advanced AI Game Architect with a powerful cloud compiler, we enable independent developers, digital entrepreneurs, and established studios to design multi-platform games without technical friction."
+  },
+  "pillars": {
+    "label": "Core pillars",
+    "heading": "Why modern game studios build on our platform.",
+    "items": [
+      {
+        "title": "Natural Language Engineering",
+        "body": "Describe architectural mechanics, system rules, and scene modifications. Watch our design architect translate your intentions into a perfect visual blueprint instantly."
+      },
+      {
+        "title": "Cloud-Native Compilation",
+        "body": "Say goodbye to hours of local build times. Compile your game headlessly in the cloud and stream interactive runtime previews straight to your dashboard."
+      },
+      {
+        "title": "Modular Production Board",
+        "body": "Deconstruct massive game systems into clean, bite-sized engineering tickets. Sort, prioritize, inject image assets, and guide your AI agents with absolute precision."
+      }
+    ]
+  },
+  "benefits": {
+    "label": "For every workspace tier",
+    "heading": "Accelerate iteration, whoever's at the keyboard.",
+    "items": [
+      {
+        "tag": "Solo creators & indie founders",
+        "title": "Ship a studio of one.",
+        "body": "Launch an independent gaming business without the overhead of an expensive engineering studio. Take your idea from design to monetization in record time.",
+        "chips": ["solo dev", "side project", "first launch"]
+      },
+      {
+        "tag": "Established studios",
+        "title": "Validate before you commit.",
+        "body": "Stop burning engineering weeks on unverified mechanics. Use our rapid template environments to build interactive proof-of-concepts over a single weekend.",
+        "chips": ["prototyping", "POCs", "weekend test"]
+      },
+      {
+        "tag": "Co-authoring teams",
+        "title": "Build together, in sync.",
+        "body": "Collaborate globally in real time with shared prompt pipelines, live workshop state synchronization, multiplayer presence, and automated audit trails.",
+        "chips": ["multiplayer presence", "shared prompts", "audit log"]
+      }
+    ]
+  },
+  "mission": {
+    "label": "Our mission",
+    "heading": "Designed to eliminate technical gatekeeping.",
+    "body": "We built this platform to ensure that resource constraints never crush a creative dream again. By providing automated debugging, procedural asset studios, and cross-platform export controls in a single interface, we are incubating the next generation of digital media entrepreneurs.",
+    "founderName": "Noor Aydin",
+    "founderRole": "founder · Geek Engine"
+  },
+  "ctaStrip": {
+    "heading": "Product access is coming soon.",
+    "sub": "Subscribe for launch windows, build notes, and early studio access.",
+    "cta": "Subscribe for launch updates"
+  }
+}

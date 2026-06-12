@@ -1,6 +1,7 @@
 import { newsPosts } from "@/data/news-posts";
+import { locales, localizePath } from "@/lib/locales";
 import { routes } from "@/lib/site-links";
-import { absoluteUrl } from "@/lib/seo";
+import { absoluteUrl, languageAlternates } from "@/lib/seo";
 
 const lastModified = new Date("2026-06-01");
 
@@ -16,19 +17,27 @@ const staticRoutes = [
 ];
 
 export default function sitemap() {
-  const staticEntries = staticRoutes.map((route) => ({
-    url: absoluteUrl(route.path),
-    lastModified,
-    changeFrequency: route.changeFrequency,
-    priority: route.priority,
-  }));
+  // Every entry is emitted once per locale (/en/..., /es/...) with
+  // hreflang alternates so both language trees are crawlable.
+  const staticEntries = locales.flatMap((lang) =>
+    staticRoutes.map((route) => ({
+      url: absoluteUrl(localizePath(lang, route.path)),
+      lastModified,
+      changeFrequency: route.changeFrequency,
+      priority: route.priority,
+      alternates: { languages: languageAlternates(route.path) },
+    })),
+  );
 
-  const newsEntries = newsPosts.map((post) => ({
-    url: absoluteUrl(`/news/${post.slug}`),
-    lastModified: new Date(post.datetime),
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }));
+  const newsEntries = locales.flatMap((lang) =>
+    newsPosts.map((post) => ({
+      url: absoluteUrl(localizePath(lang, `/news/${post.slug}`)),
+      lastModified: new Date(post.datetime),
+      changeFrequency: "monthly",
+      priority: 0.7,
+      alternates: { languages: languageAlternates(`/news/${post.slug}`) },
+    })),
+  );
 
   return [...staticEntries, ...newsEntries];
 }

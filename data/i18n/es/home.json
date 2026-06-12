@@ -1,0 +1,85 @@
+{
+  "seo": {
+    "title": "Godot asistido por IA, en el navegador",
+    "description": "Crea, compila, prueba y publica juegos Godot desde un espacio de trabajo de producción de IA nativo del navegador."
+  },
+  "hero": {
+    "chipCloud": "Nube multi-inquilino · beta pública",
+    "chipGodot": "Godot 4.6",
+    "h1": {
+      "pre": "Imagina el juego.",
+      "highlight": "Hablalo",
+      "italic": "para que cobre vida."
+    },
+    "sub": "El primer espacio de trabajo de producción de juegos de IA multi-inquilino basado en navegador del mundo. Diseña, edita, compila, prueba e implementa juegos 2D y 3D de alta fidelidad usando lenguaje natural.",
+    "primaryCta": "Unirse al boletín de lanzamiento",
+    "secondaryCta": "Explorar características del estudio",
+    "micro": {
+      "credits": "{credits} créditos / mes gratis",
+      "noInstall": "· sin instalación",
+      "godot": "· funciona en Godot 4.6"
+    }
+  },
+  "positioning": {
+    "label": "Posicionamiento de mercado",
+    "heading": {
+      "pre": "Todo el ciclo de vida del desarrollo de juegos, ",
+      "highlight": "consolidado"
+    },
+    "body": "Geek Engine reemplaza los conjuntos de desarrollo local fragmentados con un espacio de trabajo creativo centralizado y nativo de web. Al unificar un Arquitecto de Juegos de IA avanzado con un compilador en la nube potente, permitimos que desarrolladores independientes, emprendedores digitales y estudios establecidos diseñen juegos multiplataforma sin fricción técnica."
+  },
+  "pillars": {
+    "label": "Pilares principales",
+    "heading": "Por qué los estudios de juegos modernos construyen en nuestra plataforma.",
+    "items": [
+      {
+        "title": "Ingeniería de lenguaje natural",
+        "body": "Describe mecánicas arquitectónicas, reglas del sistema y modificaciones de escena. Mira cómo nuestro arquitecto de diseño traduce tus intenciones en un plano visual perfecto al instante."
+      },
+      {
+        "title": "Compilación nativa de nube",
+        "body": "Di adiós a horas de tiempos de compilación local. Compila tu juego sin interfaz en la nube y transmite vistas previas de tiempo de ejecución interactivas directamente a tu panel."
+      },
+      {
+        "title": "Tablero de producción modular",
+        "body": "Deconstruye enormes sistemas de juego en tickets de ingeniería limpios y manejables. Ordena, prioriza, inyecta activos de imagen y guía tus agentes de IA con precisión absoluta."
+      }
+    ]
+  },
+  "benefits": {
+    "label": "Para cada nivel de espacio de trabajo",
+    "heading": "Acelera la iteración, sea quien sea el que esté en el teclado.",
+    "items": [
+      {
+        "tag": "Creadores solitarios y fundadores indie",
+        "title": "Lanza un estudio de uno.",
+        "body": "Lanza un negocio de juegos independiente sin la sobrecarga de un estudio de ingeniería costoso. Lleva tu idea de diseño a monetización en tiempo récord.",
+        "chips": ["desarrollo individual", "proyecto paralelo", "primer lanzamiento"]
+      },
+      {
+        "tag": "Estudios establecidos",
+        "title": "Valida antes de comprometerte.",
+        "body": "Deja de quemar semanas de ingeniería en mecánicas no verificadas. Usa nuestros entornos de plantillas rápidas para construir prototipos interactivos durante un fin de semana.",
+        "chips": ["creación de prototipos", "POCs", "prueba de fin de semana"]
+      },
+      {
+        "tag": "Equipos de autoría compartida",
+        "title": "Construye juntos, en sincronía.",
+        "body": "Colabora globalmente en tiempo real con canalizaciones de prompts compartidas, sincronización de estado de taller en vivo, presencia multijugador y auditorías automatizadas.",
+        "chips": ["presencia multijugador", "prompts compartidos", "registro de auditoría"]
+      }
+    ]
+  },
+  "mission": {
+    "label": "Nuestra misión",
+    "heading": "Diseñado para eliminar los guardapuertas técnicos.",
+    "body": "Construimos esta plataforma para asegurar que las limitaciones de recursos nunca aplasten un sueño creativo de nuevo. Al proporcionar depuración automatizada, estudios de activos procedurales y controles de exportación multiplataforma en una sola interfaz, estamos incubando la próxima generación de emprendedores de medios digitales.",
+    "founderName": "Noor Aydin",
+    "founderRole": "fundador · Geek Engine"
+  },
+  "ctaStrip": {
+    "heading": "El acceso al producto próximamente.",
+    "sub": "Suscríbete para ventanas de lanzamiento, notas de compilación y acceso anticipado al estudio.",
+    "cta": "Suscribirse para actualizaciones de lanzamiento"
+  }
+}

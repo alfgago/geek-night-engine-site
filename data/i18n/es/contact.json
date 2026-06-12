@@ -1,0 +1,75 @@
+{
+  "seo": {
+    "title": "Contacto",
+    "description": "Contacta a Geek Engine para soporte, consultas de estudio, comentarios sobre características, actualizaciones de lanzamiento y preguntas de acceso anticipado."
+  },
+  "hero": {
+    "eyebrow": "Ponte en contacto",
+    "heading": "Optimicemos tu velocidad de desarrollo.",
+    "sub": "Ya seas un creador independiente que necesita ayuda con facturación o un estudio de juegos de múltiples equipos que requiere infraestructura de flujo de trabajo personalizada — estamos aquí para ayudar."
+  },
+  "channels": {
+    "label": "Elige un canal",
+    "heading": "Tres rutas de entrada, humanos reales al otro lado.",
+    "items": [
+      {
+        "title": "Servicio de ayuda para creadores",
+        "body": "¿Tienes preguntas sobre saldos de créditos, recargas de licencias de asientos o gestión de permisos de espacio de trabajo?",
+        "cta": "Enviar ticket de espacio de trabajo",
+        "reply": "Respuesta promedio · 4h"
+      },
+      {
+        "title": "Relaciones de estudio empresarial",
+        "body": "Solicita entornos de compilación personalizados, umbrales de almacenamiento elevados o acuerdos de distribución de etiqueta blanca.",
+        "cta": "Solicitar consulta de estudio",
+        "reply": "Respuesta promedio · mismo día laboral"
+      },
+      {
+        "title": "Retroalimentación de características y comunidad",
+        "body": "¿Tienes recomendaciones para nuestra canalización de tablero de tareas, sintetizadores de activos o atrapadores de errores de autorreparación?",
+        "cta": "Compartir solicitud de característica",
+        "reply": "Revisado semanalmente · hoja de ruta pública"
+      }
+    ]
+  },
+  "direct": {
+    "label": "Rutas directas",
+    "heading": "¿Prefieres correo electrónico o en vivo? Lléganos directamente.",
+    "supportLabel": "Correo de soporte",
+    "supportDetail": "↳ para facturación, cuentas y problemas relacionados con cuentas",
+    "enterpriseLabel": "Relaciones empresariales",
+    "enterpriseDetail": "↳ para compilaciones personalizadas, etiqueta blanca y adquisición",
+    "communityLabel": "Comunidad",
+    "communityLinks": {
+      "discord": "Discord ↗",
+      "github": "GitHub ↗",
+      "roadmap": "Hoja de ruta ↗",
+      "changelog": "Registro de cambios ↗"
+    },
+    "statusLine": "todos los sistemas operativos · {statusHost}",
+    "locations": "↳ Estambul · Tokio · Toronto · amigable con la asincronía"
+  },
+  "form": {
+    "label": "Ticket de espacio de trabajo",
+    "topicLabel": "¿Con qué podemos ayudarte?",
+    "topics": {
+      "billing": "Facturación o créditos",
+      "workspace": "Permisos del espacio de trabajo",
+      "enterprise": "Consulta empresarial",
+      "feature": "Solicitud de característica",
+      "bug": "Reporte de error"
+    },
+    "emailLabel": "Tu correo electrónico",
+    "workspaceLabel": "Espacio de trabajo (opcional)",
+    "messageLabel": "Cuéntanos un poco más",
+    "messagePlaceholder": "Proyecto, plan, mensajes de error, qué estás intentando hacer...",
+    "attach": "Adjuntar captura de pantalla",
+    "submit": "Enviar ticket",
+    "footnote": "↳ los tickets llegan a nuestro tablero Linear con la misma higiene de auditoría que la de tu estudio"
+  },
+  "ctaStrip": {
+    "heading": "El acceso al producto próximamente.",
+    "sub": "Suscríbete para notas de lanzamiento, ventanas de acceso y actualizaciones del fundador.",
+    "cta": "Suscribirse para actualizaciones"
+  }
+}

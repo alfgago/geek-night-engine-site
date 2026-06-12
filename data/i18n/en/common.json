@@ -1,0 +1,109 @@
+{
+  "seo": {
+    "defaultTitle": "Geek Engine - AI-assisted Godot, in the browser",
+    "description": "The professional cloud workspace for AI-native Godot game production."
+  },
+  "og": {
+    "alt": "Geek Engine - AI-assisted Godot in the browser",
+    "kicker": "AI-native Godot production",
+    "headline": "Imagine the game. Speak it into existence.",
+    "footer": "Browser workspace. Structured AI tickets. Cloud builds. Playtests."
+  },
+  "nav": {
+    "home": "Home",
+    "product": "Product",
+    "how": "How it works",
+    "pricing": "Pricing",
+    "news": "News",
+    "contact": "Contact"
+  },
+  "aria": {
+    "homeLink": "Geek Engine home",
+    "marketingNav": "Marketing",
+    "mobileNav": "Mobile",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "siteMenu": "Site menu",
+    "languageSwitcher": "Language"
+  },
+  "langSwitch": {
+    "en": "EN",
+    "es": "ES",
+    "enFull": "English",
+    "esFull": "Español"
+  },
+  "chips": {
+    "comingSoon": "Coming Soon"
+  },
+  "cta": {
+    "joinNewsletter": "Join newsletter"
+  },
+  "ctaStrip": {
+    "newsletterEyebrow": "Launch newsletter",
+    "defaultHeading": "Join the first-access list",
+    "newsletterSub": "Get the first public build notes, launch access, and founder updates."
+  },
+  "newsletter": {
+    "eyebrow": "Newsletter",
+    "emailLabel": "Email address",
+    "placeholder": "you@studio.com",
+    "subscribe": "Subscribe",
+    "fallbackStatus": "Newsletter signup is almost ready. Check back soon or email {supportEmail}.",
+    "footer": "Product access is coming soon. Subscribe for launch notes through {provider}."
+  },
+  "footer": {
+    "blurb": "The professional cloud workspace for AI-native game production.",
+    "cols": {
+      "product": {
+        "head": "Product",
+        "links": {
+          "architect": "Architect",
+          "scene": "Scene inspector",
+          "assets": "Asset studios",
+          "playtest": "Playtest",
+          "hub": "Workspace hub"
+        }
+      },
+      "studio": {
+        "head": "Studio",
+        "links": {
+          "how": "How it works",
+          "pricing": "Pricing",
+          "comingSoon": "Coming Soon"
+        }
+      },
+      "learn": {
+        "head": "Learn",
+        "links": {
+          "docs": "Docs",
+          "guides": "Guides",
+          "news": "News",
+          "status": "Status"
+        }
+      },
+      "company": {
+        "head": "Company",
+        "links": {
+          "about": "About",
+          "updates": "Launch updates",
+          "contact": "Contact",
+          "careers": "Careers"
+        }
+      },
+      "legal": {
+        "head": "Legal",
+        "links": {
+          "privacy": "Privacy",
+          "terms": "Terms",
+          "security": "Security",
+          "dmca": "DMCA"
+        }
+      }
+    },
+    "copyright": "© 2026 Geek Engine",
+    "privacy": "privacy",
+    "terms": "terms",
+    "security": "security",
+    "status": "all systems operational"
+  }
+}

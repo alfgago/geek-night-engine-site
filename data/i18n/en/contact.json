@@ -1,0 +1,75 @@
+{
+  "seo": {
+    "title": "Contact",
+    "description": "Contact Geek Engine for support, studio inquiries, feature feedback, launch updates, and early access questions."
+  },
+  "hero": {
+    "eyebrow": "Get in touch",
+    "heading": "Let's optimize your development velocity.",
+    "sub": "Whether you're an independent creator needing help with billing or a multi-team game studio requiring bespoke workflow infrastructure — we're here to help."
+  },
+  "channels": {
+    "label": "Pick a channel",
+    "heading": "Three routes in, real humans on the other end.",
+    "items": [
+      {
+        "title": "Creator help desk",
+        "body": "Have questions about credit balances, seat licensing top-ups, or workspace permissions management?",
+        "cta": "Submit workspace ticket",
+        "reply": "Avg reply · 4h"
+      },
+      {
+        "title": "Enterprise studio relations",
+        "body": "Request custom build environments, elevated storage thresholds, or white-label distribution agreements.",
+        "cta": "Request studio consultation",
+        "reply": "Avg reply · same business day"
+      },
+      {
+        "title": "Feature & community feedback",
+        "body": "Have recommendations for our task board pipeline, asset synthesizers, or self-healing error catchers?",
+        "cta": "Share feature request",
+        "reply": "Reviewed weekly · public roadmap"
+      }
+    ]
+  },
+  "direct": {
+    "label": "Direct routes",
+    "heading": "Prefer email or live? Reach us directly.",
+    "supportLabel": "Support email",
+    "supportDetail": "↳ for billing, accounts, and account-related issues",
+    "enterpriseLabel": "Enterprise relations",
+    "enterpriseDetail": "↳ for custom builds, white-label, and procurement",
+    "communityLabel": "Community",
+    "communityLinks": {
+      "discord": "Discord ↗",
+      "github": "GitHub ↗",
+      "roadmap": "Roadmap ↗",
+      "changelog": "Changelog ↗"
+    },
+    "statusLine": "all systems operational · {statusHost}",
+    "locations": "↳ Istanbul · Tokyo · Toronto · async-friendly"
+  },
+  "form": {
+    "label": "Workspace ticket",
+    "topicLabel": "What can we help with?",
+    "topics": {
+      "billing": "Billing or credits",
+      "workspace": "Workspace permissions",
+      "enterprise": "Enterprise consultation",
+      "feature": "Feature request",
+      "bug": "Bug report"
+    },
+    "emailLabel": "Your email",
+    "workspaceLabel": "Workspace (optional)",
+    "messageLabel": "Tell us a bit more",
+    "messagePlaceholder": "Project, plan, error messages, what you're trying to do...",
+    "attach": "Attach screenshot",
+    "submit": "Submit ticket",
+    "footnote": "↳ tickets land in our Linear board with the same audit hygiene as your studio's"
+  },
+  "ctaStrip": {
+    "heading": "Product access is coming soon.",
+    "sub": "Subscribe for launch notes, access windows, and founder updates.",
+    "cta": "Subscribe for updates"
+  }
+}

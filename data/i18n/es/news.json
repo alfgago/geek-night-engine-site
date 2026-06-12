@@ -1,0 +1,46 @@
+{
+  "seo": {
+    "title": "Noticias",
+    "description": "Actualizaciones de lanzamiento, notas de producto y despachos de construcción pública de Geek Engine."
+  },
+  "hero": {
+    "eyebrow": "Noticias",
+    "heading": "Notas de campo del estudio de juegos nativo del navegador.",
+    "sub": "Actualizaciones de lanzamiento, notas de producto y despachos de ingeniería detrás de escenas de Geek Engine.",
+    "primaryCta": "Suscribirse para actualizaciones"
+  },
+  "index": {
+    "readMore": "Leer actualización",
+    "emptyHeading": "Sin publicaciones aún.",
+    "emptyBody": "La primera publicación de noticias de Geek Engine está en cola para más tarde. Esta página está lista para notas de lanzamiento, resúmenes de registro de cambios, actualizaciones de ingeniería y anuncios de acceso anticipado.",
+    "dispatch": {
+      "eyebrow": "Despacho de noticias",
+      "heading": "Obtén la primera publicación.",
+      "sub": "Suscríbete ahora y la primera actualización de lanzamiento llegará a tu bandeja de entrada cuando se publique."
+    }
+  },
+  "ctaStrip": {
+    "heading": "El primer acceso aún se está calentando.",
+    "sub": "Suscríbete ahora y enviaremos la primera publicación pública cuando salga en vivo.",
+    "cta": "Únete a la lista de noticias"
+  },
+  "article": {
+    "back": "Noticias",
+    "references": "Referencias",
+    "authorLabel": "Autor",
+    "aside": {
+      "eyebrow": "Sigue la compilación",
+      "heading": "Obtén el siguiente registro.",
+      "sub": "Estamos publicando notas de producto, videos de compilación y actualizaciones de acceso de lanzamiento a medida que Geek Engine se une."
+    },
+    "ctaStrip": {
+      "heading": "Sigue la siguiente compilación.",
+      "sub": "Compartiremos el primer video de demostración público y notas de producto a través del boletín de lanzamiento.",
+      "cta": "Suscribirse para registros de compilación"
+    },
+    "fallbackSeo": {
+      "title": "Noticias",
+      "description": "Actualizaciones de lanzamiento y noticias de productos de Geek Engine."
+    }
+  }
+}

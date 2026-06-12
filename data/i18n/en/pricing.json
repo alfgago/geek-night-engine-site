@@ -1,0 +1,103 @@
+{
+  "seo": {
+    "title": "Pricing",
+    "description": "Review Geek Engine pricing for solo creators and studios, including credits, collaboration seats, storage, and production add-ons."
+  },
+  "hero": {
+    "eyebrow": "Pricing",
+    "heading": "Predictable, resource-backed plans.",
+    "sub": "Every tier features transparent credit mapping. {credits} workspace credits converts directly to {value} of raw background processing and AI consumption value — keeping your costs entirely open."
+  },
+  "featuredBadge": "MOST POPULAR",
+  "tiers": {
+    "hobbyist": {
+      "name": "Hobbyist",
+      "per": "Free forever",
+      "seatsLabel": "{seats} seat",
+      "creditsLabel": "{credits} credits / mo",
+      "storageLabel": "{gb} GB storage",
+      "features": [
+        "Browser-based game editing & template access",
+        "Standard priority cloud build queue",
+        "Web-only publishing via hosted platform player",
+        "Client-side local storage for default game saves",
+        "Basic asset library uploads and generation features"
+      ],
+      "cta": "Join waitlist"
+    },
+    "core": {
+      "name": "Core Creator",
+      "per": "per month",
+      "seatsLabel": "{seats} seats",
+      "creditsLabel": "{credits} credits / mo",
+      "storageLabel": "{gb} GB storage, then {rate}/GB",
+      "features": [
+        "Real-time multiplayer team workspace collaboration",
+        "High-priority cloud build queue access",
+        "Web publishing with white-label & custom domain support",
+        "Comprehensive snapshot version comparison tools",
+        "Shared organization asset libraries"
+      ],
+      "cta": "Join Core waitlist"
+    },
+    "studio": {
+      "name": "Studio Pro",
+      "per": "per month",
+      "seatsLabel": "{seats} seats",
+      "creditsLabel": "{credits} credits / mo",
+      "storageLabel": "{gb} GB storage, then {rate}/GB",
+      "features": [
+        "Direct cross-platform commercial export to Steam and Mobile stores",
+        "Turbo priority cloud build queue (isolated worker instances)",
+        "Advanced 3D model parsing and animation pipeline matching",
+        "Full raw project source-code zip extraction and downloading",
+        "Extended build history retention window"
+      ],
+      "cta": "Join Studio waitlist"
+    }
+  },
+  "addOns": {
+    "label": "Add-ons",
+    "heading": "Scale your studio workspace on demand.",
+    "items": {
+      "seat": {
+        "name": "Additional seat licensing",
+        "per": "/ user / month",
+        "body": "Available across all subscription plans. Adding an extra user seat to your organization instantly unlocks advanced collaboration pathways and injects an additional {credits} creation credits into your team's shared monthly workspace balance."
+      },
+      "credits": {
+        "name": "Metered credit overage top-ups",
+        "per": "/ {credits} credits",
+        "body": "Keep your design pipeline active. Purchase extra processing capacity whenever your studio hits peak development cycles."
+      },
+      "database": {
+        "name": "Live cloud database add-on",
+        "per": "/ month / project",
+        "body": "Unlock online persistence. The platform automatically provisions a secure, cloud-hosted relational database for your game. The AI automatically generates the remote network logic scripts required to run live multiplayer leaderboards, secure player accounts, and cloud saves."
+      }
+    }
+  },
+  "faq": {
+    "label": "FAQ",
+    "heading": "Frequently asked pricing questions.",
+    "items": [
+      {
+        "q": "How are credits calculated during production?",
+        "a": "Our credit system maps exactly to the background processing cost of your changes. Minor text tweaks or node reorder tasks cost minimal credits, whereas generating deep 3D assets or running intensive self-healing error analysis loops burns higher volumes of your allocated pool."
+      },
+      {
+        "q": "Can teams pool their credits together?",
+        "a": "Yes. All credits included in your base plan, alongside any credits added by purchasing extra user seats, are placed into a centralized pool accessible by all authorized editors within that specific organization workspace."
+      },
+      {
+        "q": "What happens if our project does not buy the cloud database?",
+        "a": "By default, your games utilize client-side local storage frameworks. This follows standard platform rules for single-player games, offline settings saving, and local machine progress. You only require the database add-on if you want your game to read and write records across a persistent global web network."
+      }
+    ]
+  },
+  "ctaStrip": {
+    "heading": "Pricing is published. Access is coming soon.",
+    "sub": "Join the list and we will send the first availability window.",
+    "cta": "Subscribe for access"
+  }
+}

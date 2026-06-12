@@ -1,0 +1,66 @@
+{
+  "seo": {
+    "title": "How it works",
+    "description": "See how Geek Engine turns game ideas into structured AI tickets, safe Godot mutations, cloud builds, snapshots, and browser playtests."
+  },
+  "hero": {
+    "eyebrow": "The production pipeline",
+    "heading": "The science of error-free AI game synthesis.",
+    "sub": "How our structured orchestration layer turns conversational ideas into production-ready game builds without code regression.",
+    "primaryCta": "Join launch newsletter",
+    "secondaryCta": "See pricing"
+  },
+  "pipeline": {
+    "label": "The pipeline · live",
+    "heading": "Four stages, all auditable, all reversible."
+  },
+  "steps": [
+    {
+      "label": "Blueprint",
+      "title": "Scaffolding from templates or prompt blueprints",
+      "copy": "Initialize your project via a blank slate or select from our curated production templates — including 2D/3D platformers, top-down tactical setups, 3D collectathons, endless runners, and shooter frameworks. Tell the AI Architect your thematic goals, and it auto-populates your target design rules, global variables, and starter asset libraries."
+    },
+    {
+      "label": "Decompose",
+      "title": "Modular task breakdown and ticket ordering",
+      "copy": "Our pipeline prevents the system from getting overwhelmed by complex instructions. When you prompt a massive system modification, the platform splits the intent into atomic execution tickets on an interactive kanban board. You review the board, reorder tasks to set priorities, add design image assets, and approve execution step-by-step."
+    },
+    {
+      "label": "Compile",
+      "title": "Headless cloud assembly and self-correction",
+      "copy": "The approved tasks are pulled into our cloud worker architecture. The system safely builds scenes, writes clean logic scripts, and compiles a headless distribution target. If the compiler encounters an error, our pre-flight environment checks and self-healing systems analyze the error log, update the faulty logic pattern, and re-compile instantly."
+    },
+    {
+      "label": "Deploy",
+      "title": "Continuous deployment and version snapshots",
+      "copy": "Every successful build generates an absolute snapshot of the entire game design model. You can label, pin, or revert to past snapshots at any time, protecting your work. The finalized code is securely routed to high-speed cloud distribution storage, delivering a live URL to your playtest iframe and external testers."
+    }
+  ],
+  "principles": {
+    "label": "Principles",
+    "heading": "Built so the AI never costs you a regression.",
+    "items": [
+      {
+        "title": "Atomic, not monolithic",
+        "body": "Every prompt is split into typed operations. Nothing is a black box; nothing overwrites accidentally."
+      },
+      {
+        "title": "Self-correcting",
+        "body": "Pre-flight checks + automated error analysis patch broken builds without your team noticing."
+      },
+      {
+        "title": "Snapshot before & after",
+        "body": "Every successful build captures the full GDD. Roll back to any state in one click."
+      },
+      {
+        "title": "Audit-trailed",
+        "body": "Prompts, builds, snapshots, settings, billing — every action lands in the immutable log."
+      }
+    ]
+  },
+  "ctaStrip": {
+    "heading": "Four stages, all auditable, all reversible.",
+    "sub": "Snapshot before, snapshot after — and release notes before the product opens.",
+    "cta": "Get build notes"
+  }
+}

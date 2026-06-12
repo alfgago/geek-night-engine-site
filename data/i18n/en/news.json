@@ -1,0 +1,46 @@
+{
+  "seo": {
+    "title": "News",
+    "description": "Launch updates, product notes, and build-in-public dispatches from Geek Engine."
+  },
+  "hero": {
+    "eyebrow": "News",
+    "heading": "Field notes from the browser-native game studio.",
+    "sub": "Launch updates, product notes, and behind-the-scenes engineering dispatches from Geek Engine.",
+    "primaryCta": "Subscribe for updates"
+  },
+  "index": {
+    "readMore": "Read update",
+    "emptyHeading": "No posts yet.",
+    "emptyBody": "The first Geek Engine news post is queued for later. This page is ready for launch notes, changelog summaries, engineering updates, and early-access announcements.",
+    "dispatch": {
+      "eyebrow": "News dispatch",
+      "heading": "Get the first post.",
+      "sub": "Subscribe now and the first launch update will land in your inbox when it is published."
+    }
+  },
+  "ctaStrip": {
+    "heading": "First access is still warming up.",
+    "sub": "Subscribe now and we will send the first public post when it goes live.",
+    "cta": "Join the news list"
+  },
+  "article": {
+    "back": "News",
+    "references": "References",
+    "authorLabel": "Author",
+    "aside": {
+      "eyebrow": "Follow the build",
+      "heading": "Get the next log.",
+      "sub": "We are publishing product notes, build videos, and launch access updates as Geek Engine comes together."
+    },
+    "ctaStrip": {
+      "heading": "Follow the next build.",
+      "sub": "We will share the first public demo video and product notes through the launch newsletter.",
+      "cta": "Subscribe for build logs"
+    },
+    "fallbackSeo": {
+      "title": "News",
+      "description": "Launch updates and product news from Geek Engine."
+    }
+  }
+}

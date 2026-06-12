@@ -1,116 +1,86 @@
 import Link from "next/link";
-import { routes } from "@/lib/site-links";
+import { localizedRoutes } from "@/lib/site-links";
+import { getDictionary } from "@/lib/i18n";
+import { contacts } from "@/data/marketing-data";
 import { Icon, I } from "./icons";
 import { NewsletterSignup } from "./newsletter-signup";
+import { GNELockup, GNEMark } from "./brand";
+import { MobileNav } from "./mobile-nav";
+import { LanguageSwitcher } from "./language-switcher";
 
-export function GNEMark({ size = 36, glow = true }) {
-  return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 32 32"
-      style={{
-        display: "block",
-        filter: glow ? "drop-shadow(0 0 6px rgba(200,247,60,0.5))" : "none",
-      }}
-      aria-hidden="true"
-    >
-      <rect x="2" y="2" width="28" height="28" rx="3" fill="none" stroke="var(--lime)" strokeWidth="1.6" />
-      <rect x="7" y="7" width="5" height="5" fill="var(--lime)" />
-      <rect x="14" y="7" width="5" height="5" fill="var(--lime)" opacity="0.35" />
-      <rect x="21" y="7" width="3" height="5" fill="var(--lime)" opacity="0.6" />
-      <rect x="7" y="14" width="5" height="5" fill="var(--lime)" opacity="0.35" />
-      <rect x="14" y="14" width="5" height="5" fill="var(--lime)" />
-      <rect x="21" y="14" width="3" height="5" fill="var(--lime)" opacity="0.35" />
-      <rect x="7" y="21" width="5" height="3" fill="var(--lime)" opacity="0.6" />
-      <rect x="14" y="21" width="5" height="3" fill="var(--lime)" />
-      <rect x="21" y="21" width="3" height="3" fill="var(--lime)" opacity="0.35" />
-    </svg>
-  );
+export { GNELockup, GNEMark };
+
+function buildNavLinks(lang) {
+  const t = getDictionary(lang, "common");
+  const r = localizedRoutes(lang);
+  return [
+    { id: "home", label: t.nav.home, href: r.home },
+    { id: "product", label: t.nav.product, href: r.product },
+    { id: "how", label: t.nav.how, href: r.how },
+    { id: "pricing", label: t.nav.pricing, href: r.pricing },
+    { id: "news", label: t.nav.news, href: r.news },
+    { id: "contact", label: t.nav.contact, href: r.contact },
+  ];
 }
 
-export function GNELockup({ size = 22, color = "var(--fg-0)" }) {
-  return (
-    <span className="gne-row" style={{ gap: 9 }}>
-      <GNEMark size={size + 4} />
-      <span style={{ fontSize: size, fontWeight: 600, letterSpacing: 0, color }}>Geek&nbsp;Night</span>
-      <span
-        style={{
-          fontSize: size,
-          fontWeight: 400,
-          letterSpacing: 0,
-          color: "var(--lime)",
-          fontStyle: "italic",
-          textShadow: "0 0 6px var(--lime-edge)",
-        }}
-      >
-        Engine
-      </span>
-    </span>
-  );
-}
+export function SiteNav({ lang, current }) {
+  const t = getDictionary(lang, "common");
+  const r = localizedRoutes(lang);
+  const navLinks = buildNavLinks(lang);
 
-const navLinks = [
-  { id: "home", label: "Home", href: routes.home },
-  { id: "product", label: "Product", href: routes.product },
-  { id: "how", label: "How it works", href: routes.how },
-  { id: "pricing", label: "Pricing", href: routes.pricing },
-  { id: "news", label: "News", href: routes.news },
-  { id: "contact", label: "Contact", href: routes.contact },
-];
-
-export function SiteNav({ current }) {
   return (
     <header
       style={{
         position: "sticky",
         top: 0,
-        zIndex: 20,
+        zIndex: 40,
         backdropFilter: "blur(12px)",
         background: "rgba(12, 12, 10, 0.7)",
         borderBottom: "1px solid var(--border-1)",
       }}
     >
       <div className="nav-shell">
-        <Link href={routes.home} style={{ textDecoration: "none" }} aria-label="Geek Night Engine home">
+        <Link href={r.home} style={{ textDecoration: "none" }} aria-label={t.aria.homeLink}>
           <GNELockup size={17} />
         </Link>
-        <nav className="gne-row nav-links" aria-label="Marketing">
+        <nav className="gne-row nav-links" aria-label={t.aria.marketingNav}>
           {navLinks.map((link) => (
             <Link
               key={link.id}
               href={link.href}
+              className="nav-link"
+              data-active={current === link.id}
+              aria-current={current === link.id ? "page" : undefined}
               style={{
                 color: current === link.id ? "var(--fg-0)" : "var(--fg-1)",
                 textDecoration: "none",
                 fontWeight: 400,
-                borderBottom: current === link.id ? "1px solid var(--lime)" : "1px solid transparent",
-                paddingBottom: 2,
                 whiteSpace: "nowrap",
               }}
             >
               {link.label}
             </Link>
           ))}
-          <a href={routes.demo} style={{ color: "var(--fg-2)", textDecoration: "none", whiteSpace: "nowrap" }}>
-            Demo ↗
-          </a>
         </nav>
-        <div style={{ flex: 1 }} />
+        <div className="nav-spacer" style={{ flex: 1 }} />
         <div className="gne-row nav-actions">
+          <LanguageSwitcher lang={lang} label={t.aria.languageSwitcher} names={t.langSwitch} />
           <span className="chip amber">
-            <span className="dot amber" /> Coming Soon
+            <span className="dot amber" /> {t.chips.comingSoon}
           </span>
-          <a href={routes.newsletter} className="btn primary sm">
-            <Icon d={I.bell} size={11} /> Join newsletter
+          <a href={r.newsletter} className="btn primary sm">
+            <Icon d={I.bell} size={11} /> {t.cta.joinNewsletter}
           </a>
         </div>
+        <MobileNav lang={lang} navLinks={navLinks} current={current} />
       </div>
     </header>
   );
 }
 
-export function PageHero({ eyebrow, heading, sub, primaryCta, secondaryCta, primaryHref, secondaryHref }) {
+export function PageHero({ lang, eyebrow, heading, sub, primaryCta, secondaryCta, primaryHref, secondaryHref }) {
+  const r = localizedRoutes(lang);
+
   return (
     <section style={{ position: "relative", overflow: "hidden", borderBottom: "1px solid var(--border-1)" }}>
       <div
@@ -129,11 +99,10 @@ export function PageHero({ eyebrow, heading, sub, primaryCta, secondaryCta, prim
         )}
         <h1
           data-anim="reveal"
-          className="pretty"
+          className="balance display"
           style={{
-            fontSize: "clamp(40px, 6vw, 64px)",
-            lineHeight: 0.98,
-            letterSpacing: 0,
+            fontSize: "clamp(42px, 6.6vw, 72px)",
+            lineHeight: 0.96,
             fontWeight: 600,
             margin: 0,
             maxWidth: 980,
@@ -144,8 +113,8 @@ export function PageHero({ eyebrow, heading, sub, primaryCta, secondaryCta, prim
         {sub && (
           <p
             data-anim="reveal"
-            className="pretty"
-            style={{ fontSize: 17.5, lineHeight: 1.55, color: "var(--fg-1)", margin: "22px 0 0", maxWidth: 720 }}
+            className="pretty measure"
+            style={{ fontSize: 17.5, lineHeight: 1.55, color: "var(--fg-1)", margin: "22px 0 0" }}
           >
             {sub}
           </p>
@@ -154,7 +123,7 @@ export function PageHero({ eyebrow, heading, sub, primaryCta, secondaryCta, prim
           <div data-anim="reveal" className="gne-row" style={{ gap: 10, marginTop: 30, flexWrap: "wrap" }}>
             {primaryCta && (
               <a
-                href={primaryHref || routes.newsletter}
+                href={primaryHref || r.newsletter}
                 className="btn primary lg"
                 style={{ minHeight: 44, padding: "0 22px", fontSize: 14.5, gap: 9 }}
               >
@@ -162,7 +131,7 @@ export function PageHero({ eyebrow, heading, sub, primaryCta, secondaryCta, prim
               </a>
             )}
             {secondaryCta && (
-              <a href={secondaryHref || routes.demo} className="btn lg" style={{ minHeight: 44, padding: "0 18px", fontSize: 14, gap: 8 }}>
+              <a href={secondaryHref || r.login} className="btn lg" style={{ minHeight: 44, padding: "0 18px", fontSize: 14, gap: 8 }}>
                 <Icon d={I.play} size={12} fill /> {secondaryCta}
               </a>
             )}
@@ -173,73 +142,103 @@ export function PageHero({ eyebrow, heading, sub, primaryCta, secondaryCta, prim
   );
 }
 
-const footerCols = [
-  {
-    head: "Product",
-    links: [
-      ["Architect", `${routes.product}#ai`],
-      ["Scene inspector", `${routes.product}#scene`],
-      ["Asset studios", `${routes.product}#assets`],
-      ["Playtest", `${routes.product}#playtest`],
-      ["Workspace hub", `${routes.product}#hub`],
-    ],
-  },
-  {
-    head: "Studio",
-    links: [
-      ["How it works", routes.how],
-      ["Pricing", routes.pricing],
-      ["Live demo", routes.demo],
-      ["Coming Soon", routes.newsletter],
-    ],
-  },
-  {
-    head: "Learn",
-    links: [
-      ["Docs", "#"],
-      ["Guides", "#"],
-      ["News", routes.news],
-      ["Status", "#"],
-    ],
-  },
-  {
-    head: "Company",
-    links: [
-      ["About", "#"],
-      ["Launch updates", routes.newsletter],
-      ["Contact", routes.contact],
-      ["Careers", "#"],
-    ],
-  },
-  {
-    head: "Legal",
-    links: [
-      ["Privacy", routes.privacy],
-      ["Terms", routes.terms],
-      ["Security", "#"],
-      ["DMCA", "mailto:dmca@geeknight.engine"],
-    ],
-  },
-];
+function buildFooterCols(lang) {
+  const t = getDictionary(lang, "common").footer.cols;
+  const r = localizedRoutes(lang);
 
-export function SiteFooter() {
+  return [
+    {
+      head: t.product.head,
+      links: [
+        [t.product.links.architect, `${r.product}#ai`],
+        [t.product.links.scene, `${r.product}#scene`],
+        [t.product.links.assets, `${r.product}#assets`],
+        [t.product.links.playtest, `${r.product}#playtest`],
+        [t.product.links.hub, `${r.product}#hub`],
+      ],
+    },
+    {
+      head: t.studio.head,
+      links: [
+        [t.studio.links.how, r.how],
+        [t.studio.links.pricing, r.pricing],
+        [t.studio.links.comingSoon, r.newsletter],
+      ],
+    },
+    {
+      head: t.learn.head,
+      links: [
+        [t.learn.links.docs, "#"],
+        [t.learn.links.guides, "#"],
+        [t.learn.links.news, r.news],
+        [t.learn.links.status, "#"],
+      ],
+    },
+    {
+      head: t.company.head,
+      links: [
+        [t.company.links.about, "#"],
+        [t.company.links.updates, r.newsletter],
+        [t.company.links.contact, r.contact],
+        [t.company.links.careers, "#"],
+      ],
+    },
+    {
+      head: t.legal.head,
+      links: [
+        [t.legal.links.privacy, r.privacy],
+        [t.legal.links.terms, r.terms],
+        [t.legal.links.security, "#"],
+        [t.legal.links.dmca, `mailto:${contacts.dmca}`],
+      ],
+    },
+  ];
+}
+
+export function SiteFooter({ lang }) {
+  const t = getDictionary(lang, "common").footer;
+  const r = localizedRoutes(lang);
+  const footerCols = buildFooterCols(lang);
+
   return (
     <footer style={{ padding: "60px 32px 40px", background: "var(--bg-1)" }}>
       <div style={{ maxWidth: 1280, margin: "0 auto" }}>
         <div
           data-anim-wordmark
+          aria-hidden="true"
           style={{
+            position: "relative",
             fontSize: "clamp(72px, 12vw, 180px)",
             fontWeight: 700,
-            letterSpacing: 0,
+            letterSpacing: "-0.03em",
             lineHeight: 0.9,
-            color: "transparent",
-            WebkitTextStroke: "1px var(--border-3)",
             margin: "0 0 40px",
             userSelect: "none",
           }}
         >
-          geek night<span style={{ fontStyle: "italic", fontWeight: 500 }}> engine</span>
+          {/* outline layer (always visible) */}
+          <span
+            style={{
+              color: "transparent",
+              WebkitTextStroke: "1px var(--border-3)",
+            }}
+          >
+            geek<span style={{ fontStyle: "italic", fontWeight: 500 }}> engine</span>
+          </span>
+          {/* fill layer — scroll reveals it via clip-path (data-anim-wordmark-fill) */}
+          <span
+            data-anim-wordmark-fill
+            style={{
+              position: "absolute",
+              inset: 0,
+              color: "var(--lime)",
+              opacity: 0.9,
+              clipPath: "inset(0 100% 0 0)",
+              willChange: "clip-path",
+            }}
+          >
+            geek<span style={{ fontStyle: "italic", fontWeight: 500 }}> engine</span>
+          </span>
         </div>
         <div
           style={{
@@ -254,7 +253,7 @@ export function SiteFooter() {
           <div>
             <GNELockup size={15} />
             <div className="mono pretty" style={{ fontSize: 12, color: "var(--fg-3)", marginTop: 12, maxWidth: 280 }}>
-              The professional cloud workspace for AI-native game production.
+              {t.blurb}
             </div>
           </div>
           {footerCols.map((col) => (
@@ -265,20 +264,20 @@ export function SiteFooter() {
           className="gne-row mono"
           style={{ marginTop: 40, paddingTop: 20, borderTop: "1px solid var(--border-1)", gap: 16, fontSize: 11, color: "var(--fg-3)", flexWrap: "wrap" }}
         >
-          <span>© 2026 Geek Night Engine</span>
+          <span>{t.copyright}</span>
           <span>·</span>
-          <Link href={routes.privacy} style={{ color: "inherit", textDecoration: "none" }}>
-            privacy
+          <Link href={r.privacy} style={{ color: "inherit", textDecoration: "none" }}>
+            {t.privacy}
           </Link>
-          <Link href={routes.terms} style={{ color: "inherit", textDecoration: "none" }}>
-            terms
+          <Link href={r.terms} style={{ color: "inherit", textDecoration: "none" }}>
+            {t.terms}
           </Link>
           <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
-            security
+            {t.security}
           </a>
           <div style={{ flex: 1 }} />
           <span style={{ color: "var(--lime)" }}>● </span>
-          <span>all systems operational</span>
+          <span>{t.status}</span>
         </div>
       </div>
     </footer>
@@ -304,7 +303,9 @@ function FooterCol({ head, links }) {
   );
 }
 
-export function CtaStrip({ heading, sub, cta }) {
+export function CtaStrip({ lang, heading, sub, cta }) {
+  const t = getDictionary(lang, "common");
+
   return (
     <section
       data-anim-section="cta"
@@ -328,12 +329,12 @@ export function CtaStrip({ heading, sub, cta }) {
       />
       <div style={{ position: "relative", maxWidth: 860, margin: "0 auto" }}>
         <span className="chip amber" style={{ marginBottom: 18 }}>
-          <span className="dot amber" /> Coming Soon
+          <span className="dot amber" /> {t.chips.comingSoon}
         </span>
         <h2
           data-anim="reveal"
-          className="balance"
-          style={{ fontSize: "clamp(40px, 5vw, 56px)", fontWeight: 600, letterSpacing: 0, margin: 0, lineHeight: 1.05 }}
+          className="balance display"
+          style={{ fontSize: "clamp(40px, 5.2vw, 58px)", fontWeight: 600, margin: 0, lineHeight: 1.02 }}
         >
           {heading}
         </h2>
@@ -348,9 +349,10 @@ export function CtaStrip({ heading, sub, cta }) {
         )}
         <div style={{ maxWidth: 620, margin: "30px auto 0" }}>
           <NewsletterSignup
-            eyebrow="Launch newsletter"
-            heading={cta || "Join the first-access list"}
-            sub="Get the first public build notes, launch access, and founder updates."
+            lang={lang}
+            eyebrow={t.ctaStrip.newsletterEyebrow}
+            heading={cta || t.ctaStrip.defaultHeading}
+            sub={t.ctaStrip.newsletterSub}
             compact
           />
         </div>

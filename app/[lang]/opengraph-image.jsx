@@ -1,13 +1,17 @@
 import { ImageResponse } from "next/og";
+import { getDictionary } from "@/lib/i18n";
 
-export const alt = "Geek Night Engine - AI-assisted Godot in the browser";
+export const alt = "Geek Engine - AI-assisted Godot in the browser";
 export const size = {
   width: 1200,
   height: 630,
 };
 export const contentType = "image/png";
 
-export default function Image() {
+export default async function Image({ params }) {
+  const { lang } = await params;
+  const og = getDictionary(lang, "common").og;
+
   return new ImageResponse(
     (
       <div
@@ -40,19 +44,17 @@ export default function Image() {
           >
             G
           </div>
-          <div style={{ fontSize: 34, fontWeight: 700 }}>Geek Night Engine</div>
+          <div style={{ fontSize: 34, fontWeight: 700 }}>Geek Engine</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
           <div style={{ color: "#c8f73c", fontSize: 24, letterSpacing: 2, textTransform: "uppercase" }}>
-            AI-native Godot production
+            {og.kicker}
           </div>
           <div style={{ maxWidth: 920, fontSize: 70, lineHeight: 0.98, fontWeight: 700 }}>
-            Imagine the game. Speak it into existence.
+            {og.headline}
           </div>
         </div>
-        <div style={{ color: "#c9c4b7", fontSize: 26 }}>
-          Browser workspace. Structured AI tickets. Cloud builds. Playtests.
-        </div>
+        <div style={{ color: "#c9c4b7", fontSize: 26 }}>{og.footer}</div>
       </div>
     ),
     size,

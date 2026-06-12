@@ -1,0 +1,216 @@
+{
+  "effectiveDateLabel": "Fecha de entrada en vigencia",
+  "lastUpdated": "Última actualización {date}.",
+  "date": "27 de mayo de 2026",
+  "privacy": {
+    "seo": {
+      "title": "Política de privacidad",
+      "description": "Lee cómo Geek Engine maneja datos de cuenta, contenido de proyecto, flujos de trabajo de IA, telemetría, solicitudes de soporte e información de facturación."
+    },
+    "eyebrow": "Legal",
+    "heading": "Política de privacidad",
+    "sub": "Cómo Geek Engine maneja datos de cuenta, contenido de proyecto, flujos de trabajo de IA, telemetría, solicitudes de soporte e información de facturación.",
+    "sections": [
+      {
+        "title": "1. Alcance",
+        "body": [
+          "Esta Política de privacidad explica cómo Geek Engine recopila, utiliza, divulga y protege información personal cuando visitas nuestro sitio de marketing, creas o te unes a un espacio de trabajo, construyes proyectos, cargas activos, usas características de producción de juegos asistida por IA, recibes comentarios de pruebas de juego o contactas al soporte.",
+          "El servicio es una herramienta creativa profesional. No está dirigido a menores de 13 años y no recopilamos intencionalmente información personal de menores de 13 años."
+        ]
+      },
+      {
+        "title": "2. Información que recopilamos",
+        "list": [
+          "Información de cuenta y espacio de trabajo: nombre, dirección de correo electrónico, datos de autenticación de contraseña, pertenencia a la organización, rol, estado de invitación, plan, propietario de facturación y configuración de cuenta.",
+          "Contenido del proyecto: prompts, datos del documento de diseño de juego, matrices de operaciones tipadas, escenas, scripts, snapshots, comentarios, activos cargados, activos generados, artefactos de compilación, registros de compilación y exportaciones que creas o almacenas en el servicio.",
+          "Datos de pruebas de juego y telemetría: datos de acceso a enlace compartido, comentarios, comentarios, capturas de pantalla que envíes, identificadores de sesión, eventos de juego, datos de finalización, cambios de puntuación, registros de tiempo de ejecución y otros eventos configurados por propietarios del espacio de trabajo.",
+          "Información de facturación: selecciones de plan, saldos de crédito, transacciones, estado de suscripción, facturas, metadatos relacionados con impuestos e identificadores de pago. Los datos completos de la tarjeta de pago se procesan por nuestro procesador de pagos y no se almacenan por Geek Engine.",
+          "Datos de dispositivo, registro y seguridad: dirección IP, tipo de navegador, sistema operativo, páginas que hacen referencia, marcas de tiempo, cookies de sesión, tokens CSRF, metadatos de conexión WebSocket, registros de errores, eventos de límite de velocidad y registros de pista de auditoría.",
+          "Datos de soporte y contacto: dirección de correo electrónico, nombre del espacio de trabajo, categoría de soporte, contenido del mensaje, adjuntos y correspondencia relacionada."
+        ]
+      },
+      {
+        "title": "3. Cómo utilizamos la información",
+        "list": [
+          "Proporcionar, asegurar, mantener y mejorar el servicio.",
+          "Crear, mutar, compilar, alojar, probar y exportar proyectos de juego según tus indicaciones.",
+          "Ejecutar características asistidas por IA, incluyendo interpretación de prompts, actualizaciones de documentos de diseño, generación de activos, análisis de compilación de autorreparación y automatización de flujo de trabajo relacionada.",
+          "Administrar organizaciones, invitaciones, roles, permisos, créditos, suscripciones y facturación.",
+          "Proporcionar soporte, responder solicitudes, investigar abusos y hacer cumplir nuestros Términos.",
+          "Generar análisis de uso, diagnósticos de productos, registros de auditoría y métricas de confiabilidad.",
+          "Enviar avisos de servicio y, cuando esté permitido, actualizaciones de productos o comunicaciones de marketing. Puedes optar por no participar en marketing no esencial."
+        ]
+      },
+      {
+        "title": "4. Bases legales para el procesamiento",
+        "body": [
+          "Donde las leyes de privacidad requieren una base legal, procesamos información personal para cumplir nuestro contrato contigo, cumplir con obligaciones legales, proteger intereses legítimos como la seguridad y la mejora del servicio, proteger intereses vitales en casos excepcionales y con consentimiento donde sea requerido para comunicaciones o características opcionales."
+        ]
+      },
+      {
+        "title": "5. Proveedores de IA y contenido generado",
+        "body": [
+          "Geek Engine puede enviar prompts, contexto del proyecto, registros, activos y datos de flujo de trabajo relacionado a proveedores de modelos de IA y vendedores de infraestructura únicamente para proporcionar características solicitadas, depurar compilaciones, generar salidas o mejorar la confiabilidad del servicio. No envíes material confidencial de terceros, datos personales regulados o contenido que no estés autorizado a usar.",
+          "Las salidas de IA pueden ser probabilísticas y pueden parecerse a obras existentes o contener errores. Eres responsable de revisar código generado, activos, texto, audio y comportamiento del juego antes de publicación o uso comercial."
+        ]
+      },
+      {
+        "title": "6. Divulgación y compartir",
+        "list": [
+          "Proveedores de servicios: alojamiento, almacenamiento, base de datos, infraestructura de compilación, procesamiento de pagos, correo electrónico, soporte, registro, seguridad, análisis y vendedores de procesamiento de IA.",
+          "Colaboradores del espacio de trabajo: la información que agregas a una organización, proyecto, hilo de comentarios, biblioteca de activos, prueba de juego o registro de auditoría puede ser visible para otros miembros autorizados según sus roles.",
+          "Probadores externos: si creas enlaces públicos o restringidos por contraseña, las compilaciones de pruebas de juego y superficies de comentarios seleccionadas pueden ser accesibles para los destinatarios que autorice.",
+          "Legal y seguridad: podemos divulgar información para cumplir la ley, proteger derechos y seguridad, prevenir fraude o abuso, hacer cumplir acuerdos o responder solicitudes legales válidas.",
+          "Transferencias comerciales: la información puede ser transferida como parte de una fusión, adquisición, financiamiento, reorganización, quiebra o venta de activos."
+        ]
+      },
+      {
+        "title": "7. Cookies y tecnologías similares",
+        "body": [
+          "Usamos cookies, almacenamiento local y tecnologías similares para autenticación, gestión de sesiones, protección CSRF, preferencias, seguridad, diagnósticos y análisis de productos. La configuración del navegador puede permitirte bloquear o eliminar cookies, pero algunas características del servicio pueden dejar de funcionar."
+        ]
+      },
+      {
+        "title": "8. Retención de datos",
+        "body": [
+          "Mantenemos información personal durante el tiempo que sea razonablemente necesario para proporcionar el servicio, mantener pistas de auditoría, cumplir con obligaciones legales, resolver disputas, hacer cumplir acuerdos, preservar la seguridad y mantener copias de seguridad. El contenido del proyecto, snapshots, registros de compilación, telemetría y registros de cuenta pueden permanecer hasta que sean eliminados por un usuario autorizado o hasta que expire el período de retención aplicable."
+        ]
+      },
+      {
+        "title": "9. Seguridad",
+        "body": [
+          "Usamos salvaguardas administrativas, técnicas y organizacionales diseñadas para proteger información personal, incluyendo controles de acceso, autenticación, transporte cifrado, acceso de servicio de mínimo privilegio, registro, controles de copia de seguridad y revisión de vendedores. Ningún sistema es perfectamente seguro y eres responsable de proteger tus credenciales de cuenta y permisos del espacio de trabajo."
+        ]
+      },
+      {
+        "title": "10. Tus derechos de privacidad",
+        "body": [
+          "Dependiendo de dónde vivas, puedes tener derechos para solicitar acceso, corrección, eliminación, portabilidad, restricción, objeción, retiro de consentimiento o información sobre cómo procesamos información personal. Los residentes de California también pueden tener derechos para conocer, eliminar, corregir, limitar el uso de información personal sensible y optar por no participar en venta o compartir. No vendemos información personal ni la compartimos para publicidad conductual entre contextos como se usan comúnmente bajo la ley de privacidad de California.",
+          "Para ejercer derechos, contacta a {privacyEmail}. Puede ser que necesitemos verificar tu identidad y autoridad antes de completar una solicitud."
+        ]
+      },
+      {
+        "title": "11. Transferencias internacionales",
+        "body": [
+          "Podemos procesar y almacenar información en los Estados Unidos y otros países donde operamos nosotros o nuestros proveedores. Donde sea requerido, usamos mecanismos de transferencia y salvaguardas contractuales apropiadas."
+        ]
+      },
+      {
+        "title": "12. Cambios y contacto",
+        "body": [
+          "Podemos actualizar esta Política de privacidad a medida que el servicio cambia. Si los cambios son significativos, proporcionaremos aviso a través del servicio u otro método razonable.",
+          "Contacto: {privacyEmail} para solicitudes de privacidad, {legalEmail} para avisos legales y {supportEmail} para soporte."
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "seo": {
+      "title": "Términos y Condiciones",
+      "description": "Lee los términos para usar el sitio de marketing, herramientas de producción de juegos asistida por IA, compilaciones en la nube, pruebas de juego y sistemas de facturación de Geek Engine."
+    },
+    "eyebrow": "Legal",
+    "heading": "Términos y Condiciones",
+    "sub": "Las reglas para usar el sitio de marketing, espacio de trabajo, herramientas de producción asistida por IA, compilaciones en la nube, pruebas de juego, facturación y contenido generado de Geek Engine.",
+    "sections": [
+      {
+        "title": "1. Acuerdo con estos Términos",
+        "body": [
+          "Estos Términos y Condiciones rigen el acceso y uso de Geek Engine, incluyendo el sitio de marketing, espacio de trabajo, herramientas de proyecto asistidas por IA, estudios de activos, compiladores, enlaces de prueba de juego, herramientas de telemetría, canales de soporte y servicios relacionados. Al usar el servicio, aceptas estos Términos.",
+          "Si usas el servicio para una empresa, estudio, organización o cliente, representa que tienes autoridad para obligar a esa entidad."
+        ]
+      },
+      {
+        "title": "2. Cuentas, elegibilidad y administración del espacio de trabajo",
+        "list": [
+          "Debes tener al menos 13 años, y si eres menor de la edad de mayoría donde vives, solo puedes usar el servicio con permiso y supervisión de un padre o tutor legal.",
+          "Eres responsable de información de cuenta precisa, seguridad de credenciales y toda actividad bajo tu cuenta.",
+          "Los propietarios del espacio de trabajo y administradores controlan el acceso a miembros, roles, permisos, enlaces compartidos, propiedad de facturación y configuración del proyecto.",
+          "Podemos suspender o cancelar cuentas que violen estos Términos, creen riesgo de seguridad o expongan el servicio u otros usuarios a riesgo legal."
+        ]
+      },
+      {
+        "title": "3. Tu contenido y propiedad",
+        "body": [
+          "Entre tú y Geek Engine, retienes la propiedad del contenido del proyecto que envíes, cargues o crees, incluyendo prompts, documentos de diseño, scripts, activos, comentarios, comentarios y conceptos de juego, sujeto a derechos mantenidos por otros y licencias otorgadas en estos Términos.",
+          "Otorgas a Geek Engine una licencia mundial, no exclusiva y libre de regalías para alojar, almacenar, reproducir, procesar, transmitir, mostrar, compilar, modificar, crear artefactos técnicos derivados de y de otra forma usar tu contenido según sea necesario para proporcionar, asegurar, soportar y mejorar el servicio.",
+          "Representas que tienes todos los derechos necesarios para cargar, procesar, generar a partir de y publicar tu contenido, y que tu contenido no infringe derechos de terceros o viola la ley."
+        ]
+      },
+      {
+        "title": "4. Características asistidas por IA",
+        "body": [
+          "Las salidas asistidas por IA pueden incluir datos de diseño de juego, scripts, activos, audio, metadatos de modelo 3D, sugerencias de depuración y texto generado. Las salidas pueden ser inexactas, incompletas, inseguras o similares al contenido generado para otros. Eres responsable de revisión humana, pruebas, aclaración de derechos, cumplimiento de calificaciones, verificaciones de exportación y decisiones de publicación.",
+          "Geek Engine no garantiza que las salidas de IA sean únicas, copiables por derechos de autor, libres de errores, seguras, comercialmente adecuadas o aceptadas por cualquier plataforma, mercado, consola, tienda o editor."
+        ]
+      },
+      {
+        "title": "5. Uso aceptable",
+        "list": [
+          "No cargues ni generes contenido que sea ilegal, infractor, engañoso, malicioso, abusivo, explotador o destinado a comprometer sistemas o cuentas.",
+          "No intentes eludir límites de velocidad, contabilidad de créditos, controles de seguridad, autenticación, permisos del espacio de trabajo o aislamiento de compilación.",
+          "No uses el servicio para crear malware, herramientas de robo de credenciales, contenido sexual no consensual, contenido que explota menores o contenido que viola reglas de plataforma aplicables.",
+          "No envíes datos sensibles regulados como registros médicos, identificadores gubernamentales, números de tarjeta de pago o información personal de niños a menos que hayamos acordado expresamente por escrito que el servicio está configurado para ese uso."
+        ]
+      },
+      {
+        "title": "6. Compilaciones, exportaciones, pruebas de juego y telemetría",
+        "body": [
+          "Las compilaciones, exportaciones, snapshots, enlaces de prueba de juego públicos, eventos de telemetría y activos generados se proporcionan como herramientas de flujo de trabajo. Eres responsable de probar el comportamiento del juego, administrar avisos enfrentados a jugadores, obtener consentimiento de probador donde sea requerido, configurar telemetría apropiadamente y cumplir con reglas de plataforma, publicidad, privacidad, calificación de contenido, accesibilidad y protección del consumidor.",
+          "Los enlaces públicos o restringidos por contraseña son controlados por usuarios del espacio de trabajo. Trátalos como potencialmente accesibles a cualquiera que reciba el enlace o contraseña."
+        ]
+      },
+      {
+        "title": "7. Planes, créditos, facturación y cancelación",
+        "body": [
+          "Los planes pagos, créditos, complementos, excedentes y licencias de asientos se describen en la página de precios o en un formulario de orden. Los créditos miden el consumo de servicio y no son efectivo, valor almacenado, tarjetas de regalo o moneda. Los créditos pueden caducar o reestablecerse según el plan aplicable.",
+          "Las suscripciones pueden renovarse automáticamente a menos que se cancelen antes de la renovación. Eres responsable de mantener la información de facturación actual. Los impuestos pueden aplicarse. A menos que sea requerido por ley o establecido en un acuerdo separado, las tarifas no son reembolsables una vez incurridas."
+        ]
+      },
+      {
+        "title": "8. Servicios de terceros",
+        "body": [
+          "El servicio puede depender de infraestructura de terceros, procesadores de pagos, proveedores de modelos de IA, vendedores de alojamiento, almacenamiento, correo electrónico, análisis, herramientas de soporte, motores de juegos, paquetes de código abierto y tiendas de plataforma. Los servicios de terceros pueden tener sus propios términos, políticas y restricciones de disponibilidad."
+        ]
+      },
+      {
+        "title": "9. Derechos de autor y DMCA",
+        "body": [
+          "Si crees que el contenido alojado a través de Geek Engine infringe tu derecho de autor, envía un aviso a {dmcaEmail} con la obra protegida por derechos de autor, el material presuntamente infractor, información de contacto, una declaración de buena fe, una declaración de precisión bajo pena de perjurio y tu firma física o electrónica.",
+          "Si Geek Engine busca protección de puerto seguro DMCA de EE.UU. para contenido de usuario alojado, debe mantener un agente designado con la Oficina de Derechos de Autor de EE.UU. y publicar la información de contacto actual de ese agente."
+        ]
+      },
+      {
+        "title": "10. Características beta, disponibilidad y renuncias",
+        "body": [
+          "Algunas características pueden ser experimentales, medidas, limitadas por velocidad, modificadas, suspendidas o descontinuadas. El servicio se proporciona \"tal cual\" y \"según disponibilidad\" sin garantías de comercialización, aptitud para un propósito particular, no infracción, disponibilidad ininterrumpida u operación libre de errores."
+        ]
+      },
+      {
+        "title": "11. Limitación de responsabilidad",
+        "body": [
+          "En la máxima medida permitida por la ley, Geek Engine no será responsable de daños indirectos, incidentales, especiales, consecuentes, ejemplares o punitivos, ganancias perdidas, ingresos perdidos, datos perdidos, pérdida de buena voluntad o costos de servicios sustitutos. En la máxima medida permitida por la ley, la responsabilidad agregada de Geek Engine por reclamaciones relacionadas con el servicio se limita a los montos que pagaste a Geek Engine por el servicio en los tres meses antes del evento que da origen a la reclamación."
+        ]
+      },
+      {
+        "title": "12. Indemnidad",
+        "body": [
+          "Defenderás, indemnizarás y mantendrás indemne a Geek Engine de reclamaciones, daños, pasivos, costos y gastos que surjan de tu contenido, tus proyectos, tus juegos publicados, tu uso del servicio, tu violación de estos Términos o tu violación de ley o derechos de terceros."
+        ]
+      },
+      {
+        "title": "13. Ley aplicable y disputas",
+        "body": [
+          "Estos Términos se rigen por las leyes de Costa Rica, sin consideración de reglas de conflicto de leyes, a menos que la ley de consumidor aplicable requiera de otra forma. Antes de presentar una demanda, cada parte acepta intentar resolver disputas informalmente contactando a {legalEmail}."
+        ]
+      },
+      {
+        "title": "14. Cambios y contacto",
+        "body": [
+          "Podemos actualizar estos Términos a medida que el servicio cambia. El uso continuo después de la fecha efectiva de Términos actualizados significa que aceptas los Términos actualizados.",
+          "Contacto: {legalEmail} para avisos legales, {dmcaEmail} para avisos de derechos de autor y {supportEmail} para soporte."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "seo": {
+    "title": "Precios",
+    "description": "Revisa los precios de Geek Engine para creadores y estudios solitarios, incluyendo créditos, asientos de colaboración, almacenamiento y complementos de producción."
+  },
+  "hero": {
+    "eyebrow": "Precios",
+    "heading": "Planes predecibles respaldados por recursos.",
+    "sub": "Cada nivel presenta mapeo de créditos transparente. {credits} créditos del espacio de trabajo se convierten directamente a {value} de valor de consumo de IA y procesamiento de fondo bruto — manteniendo tus costos completamente abiertos."
+  },
+  "featuredBadge": "MÁS POPULAR",
+  "tiers": {
+    "hobbyist": {
+      "name": "Hobbyist",
+      "per": "Gratis por siempre",
+      "seatsLabel": "{seats} asiento",
+      "creditsLabel": "{credits} créditos / mes",
+      "storageLabel": "{gb} GB almacenamiento",
+      "features": [
+        "Edición de juegos basada en navegador y acceso a plantillas",
+        "Cola de compilación en la nube con prioridad estándar",
+        "Publicación solo web a través del reproductor de plataforma alojado",
+        "Almacenamiento local del lado del cliente para guardos de juegos predeterminados",
+        "Características básicas de carga y generación de bibliotecas de activos"
+      ],
+      "cta": "Unirse a la lista de espera"
+    },
+    "core": {
+      "name": "Core Creator",
+      "per": "por mes",
+      "seatsLabel": "{seats} asientos",
+      "creditsLabel": "{credits} créditos / mes",
+      "storageLabel": "{gb} GB almacenamiento, luego {rate}/GB",
+      "features": [
+        "Colaboración de espacio de trabajo de equipo multijugador en tiempo real",
+        "Acceso a cola de compilación en la nube de alta prioridad",
+        "Publicación web con soporte de etiqueta blanca y dominio personalizado",
+        "Herramientas completas de comparación de versiones de snapshots",
+        "Librerías de activos de organización compartida"
+      ],
+      "cta": "Unirse a la lista de espera de Core"
+    },
+    "studio": {
+      "name": "Studio Pro",
+      "per": "por mes",
+      "seatsLabel": "{seats} asientos",
+      "creditsLabel": "{credits} créditos / mes",
+      "storageLabel": "{gb} GB almacenamiento, luego {rate}/GB",
+      "features": [
+        "Exportación comercial multiplataforma directa a tiendas Steam y Mobile",
+        "Acceso a cola de compilación en la nube de prioridad Turbo (instancias de trabajador aisladas)",
+        "Análisis avanzado de modelos 3D y coincidencia de canalización de animación",
+        "Extracción y descarga completa de código fuente de proyecto bruto",
+        "Ventana extendida de retención de historial de compilación"
+      ],
+      "cta": "Unirse a la lista de espera de Studio"
+    }
+  },
+  "addOns": {
+    "label": "Complementos",
+    "heading": "Escala tu espacio de trabajo del estudio bajo demanda.",
+    "items": {
+      "seat": {
+        "name": "Licencia de asiento adicional",
+        "per": "/ usuario / mes",
+        "body": "Disponible en todos los planes de suscripción. Añadir un asiento de usuario adicional a tu organización desbloquea instantáneamente vías de colaboración avanzada e inyecta {credits} créditos de creación adicionales en el saldo de espacio de trabajo mensual compartido de tu equipo."
+      },
+      "credits": {
+        "name": "Recargas de exceso de créditos medido",
+        "per": "/ {credits} créditos",
+        "body": "Mantén tu canalización de diseño activa. Compra capacidad de procesamiento adicional cuando tu estudio alcance ciclos de desarrollo máximos."
+      },
+      "database": {
+        "name": "Complemento de base de datos en la nube en vivo",
+        "per": "/ mes / proyecto",
+        "body": "Desbloquea persistencia en línea. La plataforma aprovisiona automáticamente una base de datos relacional segura y alojada en la nube para tu juego. La IA genera automáticamente los scripts de lógica de red remota requeridos para ejecutar tablas de clasificación multijugador en vivo, cuentas de jugador seguras y guardos en la nube."
+      }
+    }
+  },
+  "faq": {
+    "label": "Preguntas frecuentes",
+    "heading": "Preguntas frecuentes sobre precios.",
+    "items": [
+      {
+        "q": "¿Cómo se calculan los créditos durante la producción?",
+        "a": "Nuestro sistema de créditos se asigna exactamente al costo de procesamiento de fondo de tus cambios. Pequeños ajustes de texto o tareas de reorden de nodos cuestan créditos mínimos, mientras que generar activos 3D profundos o ejecutar bucles de análisis de errores de autorreparación intensivos consume volúmenes más altos de tu grupo asignado."
+      },
+      {
+        "q": "¿Pueden los equipos agrupar sus créditos juntos?",
+        "a": "Sí. Todos los créditos incluidos en tu plan base, junto con cualquier crédito añadido comprando asientos de usuarios adicionales, se colocan en un grupo centralizado accesible por todos los editores autorizados dentro de ese espacio de trabajo organizacional específico."
+      },
+      {
+        "q": "¿Qué sucede si nuestro proyecto no compra la base de datos en la nube?",
+        "a": "Por defecto, tus juegos utilizan marcos de almacenamiento local del lado del cliente. Esto sigue las reglas estándar de plataforma para juegos de un solo jugador, guardos de configuración sin conexión y progreso de máquina local. Solo requieres el complemento de base de datos si deseas que tu juego lea y escriba registros en una red web global persistente."
+      }
+    ]
+  },
+  "ctaStrip": {
+    "heading": "Los precios se han publicado. El acceso próximamente.",
+    "sub": "Únete a la lista y enviaremos la primera ventana de disponibilidad.",
+    "cta": "Suscribirse para acceso"
+  }
+}

@@ -42,6 +42,12 @@
   --r-3: 8px;
   --r-4: 12px;
   --r-5: 16px;
+  --r-6: 22px;
+  /* shadows tinted toward the background hue, never pure black */
+  --shadow-1: 0 1px 2px rgba(8, 8, 6, 0.4);
+  --shadow-2: 0 18px 48px -24px rgba(10, 10, 7, 0.85);
+  --shadow-lime: 0 30px 70px -28px rgba(200, 247, 60, 0.22);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 html,
@@ -55,6 +61,11 @@ body {
 
 body {
   overflow-x: hidden;
+}
+
+/* body scroll lock while the mobile overlay is open */
+body.nav-locked {
+  overflow: hidden;
 }
 
 a {
@@ -231,13 +242,20 @@ a:hover {
   font-size: 12.5px;
   color: var(--fg-0);
   text-decoration: none;
-  transition: background 0.12s, border-color 0.12s, color 0.12s;
+  transition: background 0.16s var(--ease-out-expo), border-color 0.16s, color 0.16s,
+    transform 0.16s var(--ease-out-expo), box-shadow 0.16s;
   white-space: nowrap;
+  will-change: transform;
 }
 
 .btn:hover {
   background: var(--bg-4);
   border-color: var(--border-3);
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: scale(0.98) translateY(0);
 }
 
 .btn.sm {
@@ -264,6 +282,7 @@ a:hover {
 
 .btn.primary:hover {
   background: var(--lime-soft);
+  box-shadow: 0 12px 30px -12px rgba(200, 247, 60, 0.5);
 }
 
 .btn.ghost {
@@ -324,7 +343,55 @@ a:hover {
 .card {
   background: var(--bg-2);
   border: 1px solid var(--border-1);
-  border-radius: var(--r-3);
+  border-radius: var(--r-4);
+}
+
+/* Spotlight-border hover: the border illuminates under the cursor.
+   Driven by --mx/--my (pointer position) set in JS; degrades gracefully. */
+.spotlight {
+  position: relative;
+  isolation: isolate;
+  transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s;
+}
+
+.spotlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(
+    220px circle at var(--mx, 50%) var(--my, 50%),
+    var(--lime-edge),
+    transparent 60%
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.spotlight:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-2);
+}
+
+.spotlight:hover::before {
+  opacity: 1;
+}
+
+/* Visible keyboard focus rings everywhere */
+.gne a:focus-visible,
+.gne button:focus-visible,
+.gne input:focus-visible,
+.gne select:focus-visible,
+.gne textarea:focus-visible,
+.gne [tabindex]:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 .tree-row {
@@ -437,6 +504,47 @@ a:hover {
   text-wrap: balance;
 }
 
+/* Display headlines: more presence, negative tracking, tight leading, balanced wrap */
+h1.pretty,
+h2.pretty,
+h1.balance,
+h2.balance {
+  text-wrap: balance;
+}
+
+.display {
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.display-xl {
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  text-wrap: balance;
+}
+
+/* readable body measure */
+.measure {
+  max-width: 65ch;
+}
+
+/* tabular figures for prices/credits */
+.tnum {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+/* fixed grain/noise overlay to break flat surfaces */
+.site-grain {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
 .checker {
   background-color: #0a0a08;
   background-image:
@@ -476,6 +584,17 @@ a:hover {
   gap: 18px;
 }
 
+/* Asymmetric pillar layout: lead card spans the top row, two cards below. */
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.pillar-grid .pillar-lead {
+  grid-column: 1 / -1;
+}
+
 .site-grid-4 {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -486,7 +605,7 @@ a:hover {
   position: relative;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 80px 32px 24px;
+  padding: 96px 32px 88px;
   display: grid;
   grid-template-columns: 1.15fr 1fr;
   gap: 56px;
@@ -513,12 +632,225 @@ a:hover {
   font-size: 13.5px;
 }
 
+.nav-link {
+  position: relative;
+  padding-bottom: 3px;
+  transition: color 0.18s;
+}
+
+/* animated underline indicator on hover + active state */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--lime);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.28s var(--ease-out-expo);
+}
+
+.nav-link:hover::after,
+.nav-link[data-active="true"]::after {
+  transform: scaleX(1);
+}
+
 .nav-actions {
   gap: 8px;
 }
 
+/* ---- EN | ES language switcher (desktop nav + mobile overlay foot) ---- */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px;
+  height: 26px;
+  background: var(--bg-2);
+  border: 1px solid var(--border-2);
+  border-radius: 6px;
+  flex: 0 0 auto;
+}
+
+.lang-switch-option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+  height: 20px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--fg-2);
+  text-decoration: none;
+  transition: color 0.18s, background 0.18s;
+}
+
+.lang-switch-option:hover {
+  color: var(--fg-0);
+}
+
+.lang-switch-option[data-active="true"] {
+  background: var(--lime);
+  color: var(--lime-ink);
+  font-weight: 600;
+  box-shadow: 0 0 8px var(--lime-edge);
+}
+
 .mobile-only {
   display: none;
+}
+
+/* ---- Hamburger button + animated icon ---- */
+.hamburger {
+  display: none;
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid var(--border-2);
+  background: var(--bg-2);
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  transition: border-color 0.18s, background 0.18s;
+}
+
+.hamburger:hover {
+  border-color: var(--border-3);
+  background: var(--bg-3);
+}
+
+.hamburger-box {
+  position: relative;
+  width: 18px;
+  height: 14px;
+}
+
+.hamburger-bar {
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--fg-0);
+  transition: transform 0.32s var(--ease-out-expo), opacity 0.2s ease;
+  transform-origin: center;
+}
+
+.hamburger-bar:nth-child(1) {
+  top: 0;
+}
+.hamburger-bar:nth-child(2) {
+  top: 6px;
+}
+.hamburger-bar:nth-child(3) {
+  top: 12px;
+}
+
+/* morph burger -> X when open */
+.hamburger[aria-expanded="true"] .hamburger-bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+  background: var(--lime);
+}
+.hamburger[aria-expanded="true"] .hamburger-bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0.2);
+}
+.hamburger[aria-expanded="true"] .hamburger-bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+  background: var(--lime);
+}
+
+/* ---- Full-screen slide-in overlay ---- */
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  background: rgba(10, 10, 8, 0.86);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.32s var(--ease-out-expo), visibility 0.32s;
+}
+
+.mobile-overlay[data-open="true"] {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-overlay-inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 22px 28px 40px;
+  min-height: 100dvh;
+}
+
+.mobile-overlay-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 8px;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 4px;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--fg-1);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-1);
+  transition: color 0.18s, padding-left 0.24s var(--ease-out-expo);
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link[data-active="true"] {
+  color: var(--fg-0);
+  padding-left: 12px;
+}
+
+.mobile-nav-link[data-active="true"] {
+  color: var(--lime);
+}
+
+.mobile-nav-link .arrow {
+  color: var(--lime);
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.18s, transform 0.18s;
+}
+
+.mobile-nav-link:hover .arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.mobile-overlay-foot {
+  margin-top: auto;
+  padding-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .product-module-grid {
@@ -613,22 +945,30 @@ a:hover {
     min-width: 210px;
   }
 
-  .nav-shell {
-    align-items: flex-start;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-
-  .nav-links {
-    order: 3;
-    width: 100%;
-    margin-left: 0 !important;
-    overflow-x: auto;
-    padding-bottom: 4px;
-  }
-
   .site-footer-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Switch to hamburger below the desktop nav breakpoint */
+@media (max-width: 900px) {
+  .nav-shell {
+    align-items: center;
+    gap: 14px;
+    padding: 12px 20px;
+  }
+
+  .nav-links,
+  .nav-actions {
+    display: none !important;
+  }
+
+  .nav-shell > .nav-spacer {
+    display: none;
+  }
+
+  .hamburger {
+    display: inline-flex;
   }
 }
 
@@ -638,12 +978,13 @@ a:hover {
   }
 
   .site-grid-3,
-  .site-grid-4 {
+  .site-grid-4,
+  .pillar-grid {
     grid-template-columns: 1fr !important;
   }
 
   .home-hero-grid {
-    padding: 62px 20px 20px !important;
+    padding: 62px 20px 56px !important;
   }
 
   .home-hero-preview {
@@ -676,12 +1017,6 @@ a:hover {
     padding: 12px 20px !important;
   }
 
-  .nav-actions {
-    width: 100%;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-  }
-
   .desktop-only {
     display: none !important;
   }
@@ -697,5 +1032,64 @@ a:hover {
 
   .site-footer-grid {
     grid-template-columns: 1fr !important;
+  }
+}
+
+/* =========================================================
+   Signature motion system — base states (JS animates to rest)
+   Three reusable moves:
+   1. .reveal-mask  — clip-path wipe reveal (scroll-driven)
+   2. [data-anim-cascade] children — staggered y+opacity cascade
+   3. pinned/scrubbed showcase (how-it-works pipeline, existing)
+   ========================================================= */
+
+/* Move 1: clip-path wipe. JS adds .is-in to play. */
+.reveal-mask {
+  clip-path: inset(0 0 100% 0);
+  will-change: clip-path, transform;
+}
+
+.reveal-mask.is-in {
+  clip-path: inset(0 0 0% 0);
+}
+
+/* Use 100dvh for full-height surfaces */
+.dvh-pin {
+  min-height: 100dvh;
+}
+
+[data-anim-pin] {
+  min-height: 100dvh;
+}
+
+/* =========================================================
+   prefers-reduced-motion — full honor.
+   Disable transitions/animations, force final states visible,
+   neutralize transforms. JS also gates GSAP separately.
+   ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-mask {
+    clip-path: none !important;
+  }
+
+  .mobile-overlay {
+    transition: none !important;
+  }
+
+  .hamburger-bar {
+    transition: none !important;
   }
 }

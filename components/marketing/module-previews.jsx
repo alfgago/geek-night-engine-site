@@ -50,7 +50,7 @@ function HubPreview() {
   ];
 
   return (
-    <ShellWrap title="geeknight.engine / projects">
+    <ShellWrap title="geekengine.ai / projects">
       <div style={{ padding: 18, height: "calc(100% - 32px)", overflow: "hidden" }}>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8 }}>
           {cards.map((card) => (

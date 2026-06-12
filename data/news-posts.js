@@ -1,164 +1,57 @@
+/**
+ * Canonical (locale-independent) news post records.
+ *
+ * Structural fields only: slug, machine-readable dates, author, and source
+ * URLs live here exactly once. All translatable copy (title, excerpt, dek,
+ * hero stats, body blocks, source labels) lives in the parallel
+ * `data/i18n/{lang}/news-posts.json` dictionaries, keyed by slug with an
+ * identical structure per locale.
+ */
+import enPosts from "./i18n/en/news-posts.json";
+import esPosts from "./i18n/es/news-posts.json";
+
+const localizedPosts = { en: enPosts, es: esPosts };
+
 export const newsPosts = [
   {
     slug: "build-log-001-game-studio-we-needed",
-    title: "Build Log 001: The Game Studio We Needed Ten Years Ago",
-    eyebrow: "Build Log 001",
-    date: "June 1, 2026",
     datetime: "2026-06-01",
-    author: "Geek Night Engine",
-    readTime: "7 min read",
-    category: "Build in public",
-    excerpt:
-      "Why the Build with Gemini XPRIZE finally gave us a reason to turn a decade-old indie studio dream into a web-native Godot platform.",
-    dek:
-      "Geek Night Engine is our attempt to make the game studio we wished existed when we first tried to build one: browser-native, AI-assisted, cloud-compiled, and priced so a lack of resources is not the thing that ends a good idea.",
-    heroStats: [
-      ["Hackathon", "Build with Gemini XPRIZE"],
-      ["Stack", "Godot 4, Laravel, React, Google Cloud"],
-      ["Goal", "Playable games from structured AI tickets"],
-    ],
+    author: "Geek Engine",
     sources: [
+      { href: "https://www.geminixprize.com/" },
       {
-        label: "Build with Gemini XPRIZE",
-        href: "https://www.geminixprize.com/",
-      },
-      {
-        label: "XPRIZE announcement",
         href: "https://www.xprize.org/news/xprize-launches-hackathon-with-2-million-prize-pool-backed-by-google",
       },
       {
-        label: "Google I/O 2026 developer highlights",
         href: "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights",
-      },
-    ],
-    body: [
-      {
-        type: "paragraph",
-        text:
-          "Today is June 1, 2026, and this is the first public build log for Geek Night Engine. That still feels strange to write. I got into software engineering 12 years ago because I wanted to build video games. Not dashboards. Not internal tools. Not another enterprise workflow with a better search bar. Games.",
-      },
-      {
-        type: "paragraph",
-        text:
-          "Life, as usual, had other plans. I went into custom web development, then enterprise systems, then AI integrations, then agency work. I learned how to ship serious software for serious businesses. I also kept carrying around the same old idea: what if a small team could build games without needing studio-level capital before the first prototype even existed?",
-      },
-      {
-        type: "paragraph",
-        text:
-          "About ten years ago, a few close friends and I tried to start an indie game studio. We had the energy and the ideas, but the math was brutal. Game development was fragmented, expensive, and unforgiving. Every discipline needed time, hardware, tooling, and specialized knowledge. We did not run out of imagination. We ran out of runway.",
-      },
-      {
-        type: "heading",
-        text: "The deadline that made the idea real",
-      },
-      {
-        type: "paragraph",
-        text:
-          "When Google and XPRIZE announced the Build with Gemini XPRIZE, the timing felt impossible to ignore. The challenge is not asking teams to make a clever demo and disappear. It is a 90-day push to build a real business with real users, real revenue, and AI-native operations. That constraint is exactly why we are building this in public.",
-      },
-      {
-        type: "paragraph",
-        text:
-          "Geek Night Engine is a web-native, multi-tenant, AI-assisted game production workspace for 2D and 3D Godot games. The easiest shorthand is Replit or Lovable for Godot, but that undersells the hard part. Game projects are not normal CRUD apps. A single prompt can touch scene trees, scripts, assets, animation state, collision shapes, exported builds, and player-facing runtime behavior. A chat box alone is not enough.",
-      },
-      {
-        type: "heading",
-        text: "Why this cannot be just another AI chat window",
-      },
-      {
-        type: "paragraph",
-        text:
-          "Most AI coding tools feel impressive for the first few prompts and then start losing the thread. In game development, that failure mode is especially expensive. Context drift turns into overwritten scripts. A missing node path turns into a broken scene. A tiny syntax mistake turns into a build that never reaches a player.",
-      },
-      {
-        type: "paragraph",
-        text:
-          "So we are not building a loose prompt-to-code toy. We are building a Modular Ticket Pipeline. When a creator describes a mechanic, level, asset, or system change, the AI Game Architect decomposes that request into atomic tickets on a visual board. The user can reorder them, approve them one by one, and attach reference images or rough layouts to the exact task that needs them.",
-      },
-      {
-        type: "paragraph",
-        text:
-          "Gemini 3.5 Flash handles the high-speed reasoning layer for these structured tasks. Instead of asking the model to freestyle across an entire project, we constrain the job: produce typed operations, respect schemas, preserve snapshots, and let the compiler prove whether the output is real.",
-      },
-      {
-        type: "heading",
-        text: "The pipeline under the hood",
-      },
-      {
-        type: "list",
-        items: [
-          "The interface is built with Laravel 13, Inertia.js, React, and Tailwind 4, giving the product a browser-based IDE feel without splitting the app into a separate SPA and API project.",
-          "The AI layer turns chat and wizard input into structured tickets, operation arrays, and Game Design Document updates instead of dumping raw code straight into the project.",
-          "The Godot bridge uses Summer Engine, an open-source CLI framework, to mutate Godot 4 text scene files and GDScript assets in a controlled way.",
-          "The compile loop runs through Laravel queues, Redis, Docker sandboxes, and headless Godot. Successful WebGL/WASM builds are pushed to Google Cloud Storage and streamed back into the dashboard through Laravel Reverb.",
-        ],
-      },
-      {
-        type: "paragraph",
-        text:
-          "The goal is a tight loop: describe a change, review the tickets, approve the work, compile the game, and play it in the browser. Not someday after a long export ceremony. Not after cloning a repo and configuring a local engine. Right there in the workspace.",
-      },
-      {
-        type: "heading",
-        text: "The self-healing loop",
-      },
-      {
-        type: "paragraph",
-        text:
-          "Game engine syntax has very little tolerance for hand-waving. If a generated script references a missing node or Godot rejects a scene file, the platform should not shrug and hand the error to the creator. Our backend intercepts the headless Godot compiler output, passes the stack trace and offending code back through the AI repair path, rewrites the narrow failure, and retries the build.",
-      },
-      {
-        type: "paragraph",
-        text:
-          "That does not mean AI magically becomes perfect. It means we treat failure as part of the product loop. Every serious creative tool needs a recovery path, and AI-native software needs one even more.",
-      },
-      {
-        type: "heading",
-        text: "A business model that has to survive real usage",
-      },
-      {
-        type: "paragraph",
-        text:
-          "The XPRIZE criteria pushed us to think beyond a cool technical surface. If this is going to help real creators, it has to survive real compute costs. Cloud compilation, AI reasoning, asset generation, and hosted builds can get expensive quickly if the pricing model is vague.",
-      },
-      {
-        type: "list",
-        items: [
-          "Credits map directly to platform cost: 1,000 credits equals $1.00 of API and compute budget.",
-          "The free tier is designed around 5,000 monthly credits so solo builders can start without a card.",
-          "Paid collaboration starts when teams need shared workspaces, real-time co-authoring, and larger credit pools.",
-          "Web publishing stays accessible because browser builds are cheaper to host, while native export for Steam and mobile belongs in a higher processing tier.",
-          "Online persistence becomes an add-on, so creators only pay for cloud databases when their games actually need leaderboards, accounts, or cloud saves.",
-        ],
-      },
-      {
-        type: "paragraph",
-        text:
-          "That pricing may evolve as we measure real usage, but the principle will not: creators should know what the machine is doing and why it costs what it costs.",
-      },
-      {
-        type: "heading",
-        text: "Where we are today",
-      },
-      {
-        type: "paragraph",
-        text:
-          "We have the database layers scaffolded, the Tailwind 4 builds running, the product shell in place, and Docker spinning up headless Godot builds successfully on Google Cloud infrastructure. The next milestone is a public video showing the multi-agent workflow building a playable game from scratch.",
-      },
-      {
-        type: "paragraph",
-        text:
-          "This platform is not just a tool for us. It is the incubator we wanted a decade ago. If Geek Night Engine works, a solo developer with a weekend, a mechanic, and stubborn taste should be able to get much further before money becomes the deciding factor.",
-      },
-      {
-        type: "paragraph",
-        text:
-          "We are building in public for the hackathon because the trade-offs matter: what breaks, what compiles, what users actually try, what costs too much, and what turns a promising demo into a business. The first build log starts here.",
       },
     ],
   },
 ];
 
-export function getNewsPost(slug) {
-  return newsPosts.find((post) => post.slug === slug);
+function mergePost(post, lang) {
+  const locale = localizedPosts[lang] ? lang : "en";
+  const copy = localizedPosts[locale][post.slug];
+
+  if (!copy) {
+    return null;
+  }
+
+  return {
+    ...post,
+    ...copy,
+    sources: post.sources.map((source, index) => ({
+      ...source,
+      label: copy.sourceLabels?.[index] ?? source.href,
+    })),
+  };
+}
+
+export function getNewsPosts(lang = "en") {
+  return newsPosts.map((post) => mergePost(post, lang)).filter(Boolean);
+}
+
+export function getNewsPost(slug, lang = "en") {
+  const post = newsPosts.find((entry) => entry.slug === slug);
+  return post ? mergePost(post, lang) : undefined;
 }
