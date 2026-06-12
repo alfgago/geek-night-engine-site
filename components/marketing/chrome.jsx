@@ -6,27 +6,14 @@ import { Icon, I } from "./icons";
 import { NewsletterSignup } from "./newsletter-signup";
 import { GNELockup, GNEMark } from "./brand";
 import { MobileNav } from "./mobile-nav";
+import { MegaMenu } from "./mega-menu";
 import { LanguageSwitcher } from "./language-switcher";
 
 export { GNELockup, GNEMark };
 
-function buildNavLinks(lang) {
-  const t = getDictionary(lang, "common");
-  const r = localizedRoutes(lang);
-  return [
-    { id: "home", label: t.nav.home, href: r.home },
-    { id: "product", label: t.nav.product, href: r.product },
-    { id: "how", label: t.nav.how, href: r.how },
-    { id: "pricing", label: t.nav.pricing, href: r.pricing },
-    { id: "news", label: t.nav.news, href: r.news },
-    { id: "contact", label: t.nav.contact, href: r.contact },
-  ];
-}
-
 export function SiteNav({ lang, current }) {
   const t = getDictionary(lang, "common");
   const r = localizedRoutes(lang);
-  const navLinks = buildNavLinks(lang);
 
   return (
     <header
@@ -43,27 +30,10 @@ export function SiteNav({ lang, current }) {
         <Link href={r.home} style={{ textDecoration: "none" }} aria-label={t.aria.homeLink}>
           <GNELockup size={17} brand={t.brand} />
         </Link>
-        <nav className="gne-row nav-links" aria-label={t.aria.marketingNav}>
-          {navLinks.map((link) => (
-            <Link
-              key={link.id}
-              href={link.href}
-              className="nav-link"
-              data-active={current === link.id}
-              aria-current={current === link.id ? "page" : undefined}
-              style={{
-                color: current === link.id ? "var(--fg-0)" : "var(--fg-1)",
-                textDecoration: "none",
-                fontWeight: 400,
-                whiteSpace: "nowrap",
-              }}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+        {/* Desktop mega menu — hidden below 900px via .desktop-only */}
+        <MegaMenu lang={lang} />
         <div className="nav-spacer" style={{ flex: 1 }} />
-        <div className="gne-row nav-actions">
+        <div className="gne-row nav-actions desktop-only">
           <LanguageSwitcher lang={lang} label={t.aria.languageSwitcher} names={t.langSwitch} />
           <span className="chip amber">
             <span className="dot amber" /> {t.chips.comingSoon}
@@ -72,7 +42,8 @@ export function SiteNav({ lang, current }) {
             <Icon d={I.bell} size={11} /> {t.cta.joinNewsletter}
           </a>
         </div>
-        <MobileNav lang={lang} navLinks={navLinks} current={current} />
+        {/* Mobile hamburger + full-screen sheet */}
+        <MobileNav lang={lang} current={current} />
       </div>
     </header>
   );

@@ -33,7 +33,74 @@
     "how": "Cómo funciona",
     "pricing": "Precios",
     "news": "Noticias",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "studio": "Estudio",
+    "learn": "Aprende",
+    "company": "Empresa",
+    "legal": "Legal"
+  },
+  "megaMenu": {
+    "product": {
+      "label": "Producto",
+      "overview": "Resumen del producto",
+      "overviewDesc": "El espacio de trabajo Godot con IA nativa completo",
+      "links": {
+        "architect": "Arquitecto",
+        "architectDesc": "Sistema de GDD y tickets impulsado por IA",
+        "scene": "Inspector de escenas",
+        "sceneDesc": "Editor visual de árbol de nodos y propiedades",
+        "assets": "Estudios de assets",
+        "assetsDesc": "Genera sprites, audio y assets 3D",
+        "playtest": "Prueba de juego",
+        "playtestDesc": "Pruebas en vivo en el navegador con telemetría",
+        "hub": "Centro de trabajo",
+        "hubDesc": "Vista general del proyecto, compilaciones y snapshots"
+      }
+    },
+    "studio": {
+      "label": "Estudio",
+      "links": {
+        "how": "Cómo funciona",
+        "howDesc": "Pipeline de producción de principio a fin",
+        "pricing": "Precios",
+        "pricingDesc": "Planes, créditos y almacenamiento",
+        "comingSoon": "Próximamente",
+        "comingSoonDesc": "Recibe una notificación al lanzamiento"
+      }
+    },
+    "learn": {
+      "label": "Aprende",
+      "links": {
+        "docs": "Documentación",
+        "docsDesc": "Referencias y guías de integración",
+        "guides": "Guías",
+        "guidesDesc": "Recorridos paso a paso de construcción",
+        "news": "Noticias",
+        "newsDesc": "Actualizaciones del motor y registros de compilación",
+        "status": "Estado",
+        "statusDesc": "Estado del sistema en tiempo real"
+      }
+    },
+    "company": {
+      "label": "Empresa",
+      "links": {
+        "about": "Acerca de",
+        "aboutDesc": "Nuestra misión y el equipo",
+        "updates": "Novedades del lanzamiento",
+        "updatesDesc": "Lo que salió y lo que viene",
+        "contact": "Contacto",
+        "contactDesc": "Consultas de soporte y asociación",
+        "careers": "Carreras",
+        "careersDesc": "Puestos abiertos en Geek Engine"
+      }
+    },
+    "legalStrip": {
+      "label": "Legal",
+      "privacy": "Privacidad",
+      "terms": "Términos",
+      "security": "Seguridad",
+      "dmca": "DMCA"
+    }
   },
   "aria": {
     "homeLink": "Inicio de Geek Engine",
@@ -42,7 +109,8 @@
     "openMenu": "Abrir menú",
     "closeMenu": "Cerrar menú",
     "siteMenu": "Menú del sitio",
-    "languageSwitcher": "Idioma"
+    "languageSwitcher": "Idioma",
+    "megaPanel": "Panel de navegación del sitio"
   },
   "langSwitch": {
     "en": "EN",

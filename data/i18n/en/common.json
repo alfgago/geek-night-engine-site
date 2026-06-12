@@ -33,7 +33,74 @@
     "how": "How it works",
     "pricing": "Pricing",
     "news": "News",
-    "contact": "Contact"
+    "contact": "Contact",
+    "studio": "Studio",
+    "learn": "Learn",
+    "company": "Company",
+    "legal": "Legal"
+  },
+  "megaMenu": {
+    "product": {
+      "label": "Product",
+      "overview": "Product overview",
+      "overviewDesc": "The full AI-native Godot workspace",
+      "links": {
+        "architect": "Architect",
+        "architectDesc": "AI-driven GDD and ticket system",
+        "scene": "Scene inspector",
+        "sceneDesc": "Visual node tree and property editor",
+        "assets": "Asset studios",
+        "assetsDesc": "Generate sprites, audio, and 3D assets",
+        "playtest": "Playtest",
+        "playtestDesc": "Live browser playtests with telemetry",
+        "hub": "Workspace hub",
+        "hubDesc": "Project overview, builds, and snapshots"
+      }
+    },
+    "studio": {
+      "label": "Studio",
+      "links": {
+        "how": "How it works",
+        "howDesc": "Production pipeline, end to end",
+        "pricing": "Pricing",
+        "pricingDesc": "Plans, credits, and storage",
+        "comingSoon": "Coming Soon",
+        "comingSoonDesc": "Get notified at launch"
+      }
+    },
+    "learn": {
+      "label": "Learn",
+      "links": {
+        "docs": "Docs",
+        "docsDesc": "Reference and integration guides",
+        "guides": "Guides",
+        "guidesDesc": "Step-by-step build walkthroughs",
+        "news": "News",
+        "newsDesc": "Engine updates and build logs",
+        "status": "Status",
+        "statusDesc": "Live system health"
+      }
+    },
+    "company": {
+      "label": "Company",
+      "links": {
+        "about": "About",
+        "aboutDesc": "Our mission and the team",
+        "updates": "Launch updates",
+        "updatesDesc": "What shipped and what is next",
+        "contact": "Contact",
+        "contactDesc": "Support and partnership inquiries",
+        "careers": "Careers",
+        "careersDesc": "Open roles at Geek Engine"
+      }
+    },
+    "legalStrip": {
+      "label": "Legal",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "security": "Security",
+      "dmca": "DMCA"
+    }
   },
   "aria": {
     "homeLink": "Geek Engine home",
@@ -42,7 +109,8 @@
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "siteMenu": "Site menu",
-    "languageSwitcher": "Language"
+    "languageSwitcher": "Language",
+    "megaPanel": "Site navigation panel"
   },
   "langSwitch": {
     "en": "EN",
