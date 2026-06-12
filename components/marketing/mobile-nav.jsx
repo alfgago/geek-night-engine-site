@@ -180,7 +180,7 @@ export function MobileNav({ lang, navLinks, current }) {
         <div className="mobile-overlay-inner" ref={panelRef}>
           <div className="mobile-overlay-head">
             <Link href={r.home} onClick={close} style={{ textDecoration: "none" }} aria-label={t.aria.homeLink}>
-              <GNELockup size={17} />
+              <GNELockup size={17} brand={t.brand} />
             </Link>
             <button type="button" className="hamburger" aria-label={t.aria.closeMenu} aria-expanded="true" onClick={close}>
               <span className="hamburger-box" aria-hidden="true">

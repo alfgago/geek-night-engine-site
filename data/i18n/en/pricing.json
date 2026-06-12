@@ -9,18 +9,28 @@
     "sub": "Every tier features transparent credit mapping. {credits} workspace credits converts directly to {value} of raw background processing and AI consumption value — keeping your costs entirely open."
   },
   "featuredBadge": "MOST POPULAR",
+  "billing": {
+    "monthly": "Monthly",
+    "annual": "Annual",
+    "annualBadge": "2 months free",
+    "perMonth": "per month",
+    "perYear": "per year",
+    "freeForever": "Free forever"
+  },
   "tiers": {
     "hobbyist": {
       "name": "Hobbyist",
       "per": "Free forever",
+      "perAnnual": "Free forever",
       "seatsLabel": "{seats} seat",
-      "creditsLabel": "{credits} credits / mo",
-      "storageLabel": "{gb} GB storage",
+      "creditsLabel": "{credits} credits on signup, then {monthly}/mo",
+      "creditsNote": "Monthly refill does not accumulate.",
+      "storageLabel": "{gb} GB storage (hard cap)",
       "features": [
         "Browser-based game editing & template access",
+        "5,000 credits to start, refilling to 1,500 each month",
         "Standard priority cloud build queue",
         "Web-only publishing via hosted platform player",
-        "Client-side local storage for default game saves",
         "Basic asset library uploads and generation features"
       ],
       "cta": "Join waitlist"
@@ -28,6 +38,7 @@
     "core": {
       "name": "Core Creator",
       "per": "per month",
+      "perAnnual": "per year",
       "seatsLabel": "{seats} seats",
       "creditsLabel": "{credits} credits / mo",
       "storageLabel": "{gb} GB storage, then {rate}/GB",
@@ -43,14 +54,15 @@
     "studio": {
       "name": "Studio Pro",
       "per": "per month",
+      "perAnnual": "per year",
       "seatsLabel": "{seats} seats",
       "creditsLabel": "{credits} credits / mo",
       "storageLabel": "{gb} GB storage, then {rate}/GB",
       "features": [
-        "Direct cross-platform commercial export to Steam and Mobile stores",
-        "Turbo priority cloud build queue (isolated worker instances)",
-        "Advanced 3D model parsing and animation pipeline matching",
+        "Commercial export to Steam and Mobile stores (costs {exportCredits} credits per export)",
         "Full raw project source-code zip extraction and downloading",
+        "Advanced 3D model parsing and animation pipeline matching",
+        "Turbo priority cloud build queue (isolated worker instances)",
         "Extended build history retention window"
       ],
       "cta": "Join Studio waitlist"
@@ -92,6 +104,14 @@
       {
         "q": "What happens if our project does not buy the cloud database?",
         "a": "By default, your games utilize client-side local storage frameworks. This follows standard platform rules for single-player games, offline settings saving, and local machine progress. You only require the database add-on if you want your game to read and write records across a persistent global web network."
+      },
+      {
+        "q": "How does annual billing work?",
+        "a": "Switch the toggle to annual and you pay for ten months instead of twelve — effectively two months free on Core Creator and Studio Pro. The Hobbyist tier is free on either cadence."
+      },
+      {
+        "q": "Does the Studio Pro store export cost extra credits?",
+        "a": "Yes. Studio Pro unlocks commercial export to Steam and mobile stores, and each native store export draws {exportCredits} credits from your pool. The credit cost is in addition to your subscription, and only applies when you actually run a store export — not to ordinary web builds."
       }
     ]
   },

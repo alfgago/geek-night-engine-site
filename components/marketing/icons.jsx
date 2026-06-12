@@ -98,10 +98,10 @@ export function Avatar({ initials, color, size = 22, title, style }) {
 }
 
 export const PEOPLE = {
-  noor: { initials: "NA", color: "#c8f73c", name: "Noor Aydin" },
-  sam: { initials: "SP", color: "#74d6c8", name: "Sam Patel" },
-  jade: { initials: "JR", color: "#b794f6", name: "Jade Rivers" },
-  kai: { initials: "KO", color: "#f5a524", name: "Kai Okonkwo" },
-  rin: { initials: "RM", color: "#e26464", name: "Rin Matsuda" },
-  you: { initials: "YU", color: "#f4efe4", name: "You" },
+  noor: { initials: "NA", color: "#c8f73c" },
+  sam: { initials: "SP", color: "#74d6c8" },
+  jade: { initials: "JR", color: "#b794f6" },
+  kai: { initials: "KO", color: "#f5a524" },
+  rin: { initials: "RM", color: "#e26464" },
+  you: { initials: "YU", color: "#f4efe4" },
 };

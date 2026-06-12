@@ -1,0 +1,58 @@
+{
+  "seo": {
+    "title": "Security — how we protect your account and work",
+    "description": "How Geek Engine protects your account and projects: encrypted transit, Stripe-handled card data, org-scoped access roles, signed webhooks, env-gated error tracking, and clear data rights."
+  },
+  "hero": {
+    "eyebrow": "Security",
+    "heading": "Security practices, stated plainly.",
+    "sub": "Here's how we protect your account and your work today — and, just as importantly, what we don't claim. We're a pre-launch studio, so this page describes real practices, not certifications we haven't earned."
+  },
+  "sections": [
+    {
+      "title": "Encrypted in transit",
+      "body": [
+        "Traffic between your browser and Geek Engine is served over HTTPS, so data moving across the network is encrypted in transit. Realtime connections used for presence and live updates run over the same secured transport."
+      ]
+    },
+    {
+      "title": "Card data never touches our servers",
+      "body": [
+        "Payments are handled by Stripe. Your full card details go directly to Stripe and are never stored on Geek Engine's servers. We work with payment identifiers and subscription status, not raw card numbers, which keeps the most sensitive financial data out of our systems entirely.",
+        "Billing webhooks from Stripe are signed and verified before we act on them, so we don't trust unverified billing events."
+      ]
+    },
+    {
+      "title": "Org-scoped access and roles",
+      "body": [
+        "Projects belong to organizations, and access is scoped by role — owner, admin, editor, viewer, and playtester. What a member can see and do follows their role, so access is least-privilege by design rather than all-or-nothing.",
+        "Share links for playtest builds are controlled by your team and can be protected with an optional password, so you decide who can reach a build."
+      ]
+    },
+    {
+      "title": "Error tracking, off by default",
+      "body": [
+        "Our error tracking is environment-gated. It stays disabled unless explicitly configured, so diagnostics are an opt-in operational tool rather than something quietly running against your account from day one."
+      ]
+    },
+    {
+      "title": "Your data rights",
+      "body": [
+        "We support data-rights requests in line with modern privacy expectations, including access, correction, and deletion where applicable. Requests are handled through our privacy contact, where we may verify identity before acting.",
+        "To make a request or ask a security question, email {privacyEmail}. Our Privacy Policy describes how we handle your information in full."
+      ]
+    },
+    {
+      "title": "What we don't claim",
+      "body": [
+        "We're not going to overstate this. Geek Engine does not currently hold SOC 2 or ISO certifications, and we are not advertising third-party penetration-test attestations. If that changes, we'll say so here with specifics rather than vague badges.",
+        "No system is perfectly secure. You're responsible for protecting your account credentials and for managing the roles and share links inside your organization."
+      ]
+    }
+  ],
+  "ctaStrip": {
+    "heading": "Questions about security?",
+    "sub": "Reach our privacy contact, or subscribe for launch notes as we harden the platform toward release.",
+    "cta": "Subscribe for updates"
+  }
+}

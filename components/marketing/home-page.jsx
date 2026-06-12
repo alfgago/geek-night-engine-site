@@ -4,7 +4,7 @@ import { getDictionary, format } from "@/lib/i18n";
 import { pricingNumbers } from "@/data/marketing-data";
 import { CtaStrip, SiteFooter, SiteNav } from "./chrome";
 import { Avatar, Icon, I, PEOPLE } from "./icons";
-import { HeroProductMock } from "./previews";
+import { HeroProductMock } from "./hero-product-mock";
 
 const pillarIcons = ["sparkles", "build", "layers"];
 
@@ -109,7 +109,7 @@ function HomeHero({ lang, t }) {
               boxShadow: "var(--shadow-2)",
             }}
           />
-          <HeroProductMock />
+          <HeroProductMock lang={lang} />
         </div>
       </div>
     </section>

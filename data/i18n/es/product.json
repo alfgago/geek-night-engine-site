@@ -18,7 +18,7 @@
       "caps": [
         ["Centro de múltiples proyectos", "Crea, duplica, archiva, elimina o transfiere la propiedad de proyectos de juegos 2D y 3D independientes limpiamente."],
         ["Gobernanza organizacional", "Asigna roles distintos (Propietario, Administrador, Editor, Espectador, Probador) y gestiona rutas de acceso seguro del equipo."],
-        ["Insignias de salud del proyecto", "Rastrear instantáneamente qué sistemas están listos, compilándose, fallidos o esperando atención del desarrollador en toda la organización."],
+        ["Insignias de salud del proyecto", "Identifica al instante qué sistemas están listos, compilándose, fallidos o esperando atención del desarrollador en toda la organización."],
         ["Registros de actividad en tiempo real", "Una pista de auditoría completa e inmutable que rastrea prompts, compilaciones, cambios de snapshot, actualizaciones de configuración y acciones de facturación."]
       ]
     },
@@ -39,7 +39,7 @@
         ["Árboles de nodos visuales", "Audita gráficos de escena estructurales, sistemas de nodos padre-hijo y vectores de propiedades del sistema instantáneamente."],
         ["Operaciones tipadas", "Aplica propiedades seguras, actualiza datos de scripts, manipula dimensiones espaciales 3D y reordena jerarquías estructurales sin problemas."],
         ["Inspector de scripts", "Lee y verifica la lógica de comportamiento subyacente a través de lecturas profundas y atajos de scripts automatizados."],
-        ["Presencia de autoría compartida", "Rastrear cursores de equipos remotos, prompts compartidos y selecciones de nodos activos dentro de un lienzo de espacio de trabajo sincronizado."]
+        ["Presencia de autoría compartida", "Sigue los cursores de equipos remotos, prompts compartidos y selecciones de nodos activos dentro de un lienzo de espacio de trabajo sincronizado."]
       ]
     },
     "assets": {
@@ -54,12 +54,90 @@
     },
     "playtest": {
       "title": "Pruebas de juego en navegador y telemetría en tiempo real",
-      "desc": "Prueba mecánicas directamente dentro de tu interfaz de creador o distribuye compilaciones de sandbox a probadores externos para cosechar información de rendimiento.",
+      "desc": "Prueba mecánicas directamente dentro de tu interfaz de creador o distribuye compilaciones de sandbox a probadores externos para recopilar información de rendimiento.",
       "caps": [
         ["Superficie web instantánea", "Lanza compilaciones interactivas responsivas y de pantalla completa dentro de tu centro de control en el momento en que finaliza una tarea de compilación."],
         ["Enlaces de revisión compartibles", "Enlaces públicos o restringidos por contraseña construidos explícitamente para distribución a probadores externos."],
         ["Panel de telemetría", "Recopila seguimiento de sesiones, recuentos de frecuencia de eventos, umbrales de finalización y registros de ejecución de jugadores activos."],
         ["Discusión contextual", "Fija comentarios, carga capturas de pantalla de errores y organiza comentarios colaborativos vinculados a compilaciones o snapshots específicos."]
+      ]
+    }
+  },
+  "previewMock": {
+    "shell": {
+      "live": "en vivo"
+    },
+    "hub": {
+      "title": "geekengine.ai / proyectos",
+      "activityLabel": "ACTIVIDAD DEL ESTUDIO",
+      "cards": [
+        { "name": "Pebble Punks", "statusColor": "lime", "status": "listo · v0.4.7" },
+        { "name": "Goldcrest Run", "statusColor": "amber", "status": "compilando..." },
+        { "name": "Hollow Garden", "statusColor": "lime", "status": "listo · v0.2.0" },
+        { "name": "Mooncourt", "statusColor": "red", "status": "compilación fallida" },
+        { "name": "Tinwhistle", "statusColor": "lime", "status": "listo · v0.1.9" },
+        { "name": "Sin título", "statusColor": "muted", "status": "nunca compilado" }
+      ],
+      "activities": [
+        { "text": "sam recompiló goldcrest-run", "time": "ahora" },
+        { "text": "noor guardó snapshot v0.4.7", "time": "3m" },
+        { "text": "kai invitó a rin como editor", "time": "42m" }
+      ]
+    },
+    "ai": {
+      "title": "pebble-punks / Arquitecto",
+      "userTimestamp": "Tú · 12m",
+      "prompt": "Haz que la sala del jefe tenga tres fases con ataques de pisotón y carga.",
+      "ticketSummary": "Arquitecto · 6 tickets",
+      "creditDelta": "-62 cr",
+      "ready": "LISTO",
+      "operations": [
+        { "id": "#312", "kind": "agregar_nodo", "title": "Boss.Fase1" },
+        { "id": "#313", "kind": "agregar_nodo", "title": "Boss.Fase2 · Pisotón" },
+        { "id": "#314", "kind": "agregar_nodo", "title": "Boss.Fase3 · Carga" },
+        { "id": "#315", "kind": "editar_script", "title": "boss.gd" },
+        { "id": "#316", "kind": "vincular_activo", "title": "boss-roar.wav" },
+        { "id": "#317", "kind": "iniciar_compilación", "title": "v0.5.0" }
+      ],
+      "commandPrompt": "Ajusta el aviso de carga de la fase 3 a 0.6s..."
+    },
+    "scene": {
+      "title": "pebble-punks / Escena",
+      "inspectorLabel": "INSPECTOR · JUGADOR",
+      "tree": [
+        ["•", "Principal", "Node2D", 0],
+        ["▦", "Mundo", "TileMap", 1],
+        ["✷", "PuntosAparición", "Node2D", 2],
+        ["◆", "Jugador", "CharacterBody2D", 1, true],
+        ["▣", "Sprite", "Sprite2D", 2],
+        ["◇", "Colisionador", "CollisionShape2D", 2],
+        ["ƒ", "player.gd", "Script", 2],
+        ["•", "Enemigos", "Node2D", 1],
+        ["◆", "Grub", "CharacterBody2D", 2],
+        ["▤", "HUD", "CanvasLayer", 1]
+      ],
+      "properties": [
+        ["posición", "(96,280)"],
+        ["velocidad", "180"],
+        ["tiempo_coyote", "0.10s"]
+      ]
+    },
+    "assets": {
+      "title": "pebble-punks / Activos · 24",
+      "names": ["guijarro", "grub", "gema", "jefe", "salto", "moneda", "tile", "música", "sprite", "sfx", "modelo", "fuente"],
+      "storageLabel": "ALMACENAMIENTO",
+      "storageValue": "4.8 GB / 50 GB",
+      "unusedLabel": "SIN USAR",
+      "unusedValue": "3",
+      "autoBind": "auto-vincular al guardar"
+    },
+    "playtest": {
+      "title": "play.gne / pebble-punks",
+      "hud": "♥♥♥ · ⛀ 0/3 · T 00:42",
+      "telemetry": [
+        ["EVT", "1,284"],
+        ["SES", "38"],
+        ["COMP", "62%"]
       ]
     }
   },

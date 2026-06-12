@@ -5,6 +5,7 @@
     "date": "1 de junio de 2026",
     "readTime": "7 min lectura",
     "category": "Construcción pública",
+    "seoTags": ["Construcción pública", "Godot", "desarrollo de juegos con IA", "Build with Gemini XPRIZE"],
     "excerpt": "Por qué Build with Gemini XPRIZE finalmente nos dio una razón para convertir un sueño de estudio indie de una década en una plataforma Godot nativa de web.",
     "dek": "Geek Engine es nuestro intento de hacer el estudio de juegos que deseábamos que existiera cuando primero intentamos construir uno: nativo del navegador, asistido por IA, compilado en la nube y con precios para que la falta de recursos no sea lo que termine una buena idea.",
     "heroStats": [
@@ -28,7 +29,7 @@
       },
       {
         "type": "paragraph",
-        "text": "Hace unos diez años, unos pocos amigos cercanos e yo intentamos comenzar un estudio de juegos indie. Teníamos la energía y las ideas, pero las matemáticas eran brutales. El desarrollo de juegos era fragmentado, costoso e implacable. Cada disciplina necesitaba tiempo, hardware, herramientas y conocimiento especializado. No se nos acabó la imaginación. Se nos acabó la pista."
+        "text": "Hace unos diez años, unos pocos amigos cercanos y yo intentamos comenzar un estudio de juegos indie. Teníamos la energía y las ideas, pero las matemáticas eran brutales. El desarrollo de juegos era fragmentado, costoso e implacable. Cada disciplina necesitaba tiempo, hardware, herramientas y conocimiento especializado. No se nos acabó la imaginación. Se nos acabó la pista."
       },
       {
         "type": "heading",
@@ -40,7 +41,7 @@
       },
       {
         "type": "paragraph",
-        "text": "Geek Engine es un espacio de trabajo de producción de juegos nativo de web, multi-inquilino y asistido por IA para juegos Godot 2D y 3D. El atajo más fácil es Replit o Lovable para Godot, pero eso minimiza la parte difícil. Los proyectos de juegos no son aplicaciones CRUD normales. Un prompt único puede tocar árboles de escena, scripts, activos, estado de animación, formas de colisión, compilaciones exportadas y comportamiento de tiempo de ejecución enfrentado al jugador. Una caja de chat solamente no es suficiente."
+        "text": "Geek Engine es un espacio de trabajo de producción de juegos nativo de la web, multi-inquilino y asistido por IA para juegos Godot 2D y 3D. El atajo más fácil es Replit o Lovable para Godot, pero eso minimiza la parte difícil. Los proyectos de juegos no son aplicaciones CRUD normales. Un prompt único puede tocar árboles de escena, scripts, activos, estado de animación, formas de colisión, compilaciones exportadas y comportamiento de tiempo de ejecución enfrentado al jugador. Una caja de chat solamente no es suficiente."
       },
       {
         "type": "heading",
@@ -93,7 +94,7 @@
       },
       {
         "type": "paragraph",
-        "text": "Los criterios de XPRIZE nos impulsaron a pensar más allá de una superficie técnica cool. Si esto va a ayudar a creadores reales, tiene que sobrevivir a costos de cómputo reales. La compilación en la nube, el razonamiento de IA, la generación de activos y las compilaciones alojadas pueden volverse costosas rápidamente si el modelo de precios es vago."
+        "text": "Los criterios de XPRIZE nos impulsaron a pensar más allá de una superficie técnica llamativa. Si esto va a ayudar a creadores reales, tiene que sobrevivir a costos de cómputo reales. La compilación en la nube, el razonamiento de IA, la generación de activos y las compilaciones alojadas pueden volverse costosas rápidamente si el modelo de precios es vago."
       },
       {
         "type": "list",
@@ -102,7 +103,7 @@
           "El nivel gratuito está diseñado alrededor de 5,000 créditos mensuales para que los constructores solitarios puedan comenzar sin tarjeta.",
           "La colaboración pagada comienza cuando los equipos necesitan espacios de trabajo compartidos, coautería en tiempo real y grupos de crédito más grandes.",
           "La publicación en web permanece accesible porque las compilaciones de navegador son más baratas de alojar, mientras que la exportación nativa para Steam y dispositivos móviles pertenece a un nivel de procesamiento más alto.",
-          "La persistencia en línea se convierte en un complemento, para que los creadores solo paguen por bases de datos en la nube cuando sus juegos realmente necesitan tablas de clasificación, cuentas o guardos en la nube."
+          "La persistencia en línea se convierte en un complemento, para que los creadores solo paguen por bases de datos en la nube cuando sus juegos realmente necesitan tablas de clasificación, cuentas o partidas guardadas en la nube."
         ]
       },
       {
@@ -119,7 +120,7 @@
       },
       {
         "type": "paragraph",
-        "text": "Esta plataforma no es solo una herramienta para nosotros. Es la incubadora que queríamos hace una década. Si Geek Engine funciona, un desarrollador solitario con un fin de semana, una mecánica y gusto obstinado debería poder llegar mucho más lejos antes de que el dinero se convierte en el factor decisivo."
+        "text": "Esta plataforma no es solo una herramienta para nosotros. Es la incubadora que queríamos hace una década. Si Geek Engine funciona, un desarrollador solitario con un fin de semana, una mecánica y gusto obstinado debería poder llegar mucho más lejos antes de que el dinero se convierta en el factor decisivo."
       },
       {
         "type": "paragraph",

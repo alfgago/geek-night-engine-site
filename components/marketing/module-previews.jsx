@@ -1,15 +1,18 @@
+import { getDictionary } from "@/lib/i18n";
 import { Avatar, Icon, I, PEOPLE } from "./icons";
 
-export function ModulePreview({ kind }) {
-  if (kind === "hub") return <HubPreview />;
-  if (kind === "ai") return <AIPreview />;
-  if (kind === "scene") return <ScenePreview />;
-  if (kind === "assets") return <AssetsPreview />;
-  if (kind === "playtest") return <PlaytestPreview />;
+export function ModulePreview({ kind, lang = "en" }) {
+  const t = getDictionary(lang, "product").previewMock;
+
+  if (kind === "hub") return <HubPreview t={t} />;
+  if (kind === "ai") return <AIPreview t={t} />;
+  if (kind === "scene") return <ScenePreview t={t} />;
+  if (kind === "assets") return <AssetsPreview t={t} />;
+  if (kind === "playtest") return <PlaytestPreview t={t} />;
   return null;
 }
 
-export function ShellWrap({ title, children }) {
+export function ShellWrap({ title, liveLabel, children }) {
   return (
     <div
       className="card"
@@ -31,7 +34,7 @@ export function ShellWrap({ title, children }) {
         </span>
         <div style={{ flex: 1 }} />
         <span className="chip ghost" style={{ height: 16, fontSize: 9.5 }}>
-          <span className="dot lime" /> live
+          <span className="dot lime" /> {liveLabel}
         </span>
       </div>
       {children}
@@ -39,51 +42,42 @@ export function ShellWrap({ title, children }) {
   );
 }
 
-function HubPreview() {
-  const cards = [
-    { n: "Pebble Punks", s: "lime", t: "ready · v0.4.7" },
-    { n: "Goldcrest Run", s: "amber", t: "compiling..." },
-    { n: "Hollow Garden", s: "lime", t: "ready · v0.2.0" },
-    { n: "Mooncourt", s: "red", t: "build failed" },
-    { n: "Tinwhistle", s: "lime", t: "ready · v0.1.9" },
-    { n: "Untitled", s: "muted", t: "never built" },
-  ];
-
+function HubPreview({ t }) {
   return (
-    <ShellWrap title="geekengine.ai / projects">
+    <ShellWrap title={t.hub.title} liveLabel={t.shell.live}>
       <div style={{ padding: 18, height: "calc(100% - 32px)", overflow: "hidden" }}>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8 }}>
-          {cards.map((card) => (
-            <div key={card.n} className="card" style={{ padding: 10, background: "var(--bg-1)" }}>
+          {t.hub.cards.map((card) => (
+            <div key={card.name} className="card" style={{ padding: 10, background: "var(--bg-1)" }}>
               <div className="placeholder" style={{ height: 50, marginBottom: 6, borderRadius: 4, background: "linear-gradient(135deg, rgba(200,247,60,0.05), transparent)" }}>
                 <span className="mono" style={{ fontSize: 9, color: "var(--fg-3)" }}>
-                  {card.n}
+                  {card.name}
                 </span>
               </div>
               <div className="gne-row" style={{ gap: 5 }}>
-                <span className={`dot ${card.s}`} />
+                <span className={`dot ${card.statusColor}`} />
                 <span className="mono" style={{ fontSize: 10, color: "var(--fg-1)" }}>
-                  {card.n}
+                  {card.name}
                 </span>
               </div>
               <div className="mono" style={{ fontSize: 9, color: "var(--fg-3)", marginTop: 3 }}>
-                {card.t}
+                {card.status}
               </div>
             </div>
           ))}
         </div>
         <div className="label-cap" style={{ marginTop: 18, marginBottom: 8 }}>
-          STUDIO ACTIVITY
+          {t.hub.activityLabel}
         </div>
-        {["sam rebuilt goldcrest-run", "noor snapshotted v0.4.7", "kai invited rin as editor"].map((activity, index) => (
+        {t.hub.activities.map((activity, index) => (
           <div
-            key={activity}
+            key={activity.text}
             className="gne-row mono"
             style={{ fontSize: 11, padding: "5px 0", borderTop: index ? "1px dashed var(--border-1)" : 0, color: "var(--fg-1)", gap: 8 }}
           >
-            <span className="dot lime" /> {activity}
+            <span className="dot lime" /> {activity.text}
             <div style={{ flex: 1 }} />
-            <span style={{ color: "var(--fg-3)" }}>{["now", "3m", "42m"][index]}</span>
+            <span style={{ color: "var(--fg-3)" }}>{activity.time}</span>
           </div>
         ))}
       </div>
@@ -91,18 +85,18 @@ function HubPreview() {
   );
 }
 
-function AIPreview() {
+function AIPreview({ t }) {
   return (
-    <ShellWrap title="pebble-punks / Architect">
+    <ShellWrap title={t.ai.title} liveLabel={t.shell.live}>
       <div style={{ padding: 16, height: "calc(100% - 32px)", overflow: "hidden", display: "flex", flexDirection: "column", gap: 12 }}>
         <div className="gne-row" style={{ gap: 9, alignItems: "flex-start" }}>
           <Avatar {...PEOPLE.you} size={20} />
           <div style={{ flex: 1 }}>
             <div className="mono" style={{ fontSize: 10, color: "var(--fg-3)" }}>
-              You · 12m
+              {t.ai.userTimestamp}
             </div>
             <div style={{ fontSize: 12.5, color: "var(--fg-1)", marginTop: 2 }} className="pretty">
-              Make the boss room have three phases with stomp + charge attacks.
+              {t.ai.prompt}
             </div>
           </div>
         </div>
@@ -124,31 +118,24 @@ function AIPreview() {
           </div>
           <div style={{ flex: 1 }}>
             <div className="gne-row mono" style={{ gap: 6 }}>
-              <span style={{ fontSize: 11, color: "var(--lime)", fontWeight: 500 }}>Architect · 6 tickets</span>
+              <span style={{ fontSize: 11, color: "var(--lime)", fontWeight: 500 }}>{t.ai.ticketSummary}</span>
               <span className="chip ghost" style={{ height: 14, fontSize: 9, padding: "0 4px" }}>
-                -62 cr
+                {t.ai.creditDelta}
               </span>
             </div>
             <div style={{ marginTop: 6, border: "1px solid var(--border-1)", borderRadius: 4, background: "var(--bg-0)" }}>
-              {[
-                ["#312", "add_node", "Boss.Phase1"],
-                ["#313", "add_node", "Boss.Phase2 · Stomp"],
-                ["#314", "add_node", "Boss.Phase3 · Charge"],
-                ["#315", "edit_script", "boss.gd"],
-                ["#316", "bind_asset", "boss-roar.wav"],
-                ["#317", "trigger_build", "v0.5.0"],
-              ].map(([id, kind, title], index) => (
+              {t.ai.operations.map((operation, index) => (
                 <div
-                  key={id}
+                  key={operation.id}
                   className="gne-row mono"
-                  style={{ fontSize: 10, padding: "5px 9px", gap: 8, borderBottom: index < 5 ? "1px solid var(--border-1)" : 0, color: "var(--fg-1)" }}
+                  style={{ fontSize: 10, padding: "5px 9px", gap: 8, borderBottom: index < t.ai.operations.length - 1 ? "1px solid var(--border-1)" : 0, color: "var(--fg-1)" }}
                 >
-                  <span style={{ color: "var(--fg-3)", flex: "0 0 30px" }}>{id}</span>
-                  <span style={{ color: "var(--lime)", flex: "0 0 90px" }}>{kind}</span>
-                  <span style={{ color: "var(--fg-0)" }}>{title}</span>
+                  <span style={{ color: "var(--fg-3)", flex: "0 0 30px" }}>{operation.id}</span>
+                  <span style={{ color: "var(--lime)", flex: "0 0 90px" }}>{operation.kind}</span>
+                  <span style={{ color: "var(--fg-0)" }}>{operation.title}</span>
                   <div style={{ flex: 1 }} />
                   <span className="chip ghost" style={{ height: 12, fontSize: 8, padding: "0 3px" }}>
-                    READY
+                    {t.ai.ready}
                   </span>
                 </div>
               ))}
@@ -159,7 +146,7 @@ function AIPreview() {
         <div className="card" style={{ padding: "6px 9px", background: "var(--bg-1)" }}>
           <div className="mono" style={{ fontSize: 11, color: "var(--fg-1)" }}>
             <span style={{ color: "var(--fg-3)", marginRight: 4 }}>›</span>
-            Adjust phase 3 charge tell to 0.6s...
+            {t.ai.commandPrompt}
             <span style={{ display: "inline-block", width: 6, height: 11, background: "var(--lime)", verticalAlign: "-1px", marginLeft: 2 }} />
           </div>
         </div>
@@ -168,23 +155,11 @@ function AIPreview() {
   );
 }
 
-function ScenePreview() {
-  const tree = [
-    ["•", "Main", "Node2D", 0],
-    ["▦", "World", "TileMap", 1],
-    ["✷", "SpawnPoints", "Node2D", 2],
-    ["◆", "Player", "CharacterBody2D", 1, true],
-    ["▣", "Sprite", "Sprite2D", 2],
-    ["◇", "Collider", "CollisionShape2D", 2],
-    ["ƒ", "player.gd", "Script", 2],
-    ["•", "Enemies", "Node2D", 1],
-    ["◆", "Grub", "CharacterBody2D", 2],
-    ["▤", "HUD", "CanvasLayer", 1],
-  ];
+function ScenePreview({ t }) {
   return (
-    <ShellWrap title="pebble-punks / Scene">
+    <ShellWrap title={t.scene.title} liveLabel={t.shell.live}>
       <div style={{ padding: 8, height: "calc(100% - 32px)", overflow: "hidden" }}>
-        {tree.map(([icon, label, type, depth, selected], index) => (
+        {t.scene.tree.map(([icon, label, type, depth, selected], index) => (
           <div key={index} className={`tree-row ${selected ? "sel" : ""}`} style={{ paddingLeft: 8 + depth * 12, fontSize: 11 }}>
             <span className="mono" style={{ width: 11, color: "var(--fg-3)", textAlign: "center" }}>
               {icon}
@@ -196,14 +171,10 @@ function ScenePreview() {
           </div>
         ))}
         <div className="label-cap" style={{ marginTop: 10, marginBottom: 6, padding: "0 8px" }}>
-          INSPECTOR · PLAYER
+          {t.scene.inspectorLabel}
         </div>
         <div style={{ padding: "0 8px" }}>
-          {[
-            ["position", "(96,280)"],
-            ["speed", "180"],
-            ["coyote_time", "0.10s"],
-          ].map(([key, value]) => (
+          {t.scene.properties.map(([key, value]) => (
             <div key={key} className="gne-row mono" style={{ fontSize: 10.5, padding: "3px 0", borderBottom: "1px dashed var(--border-1)" }}>
               <span style={{ color: "var(--fg-3)", flex: "0 0 90px" }}>{key}</span>
               <span style={{ color: "var(--lime)" }}>{value}</span>
@@ -215,13 +186,13 @@ function ScenePreview() {
   );
 }
 
-function AssetsPreview() {
+function AssetsPreview({ t }) {
   return (
-    <ShellWrap title="pebble-punks / Assets · 24">
+    <ShellWrap title={t.assets.title} liveLabel={t.shell.live}>
       <div style={{ padding: 14, height: "calc(100% - 32px)", overflow: "hidden" }}>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 8 }}>
-          {Array.from({ length: 12 }).map((_, index) => (
-            <div key={index} className="card" style={{ padding: 0, overflow: "hidden" }}>
+          {t.assets.names.map((name, index) => (
+            <div key={name} className="card" style={{ padding: 0, overflow: "hidden" }}>
               <div
                 className="placeholder"
                 style={{ height: 50, borderRadius: 0, border: 0, color: ["var(--lime)", "var(--amber)", "var(--cyan)", "var(--violet)"][index % 4] }}
@@ -229,29 +200,29 @@ function AssetsPreview() {
                 <Icon d={[I.sparkles, I.wave, I.cube, I.layers][index % 4]} size={14} />
               </div>
               <div className="mono" style={{ fontSize: 8.5, padding: "4px 6px", color: "var(--fg-2)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
-                {["pebble", "grub", "gem", "boss", "jump", "coin", "tile", "music", "sprite", "sfx", "model", "font"][index]}
+                {name}
               </div>
             </div>
           ))}
         </div>
         <div className="gne-row mono" style={{ marginTop: 10, fontSize: 10.5, color: "var(--fg-2)", gap: 10 }}>
           <span>
-            <span style={{ color: "var(--fg-3)" }}>STORAGE</span> 4.8 GB / 50 GB
+            <span style={{ color: "var(--fg-3)" }}>{t.assets.storageLabel}</span> {t.assets.storageValue}
           </span>
           <span>
-            <span style={{ color: "var(--fg-3)" }}>UNUSED</span> 3
+            <span style={{ color: "var(--fg-3)" }}>{t.assets.unusedLabel}</span> {t.assets.unusedValue}
           </span>
           <div style={{ flex: 1 }} />
-          <span style={{ color: "var(--lime)" }}>auto-bind on save</span>
+          <span style={{ color: "var(--lime)" }}>{t.assets.autoBind}</span>
         </div>
       </div>
     </ShellWrap>
   );
 }
 
-function PlaytestPreview() {
+function PlaytestPreview({ t }) {
   return (
-    <ShellWrap title="play.gne / pebble-punks">
+    <ShellWrap title={t.playtest.title} liveLabel={t.shell.live}>
       <div className="checker scanline" style={{ position: "relative", height: "calc(100% - 32px)", background: "linear-gradient(180deg, #0a0d05 0%, #060805 100%)" }}>
         <svg width="100%" height="100%" viewBox="0 0 400 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
           <defs>
@@ -282,21 +253,17 @@ function PlaytestPreview() {
           </g>
         </svg>
         <div className="mono" style={{ position: "absolute", top: 10, left: 12, color: "var(--lime)", fontSize: 10.5, textShadow: "0 0 8px rgba(200,247,60,0.4)" }}>
-          ♥♥♥ · ⛀ 0/3 · T 00:42
+          {t.playtest.hud}
         </div>
         <div
           className="gne-row mono"
           style={{ position: "absolute", bottom: 10, right: 12, gap: 8, fontSize: 9, color: "var(--fg-1)", background: "rgba(12,12,10,0.8)", padding: "4px 8px", borderRadius: 4, border: "1px solid var(--border-2)" }}
         >
-          <span>
-            <span style={{ color: "var(--fg-3)" }}>EVT</span> 1,284
-          </span>
-          <span>
-            <span style={{ color: "var(--fg-3)" }}>SESS</span> 38
-          </span>
-          <span>
-            <span style={{ color: "var(--fg-3)" }}>COMP</span> 62%
-          </span>
+          {t.playtest.telemetry.map(([label, value]) => (
+            <span key={label}>
+              <span style={{ color: "var(--fg-3)" }}>{label}</span> {value}
+            </span>
+          ))}
         </div>
       </div>
     </ShellWrap>

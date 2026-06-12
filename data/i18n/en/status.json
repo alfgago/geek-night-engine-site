@@ -1,0 +1,27 @@
+{
+  "seo": {
+    "title": "Status — is Geek Engine up?",
+    "description": "Live status for Geek Engine. We probe the app platform from our edge and report whether it's operational, plus the status of this marketing site."
+  },
+  "hero": {
+    "eyebrow": "Status",
+    "heading": "Is everything running?",
+    "sub": "We check the app platform from our edge every minute or so and report what we see — honestly, including when we can't reach it."
+  },
+  "rows": {
+    "label": "Live checks",
+    "appPlatform": "App platform",
+    "marketingSite": "Marketing site",
+    "marketingValue": "you're reading it",
+    "operational": "operational",
+    "degraded": "unreachable from our edge",
+    "unknown": "status unknown",
+    "lastChecked": "Last checked {time}"
+  },
+  "note": "This check probes a lightweight health endpoint on the app platform. An amber result means our edge couldn't reach it just now; it doesn't always mean the platform is down for everyone.",
+  "ctaStrip": {
+    "heading": "Want incident notes?",
+    "sub": "Geek Engine isn't live yet. Subscribe for launch and reliability updates.",
+    "cta": "Subscribe for updates"
+  }
+}

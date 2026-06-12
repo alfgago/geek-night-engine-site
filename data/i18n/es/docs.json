@@ -1,0 +1,93 @@
+{
+  "seo": {
+    "title": "Docs — how Geek Engine works",
+    "description": "Documentation for Geek Engine: getting started, the wizard, the Architect chat, scenes and the GDD, asset studios, playtests and telemetry, credits and billing, and storage and teams."
+  },
+  "hero": {
+    "eyebrow": "Learn · Docs",
+    "heading": "How Geek Engine works.",
+    "sub": "A practical tour of the product, from your first project to teams and billing. Everything here describes what the engine actually does today.",
+    "primaryCta": "Subscribe for updates",
+    "secondaryCta": "See how it works"
+  },
+  "tocLabel": "On this page",
+  "articles": [
+    {
+      "id": "getting-started",
+      "title": "Getting started",
+      "body": [
+        "Geek Engine turns a description of a game into a playable build. You start a project, describe what you want, and the engine does the engine work — editing a structured game model, generating assets, and compiling a real Godot web build you can play in your browser.",
+        "Everything happens in one workspace tab. There's nothing to install, no engine to learn first, and no export pipeline to configure. Your job is to describe and steer; the engine handles the structure, code, and build.",
+        "Because Geek Engine is pre-launch, access opens in waves. Subscribing to the launch newsletter is how you get the first availability window."
+      ]
+    },
+    {
+      "id": "the-wizard",
+      "title": "The wizard",
+      "body": [
+        "New projects begin with a 7-step guided wizard that turns a loose idea into a structured plan. It starts with your Idea, then runs an AI interview covering Gameplay, Style, and Scope to understand what you're really making.",
+        "From your answers, the engine suggests a Foundation template to build on. It then drafts an editable build plan you can refine through a chat before anything is committed, and finishes with a Game Design Document review so you approve the shape of the project before it's built.",
+        "Wizard steps consume a small number of credits each, on the order of a few to a couple dozen, because they involve AI work. The result is a Game Design Document the rest of the tools operate on."
+      ]
+    },
+    {
+      "id": "architect-chat",
+      "title": "Architect chat",
+      "body": [
+        "The Architect is the AI chat you use to change your game after the wizard. You describe a change in plain language, and the Architect translates it into typed operations against the Game Design Document — adding nodes, setting properties, attaching scripts, binding assets, adding mechanics, and more.",
+        "Every change is snapshotted before and after, so the full history is preserved and reversible. When a compile fails, the Architect can read the error log and attempt a single credit-checked self-heal before rebuilding.",
+        "Chat requests are metered, starting around 20 credits, with heavier work costing more. You always work against one auditable model rather than a pile of disconnected edits."
+      ]
+    },
+    {
+      "id": "scenes-and-the-gdd",
+      "title": "Scenes & the GDD",
+      "body": [
+        "The Game Design Document is the single source of truth for your project. It holds the structure, scripts, mechanics, and asset bindings, and everything else — the compiled build, the Scenes inspector, the assets — derives from it.",
+        "The Scenes inspector is your window into that model. You can walk the scene-node tree, inspect node properties and mechanics, and read generated scripts to confirm the AI built what you asked for.",
+        "Generated source code isn't hand-edited. You change the game by describing changes to the Architect, which re-derives the structure and regenerates code, so there's never a drifting hand edit to reconcile against the model."
+      ]
+    },
+    {
+      "id": "asset-studios",
+      "title": "Asset studios",
+      "body": [
+        "The asset studios let you create and manage the media your game uses without leaving the workspace. The sprite forge generates 2D art from a text description, the SFX synth generates sound effects, and the 3D studio generates models with AI or accepts industry-standard files you upload.",
+        "You can also store arbitrary bring-your-own files alongside a project. Everything is organized in a per-project file tree derived from each asset's path and type, and assets can be bound to nodes so the compiled build picks them up.",
+        "Generated and uploaded assets count toward your organization's storage quota, so the cost of your media library stays visible."
+      ]
+    },
+    {
+      "id": "playtests-and-telemetry",
+      "title": "Playtests & telemetry",
+      "body": [
+        "When a build succeeds, it's a hosted web game you can play immediately and share with testers. Share links can carry an optional password, and external testers don't need an account to play and respond.",
+        "Testers can leave feedback against a build, and the game emits telemetry as they play — events, sessions, and completion signals that are captured and summarized on your dashboard.",
+        "After each deploy, Vision QA screenshots the hosted build and asks a vision model whether it actually rendered, capturing two frames to catch frozen games. A pass becomes your project thumbnail; a fail can trigger one credit-checked self-heal."
+      ]
+    },
+    {
+      "id": "credits-and-billing",
+      "title": "Credits & billing",
+      "body": [
+        "AI work in Geek Engine is measured in credits. Wizard steps, Architect chat, asset generation, compiles, and store exports each draw from your balance, with the cost tied to how heavy the work is — small edits cost little, large generations cost more.",
+        "Your plan includes a monthly credit pool shared across your organization, and you can buy top-ups when a project hits a busy stretch. Credits measure consumption; they aren't cash or stored value.",
+        "Plans run from a free Hobbyist tier through Core Creator and Studio Pro, with Studio Pro adding commercial store export, source ZIP downloads, advanced 3D, and isolated build workers. See the pricing page for the current numbers."
+      ]
+    },
+    {
+      "id": "storage-and-teams",
+      "title": "Storage & teams",
+      "body": [
+        "Storage is metered per organization. The free tier has a hard cap, while paid tiers include a storage allowance and bill metered overage beyond it. Billable storage counts your uploaded and generated assets and the latest compiled build per project.",
+        "Teams work through organizations and seats. Roles — owner, admin, editor, viewer, and playtester — scope what each member can do, and your plan sets how many seats you have. An activity feed records prompts, builds, snapshots, invitations, and billing actions as a shared audit trail.",
+        "Realtime presence shows who's active in a workspace, so collaborating on the same project stays coordinated rather than guesswork."
+      ]
+    }
+  ],
+  "ctaStrip": {
+    "heading": "Docs grow with the product.",
+    "sub": "Geek Engine isn't live yet. Subscribe for the first access window and expanded documentation.",
+    "cta": "Subscribe for updates"
+  }
+}

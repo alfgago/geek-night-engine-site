@@ -1,0 +1,57 @@
+{
+  "seo": {
+    "title": "DMCA — copyright notice and counter-notice",
+    "description": "How to send a DMCA copyright infringement notice or counter-notice to Geek Engine, what a valid notice must include, and where to reach our designated contact."
+  },
+  "hero": {
+    "eyebrow": "Legal · DMCA",
+    "heading": "Copyright notice and counter-notice.",
+    "sub": "If you believe content hosted through Geek Engine infringes your copyright, this page explains how to tell us, what a valid notice needs to include, and how a user can respond. Our Terms also describe copyright handling."
+  },
+  "sections": [
+    {
+      "title": "1. Reporting alleged infringement",
+      "body": [
+        "If you are a copyright owner, or authorized to act on behalf of one, and you believe material hosted through Geek Engine infringes your copyright, send a written notice to our copyright contact at {dmcaEmail}.",
+        "Submitting a knowingly false notice may expose you to liability. If you are unsure whether material is infringing, consider seeking legal advice before sending a notice."
+      ]
+    },
+    {
+      "title": "2. What a valid notice must include",
+      "list": [
+        "Identification of the copyrighted work you claim has been infringed.",
+        "Identification of the material that is claimed to be infringing, with enough detail for us to locate it, such as the project, build, share link, or asset.",
+        "Your contact information, including name, address, telephone number, and email address.",
+        "A statement that you have a good-faith belief that the use is not authorized by the copyright owner, its agent, or the law.",
+        "A statement, made under penalty of perjury, that the information in your notice is accurate and that you are the copyright owner or authorized to act on the owner's behalf.",
+        "Your physical or electronic signature."
+      ]
+    },
+    {
+      "title": "3. How we respond",
+      "body": [
+        "When we receive a valid notice, we may remove or disable access to the material identified in the notice and take reasonable steps to notify the affected user. We may also act on repeat-infringer situations as appropriate.",
+        "We aim to handle valid notices promptly. Incomplete notices may delay our ability to act."
+      ]
+    },
+    {
+      "title": "4. Counter-notice",
+      "body": [
+        "If you are a user whose material was removed and you believe the removal was a mistake or misidentification, you may send a counter-notice to {dmcaEmail}.",
+        "A valid counter-notice should identify the removed material and its prior location, include a statement under penalty of perjury that you have a good-faith belief the material was removed by mistake or misidentification, include your contact information and consent to jurisdiction as required by applicable law, and include your physical or electronic signature."
+      ]
+    },
+    {
+      "title": "5. Designated contact and safe harbor",
+      "body": [
+        "Send all copyright notices and counter-notices to {dmcaEmail}. For other legal matters, contact {legalEmail}.",
+        "If Geek Engine seeks U.S. DMCA safe-harbor protection for hosted user content, it should maintain a designated agent registered with the U.S. Copyright Office and keep that agent's contact information current. This page and our Terms describe the contact route for copyright notices."
+      ]
+    }
+  ],
+  "ctaStrip": {
+    "heading": "Other legal questions?",
+    "sub": "For matters beyond copyright, reach our legal contact. Subscribe for product launch updates.",
+    "cta": "Subscribe for updates"
+  }
+}

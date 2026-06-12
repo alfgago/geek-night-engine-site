@@ -46,7 +46,7 @@
       "roadmap": "Hoja de ruta ↗",
       "changelog": "Registro de cambios ↗"
     },
-    "statusLine": "todos los sistemas operativos · {statusHost}",
+    "statusLine": "todos los sistemas funcionando · {statusHost}",
     "locations": "↳ Estambul · Tokio · Toronto · amigable con la asincronía"
   },
   "form": {

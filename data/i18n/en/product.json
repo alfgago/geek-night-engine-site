@@ -63,6 +63,84 @@
       ]
     }
   },
+  "previewMock": {
+    "shell": {
+      "live": "live"
+    },
+    "hub": {
+      "title": "geekengine.ai / projects",
+      "activityLabel": "STUDIO ACTIVITY",
+      "cards": [
+        { "name": "Pebble Punks", "statusColor": "lime", "status": "ready · v0.4.7" },
+        { "name": "Goldcrest Run", "statusColor": "amber", "status": "compiling..." },
+        { "name": "Hollow Garden", "statusColor": "lime", "status": "ready · v0.2.0" },
+        { "name": "Mooncourt", "statusColor": "red", "status": "build failed" },
+        { "name": "Tinwhistle", "statusColor": "lime", "status": "ready · v0.1.9" },
+        { "name": "Untitled", "statusColor": "muted", "status": "never built" }
+      ],
+      "activities": [
+        { "text": "sam rebuilt goldcrest-run", "time": "now" },
+        { "text": "noor snapshotted v0.4.7", "time": "3m" },
+        { "text": "kai invited rin as editor", "time": "42m" }
+      ]
+    },
+    "ai": {
+      "title": "pebble-punks / Architect",
+      "userTimestamp": "You · 12m",
+      "prompt": "Make the boss room have three phases with stomp + charge attacks.",
+      "ticketSummary": "Architect · 6 tickets",
+      "creditDelta": "-62 cr",
+      "ready": "READY",
+      "operations": [
+        { "id": "#312", "kind": "add_node", "title": "Boss.Phase1" },
+        { "id": "#313", "kind": "add_node", "title": "Boss.Phase2 · Stomp" },
+        { "id": "#314", "kind": "add_node", "title": "Boss.Phase3 · Charge" },
+        { "id": "#315", "kind": "edit_script", "title": "boss.gd" },
+        { "id": "#316", "kind": "bind_asset", "title": "boss-roar.wav" },
+        { "id": "#317", "kind": "trigger_build", "title": "v0.5.0" }
+      ],
+      "commandPrompt": "Adjust phase 3 charge tell to 0.6s..."
+    },
+    "scene": {
+      "title": "pebble-punks / Scene",
+      "inspectorLabel": "INSPECTOR · PLAYER",
+      "tree": [
+        ["•", "Main", "Node2D", 0],
+        ["▦", "World", "TileMap", 1],
+        ["✷", "SpawnPoints", "Node2D", 2],
+        ["◆", "Player", "CharacterBody2D", 1, true],
+        ["▣", "Sprite", "Sprite2D", 2],
+        ["◇", "Collider", "CollisionShape2D", 2],
+        ["ƒ", "player.gd", "Script", 2],
+        ["•", "Enemies", "Node2D", 1],
+        ["◆", "Grub", "CharacterBody2D", 2],
+        ["▤", "HUD", "CanvasLayer", 1]
+      ],
+      "properties": [
+        ["position", "(96,280)"],
+        ["speed", "180"],
+        ["coyote_time", "0.10s"]
+      ]
+    },
+    "assets": {
+      "title": "pebble-punks / Assets · 24",
+      "names": ["pebble", "grub", "gem", "boss", "jump", "coin", "tile", "music", "sprite", "sfx", "model", "font"],
+      "storageLabel": "STORAGE",
+      "storageValue": "4.8 GB / 50 GB",
+      "unusedLabel": "UNUSED",
+      "unusedValue": "3",
+      "autoBind": "auto-bind on save"
+    },
+    "playtest": {
+      "title": "play.gne / pebble-punks",
+      "hud": "♥♥♥ · ⛀ 0/3 · T 00:42",
+      "telemetry": [
+        ["EVT", "1,284"],
+        ["SESS", "38"],
+        ["COMP", "62%"]
+      ]
+    }
+  },
   "ctaStrip": {
     "heading": "Five modules, one shared game design document.",
     "sub": "Everything you ship lands in the same auditable model. Subscribe for release notes as the first access window opens.",

@@ -1,0 +1,57 @@
+{
+  "seo": {
+    "title": "Playtest — share builds and capture feedback",
+    "description": "Playtest hosts your Godot web build, share links with optional passwords, captures external tester feedback and telemetry, and runs Vision QA to verify every deploy actually rendered."
+  },
+  "hero": {
+    "eyebrow": "Product · Playtest",
+    "heading": "Ship a link. Watch how people play.",
+    "sub": "Every successful build is a hosted web game you can play in the browser and share with real testers. Send a link, optionally protect it with a password, collect feedback and telemetry, and let Vision QA confirm each deploy actually rendered before anyone sees it.",
+    "primaryCta": "Join launch newsletter",
+    "secondaryCta": "See how it works"
+  },
+  "sections": [
+    {
+      "title": "Hosted web builds",
+      "body": "When a compile succeeds, the result is a playable Godot web export hosted for you — no exporting, uploading, or wiring up a server. You can play it in the workspace the moment it's ready, then hand it to testers as a link.",
+      "caps": [
+        ["Playable immediately", "A successful build is a web game you can open right away."],
+        ["Nothing to host yourself", "The build is served for you; you just share the link."]
+      ]
+    },
+    {
+      "title": "Share links, optionally protected",
+      "body": "Generate a share link for any build and send it to external testers. Links can carry an optional password, so you decide whether a build is open to anyone with the URL or gated to the people you choose. Testers don't need an account to play and respond.",
+      "caps": [
+        ["Optional password", "Gate a build to chosen testers, or leave it open — your call."],
+        ["No account needed", "External testers play from the link without signing up."]
+      ]
+    },
+    {
+      "title": "Feedback and telemetry",
+      "body": "External testers can leave feedback against a build, and the game emits telemetry as they play — events, sessions, and completion signals are captured and summarized on your dashboard. You get a real picture of how a build performs in the wild instead of guessing.",
+      "caps": [
+        ["Tester feedback", "Collect comments and reports tied to the build that produced them."],
+        ["Telemetry capture", "Gameplay events and sessions are recorded and summarized for you."]
+      ]
+    },
+    {
+      "title": "Vision QA on every deploy",
+      "body": "After a successful deploy, Vision QA opens the hosted build in a headless browser, screenshots it, and asks a vision model whether the game actually rendered. It captures two frames to catch frozen games, marks the result PASS or FAIL in the build log, and on a pass stores the screenshot as your project thumbnail. A fail can trigger one credit-checked self-heal.",
+      "caps": [
+        ["Did it actually render?", "Vision QA verifies the deploy visually, not just that the build exited cleanly."],
+        ["Thumbnails and heals", "A pass becomes your dashboard thumbnail; a fail can prompt one repair attempt."]
+      ]
+    }
+  ],
+  "connect": {
+    "label": "How it connects",
+    "heading": "From a chat request to a public link.",
+    "body": "The Architect builds, the compiler produces a web export, Vision QA verifies it, and Playtest hands it to your testers. Their feedback and telemetry flow back into the workspace, where you describe the next change and run the loop again."
+  },
+  "ctaStrip": {
+    "heading": "Put builds in front of real players.",
+    "sub": "Geek Engine isn't live yet. Subscribe and we'll send the first access window and build notes.",
+    "cta": "Subscribe for launch updates"
+  }
+}

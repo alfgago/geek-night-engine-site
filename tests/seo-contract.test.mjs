@@ -19,6 +19,9 @@ test("site SEO is centralized and exposes complete social metadata defaults", ()
   assert.match(seo, /twitter/);
   assert.match(seo, /alternates/);
   assert.match(seo, /canonical/);
+  assert.match(seo, /commonSeo/);
+  assert.match(seo, /metadataKeywords/);
+  assert.match(seo, /keywords:\s*\[\.\.\.metadataKeywords,\s*\.\.\.tags\]/);
   // Locale awareness: canonical URLs carry the locale prefix and every page
   // declares hreflang pairs plus x-default.
   assert.match(seo, /languageAlternates/);
@@ -31,9 +34,22 @@ test("all public static pages use the shared metadata builder with locale params
   const pageFiles = [
     "app/[lang]/page.jsx",
     "app/[lang]/product/page.jsx",
+    "app/[lang]/product/architect/page.jsx",
+    "app/[lang]/product/scenes/page.jsx",
+    "app/[lang]/product/asset-studios/page.jsx",
+    "app/[lang]/product/playtest/page.jsx",
+    "app/[lang]/product/workspace/page.jsx",
     "app/[lang]/how-it-works/page.jsx",
     "app/[lang]/pricing/page.jsx",
     "app/[lang]/contact/page.jsx",
+    "app/[lang]/about/page.jsx",
+    "app/[lang]/launch-updates/page.jsx",
+    "app/[lang]/careers/page.jsx",
+    "app/[lang]/docs/page.jsx",
+    "app/[lang]/guides/page.jsx",
+    "app/[lang]/status/page.jsx",
+    "app/[lang]/security/page.jsx",
+    "app/[lang]/dmca/page.jsx",
     "app/[lang]/privacy/page.jsx",
     "app/[lang]/terms/page.jsx",
     "app/[lang]/news/page.jsx",
@@ -62,6 +78,24 @@ test("sitemap, robots, and generated OG image routes are present and locale-awar
   assert.match(sitemap, /locales\.flatMap/);
   assert.match(sitemap, /localizePath\(lang/);
   assert.match(sitemap, /alternates:\s*\{\s*languages:/);
+  // Every new content route is enumerated in the sitemap.
+  for (const route of [
+    "routes.productArchitect",
+    "routes.productScenes",
+    "routes.productAssetStudios",
+    "routes.productPlaytest",
+    "routes.productWorkspace",
+    "routes.docs",
+    "routes.guides",
+    "routes.about",
+    "routes.launchUpdates",
+    "routes.careers",
+    "routes.status",
+    "routes.security",
+    "routes.dmca",
+  ]) {
+    assert.ok(sitemap.includes(route), `sitemap should list ${route}`);
+  }
 
   const robots = read("app/robots.js");
   assert.match(robots, /sitemap/);
@@ -71,7 +105,7 @@ test("sitemap, robots, and generated OG image routes are present and locale-awar
   // The OG image lives under [lang] and renders dictionary copy per locale.
   const og = read("app/[lang]/opengraph-image.jsx");
   assert.match(og, /ImageResponse/);
-  assert.match(og, /Geek Engine/);
+  assert.match(og, /og\.brandName/);
   assert.match(og, /getDictionary\(lang,\s*"common"\)/);
 });
 
@@ -82,6 +116,27 @@ test("news article metadata includes canonical URL and article Open Graph data",
   assert.match(article, /type:\s*"article"/);
   assert.match(article, /publishedTime/);
   assert.match(article, /getNewsPost\(slug,\s*lang\)/);
+});
+
+test("status page probes the app health endpoint honestly", () => {
+  const statusPage = read("components/marketing/status-page.jsx");
+  // Probes the live /up endpoint on the app platform.
+  assert.match(statusPage, /app\.geekengine\.ai\/up/);
+  // Bounded fetch (~3s timeout) so a hung upstream can't block the render.
+  assert.match(statusPage, /AbortController/);
+  assert.match(statusPage, /3000/);
+  // ISR revalidation keeps the check fresh without hammering upstream.
+  assert.match(statusPage, /next:\s*\{\s*revalidate:\s*60\s*\}/);
+  // 200 -> operational; anything else (incl. network error) -> degraded.
+  assert.match(statusPage, /response\.ok\s*\?\s*"operational"\s*:\s*"degraded"/);
+  assert.match(statusPage, /catch\s*\{[\s\S]*?return\s*"degraded"/);
+  // Renders a last-checked timestamp.
+  assert.match(statusPage, /lastChecked/);
+
+  // The footer status link points at the internal /status route, not the
+  // old status.geekengine.ai host.
+  const chrome = read("components/marketing/chrome.jsx");
+  assert.match(chrome, /href=\{r\.status\}/);
 });
 
 test("page components keep a semantic heading hierarchy", () => {

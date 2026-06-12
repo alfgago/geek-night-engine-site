@@ -1,0 +1,39 @@
+{
+  "seo": {
+    "title": "About — a small studio building an AI-native engine",
+    "description": "Geek Engine is a small Costa Rican studio building an AI-native game engine on Godot, so anyone can make a game by describing it instead of learning an engine first."
+  },
+  "hero": {
+    "eyebrow": "Company · About",
+    "heading": "A small studio with one stubborn idea.",
+    "sub": "We think making a game should start with describing it, not with months of learning an engine. Geek Engine is our attempt to make that real — an AI-native game engine built on Godot, from a small team in Costa Rica."
+  },
+  "sections": [
+    {
+      "title": "Why we're building this",
+      "body": [
+        "Game engines are extraordinary, and they're also a wall. Between the idea in your head and a thing you can actually play sits a long climb: scene trees, scripting languages, build pipelines, export settings. Plenty of people with great game ideas never get over that wall.",
+        "Geek Engine exists to lower it. You describe the game you want — the world, the mechanics, the feel — and an AI does the engine work: editing a structured game model, generating the art and sound, and compiling a real build you can play in your browser. The learning curve stops being the price of admission."
+      ]
+    },
+    {
+      "title": "What we actually are",
+      "body": [
+        "We're a small studio in Costa Rica, not a large company with a marketing department. We'd rather be honest about that than invent a roster of fake executives. The product is real and being built carefully; the team behind it is small and focused.",
+        "We build on Godot, the open-source engine, because it's genuinely good and because we don't believe creators should be locked into a black box. Your game compiles to a real Godot web build — not a toy runtime we made up."
+      ]
+    },
+    {
+      "title": "How we think about the work",
+      "body": [
+        "AI-assisted doesn't mean AI-magic. Every change the system makes is structured, recorded as a snapshot, and inspectable, so you can always see what happened and roll it back. We'd rather the tool be honest and legible than impressively opaque.",
+        "We're pre-launch. That means we're choosing to ship something we trust rather than something we rushed. If you want to follow along, the launch newsletter is where the real updates land."
+      ]
+    }
+  ],
+  "ctaStrip": {
+    "heading": "We're building in the open-ish.",
+    "sub": "Geek Engine isn't live yet. Subscribe for honest build notes and the first access window.",
+    "cta": "Follow the build"
+  }
+}

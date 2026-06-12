@@ -1,0 +1,57 @@
+{
+  "seo": {
+    "title": "Workspace — your multi-project hub and team",
+    "description": "The workspace hub manages all your game projects, organizations and team seats with roles, an activity feed, realtime presence, archive and restore, and project thumbnails from Vision QA."
+  },
+  "hero": {
+    "eyebrow": "Product · Workspace",
+    "heading": "One hub for every project and teammate.",
+    "sub": "The workspace is your command centre: a dashboard of all your games, organizations with team seats and roles, a live activity feed, realtime presence, and archive and restore. Project cards show thumbnails captured by Vision QA, so the dashboard reflects what your games actually look like.",
+    "primaryCta": "Join launch newsletter",
+    "secondaryCta": "See how it works"
+  },
+  "sections": [
+    {
+      "title": "A multi-project dashboard",
+      "body": "Every game you build lives on one dashboard. Cards show project status and a thumbnail captured by Vision QA on the last successful deploy, so you can tell at a glance which projects are ready, building, or need attention. Archive a project to get it out of the way and restore it whenever you come back to it.",
+      "caps": [
+        ["All your games in one view", "Switch between projects from a single hub instead of scattered links."],
+        ["Archive and restore", "Tuck a project away without losing it, and bring it back intact."]
+      ]
+    },
+    {
+      "title": "Organizations, seats, and roles",
+      "body": "Projects belong to organizations, and organizations have seats your teammates fill. Roles control who can do what — owners and admins manage the org, editors build, and viewers and playtesters get scoped access. Your plan sets how many seats you have, and you can add more as your team grows.",
+      "caps": [
+        ["Role-based access", "Owner, admin, editor, viewer, and playtester roles scope what each member can do."],
+        ["Seats that scale", "Each plan includes seats; add more when the team expands."]
+      ]
+    },
+    {
+      "title": "Activity feed and audit trail",
+      "body": "The workspace keeps a running activity feed of what's happening — prompts, builds, snapshots, invitations, and billing actions. It doubles as an audit trail, so a team can see who changed what and when without anyone having to ask.",
+      "caps": [
+        ["See what's happening", "A live feed of meaningful events across your projects."],
+        ["Accountable by default", "The feed is an audit trail, so history is always available."]
+      ]
+    },
+    {
+      "title": "Realtime presence",
+      "body": "When teammates are in the same workspace, you can see it. Realtime presence shows who's around, so collaboration feels live rather than asynchronous guesswork — useful when two people are steering the same project through the Architect.",
+      "caps": [
+        ["See who's here", "Presence shows active teammates in the workspace."],
+        ["Built for collaboration", "Presence keeps a shared project from turning into a coordination problem."]
+      ]
+    }
+  ],
+  "connect": {
+    "label": "How it connects",
+    "heading": "The hub ties every module together.",
+    "body": "From the workspace you open a project into the Architect, inspect it in Scenes, generate art in the asset studios, and share it through Playtest. Seats, roles, credits, and storage are all managed at the organization level, so the whole team works from one shared foundation."
+  },
+  "ctaStrip": {
+    "heading": "Run your studio from one place.",
+    "sub": "Geek Engine isn't live yet. Subscribe and we'll send the first access window and build notes.",
+    "cta": "Subscribe for launch updates"
+  }
+}

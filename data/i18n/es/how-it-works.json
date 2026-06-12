@@ -12,7 +12,86 @@
   },
   "pipeline": {
     "label": "La canalización · en vivo",
-    "heading": "Cuatro etapas, todas auditable, todas reversibles."
+    "heading": "Cuatro etapas, todas auditables, todas reversibles."
+  },
+  "pipelineMock": {
+    "scaffold": {
+      "title": "ANDAMIAJE · ELIGE UN INICIO",
+      "templates": ["Plataforma 2D", "Plataforma 3D", "Vista superior", "Disparos", "Puzzle", "Colección 3D", "Carrera infinita", "Desde prompt"],
+      "describedByYou": "↳ descrito por ti"
+    },
+    "decompose": {
+      "title": "DESCOMPONER · 6 TICKETS ATÓMICOS",
+      "subtitle": "arrastra · prioriza · aprueba",
+      "ready": "LISTO",
+      "columns": [
+        {
+          "label": "BACKLOG",
+          "items": [
+            ["#318", "ajustar cooldown del dash"],
+            ["#319", "agregar daño por caída"]
+          ]
+        },
+        {
+          "label": "EN COLA · 4",
+          "items": [
+            ["#312", "agregar_nodo Boss.Fase1"],
+            ["#313", "agregar_nodo Boss.Fase2 · Pisotón"],
+            ["#314", "agregar_nodo Boss.Fase3 · Carga"],
+            ["#315", "editar_script boss.gd"]
+          ]
+        },
+        {
+          "label": "APROBADOS · 2",
+          "items": [
+            ["#316", "vincular boss-roar.wav"],
+            ["#317", "iniciar compilación v0.5.0"]
+          ]
+        }
+      ]
+    },
+    "compile": {
+      "label": "COMPILACIÓN EN LA NUBE · BUILD #149",
+      "heading": "godot --headless · autorreparación",
+      "retryOk": "reintento · ok",
+      "steps": [
+        { "label": "Validar GDD", "time": "0.4s", "status": "ok" },
+        { "label": "Doctor", "time": "0.2s", "status": "ok" },
+        { "label": "Resolver ops", "time": "1.1s", "status": "ok" },
+        { "label": "compilar godot", "time": "13.8s", "status": "err" },
+        { "label": "Autorreparar", "time": "2.1s", "status": "ok" },
+        { "label": "reintento godot", "time": "9.4s", "status": "ok" },
+        { "label": "paquete WebGL", "time": "1.0s", "status": "ok" },
+        { "label": "Desplegar", "time": "0.2s", "status": "ok" }
+      ],
+      "selfHealLabel": "AUTORREPARACIÓN · 1 ERROR PARCHEADO",
+      "selfHealDetail": "CollisionShape3D nulo · auto-vinculado",
+      "summary": "Snapshot #95 creado antes del parche · build #149 correcto en reintento · revertir con un clic"
+    },
+    "deploy": {
+      "title": "DESPLEGAR · SNAPSHOTS",
+      "timelineLabel": "Línea de tiempo de snapshots",
+      "snapshots": [
+        { "id": 149, "text": "desplegado · play.gne/pebble-punks", "color": "lime", "head": true },
+        { "id": 148, "text": "+ gemas coleccionables · arquitecto", "color": "lime" },
+        { "id": 147, "text": "vibración del drifter", "color": "lime" },
+        { "id": 146, "text": "coyote time + velocidad", "color": "lime" },
+        { "id": 144, "text": "intento de sala del jefe · fallido", "color": "red" },
+        { "id": 138, "text": "fijado · pre-boss-pass", "color": "cyan", "pin": true }
+      ],
+      "pinned": "FIJADO",
+      "head": "HEAD",
+      "distributionLabel": "Distribución",
+      "liveUrlLabel": "URL EN VIVO",
+      "liveUrl": "play.gne/pebble-punks",
+      "metrics": [
+        ["artefacto", "3.42 MB · WebGL"],
+        ["CDN edge", "12 regiones · 38ms p50"],
+        ["testers", "12 registrados · 1 en vivo"],
+        ["snapshot", "#149 · hace 11.8s"]
+      ],
+      "actions": "revertir · re-fijar · re-desplegar · cuando quieras"
+    }
   },
   "steps": [
     {
@@ -59,7 +138,7 @@
     ]
   },
   "ctaStrip": {
-    "heading": "Cuatro etapas, todas auditable, todas reversibles.",
+    "heading": "Cuatro etapas, todas auditables, todas reversibles.",
     "sub": "Snapshot antes, snapshot después — y notas de lanzamiento antes de que el producto abra.",
     "cta": "Obtener notas de compilación"
   }

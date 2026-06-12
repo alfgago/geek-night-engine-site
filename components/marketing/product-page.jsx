@@ -33,6 +33,7 @@ export function ProductPage({ lang }) {
         <ProductModule
           key={module.id}
           {...module}
+          lang={lang}
           moduleLabel={t.moduleLabel}
           title={t.modules[module.id].title}
           desc={t.modules[module.id].desc}
@@ -45,7 +46,7 @@ export function ProductPage({ lang }) {
   );
 }
 
-function ProductModule({ id, n, title, desc, caps, previewKind, flip, moduleLabel }) {
+function ProductModule({ id, n, lang, title, desc, caps, previewKind, flip, moduleLabel }) {
   return (
     <section id={id} data-anim-section="features" className="site-section" style={{ background: id.match(/^(ai|assets)$/) ? "var(--bg-0)" : "var(--bg-1)" }}>
       <div className="site-wrap product-module-grid">
@@ -95,7 +96,7 @@ function ProductModule({ id, n, title, desc, caps, previewKind, flip, moduleLabe
           </div>
         </div>
         <div data-anim="reveal" className={`product-module-preview ${flip ? "flip" : ""}`}>
-          <ModulePreview kind={previewKind} />
+          <ModulePreview kind={previewKind} lang={lang} />
         </div>
       </div>
     </section>

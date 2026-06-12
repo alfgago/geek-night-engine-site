@@ -1,0 +1,57 @@
+{
+  "seo": {
+    "title": "Scenes — inspect the structure of your game",
+    "description": "The Scenes inspector exposes your Godot scene tree, node properties, mechanics, and scripts. The Game Design Document stays the source of truth while you audit exactly what the AI built."
+  },
+  "hero": {
+    "eyebrow": "Product · Scenes",
+    "heading": "See exactly what the AI built.",
+    "sub": "Scenes is the inspector for your game's structure. Walk the scene-node tree, read node properties and mechanics, and view generated scripts — so a chat request is never a black box. The Game Design Document remains the single source of truth.",
+    "primaryCta": "Join launch newsletter",
+    "secondaryCta": "See how it works"
+  },
+  "sections": [
+    {
+      "title": "A real scene-node tree",
+      "body": "Scenes mirrors the structure of your Godot project as a navigable node tree. Expand parents, follow children, and see the node types behind each part of your game — the player body, the tilemap, spawn points, the HUD layer. It's the same hierarchy the Architect mutates, rendered so you can actually read it.",
+      "caps": [
+        ["Parent and child nodes", "Navigate the full hierarchy the way it exists in the compiled project."],
+        ["Typed nodes", "Each node shows its Godot type, so the structure stays legible at a glance."]
+      ]
+    },
+    {
+      "title": "Node properties and mechanics",
+      "body": "Select a node to inspect its properties — position, speed, timing values, and the rest of the configuration that defines how it behaves. Mechanics attached to the project are listed alongside the tree, so you can confirm that the rule you described in chat actually exists in the model.",
+      "caps": [
+        ["Inspect any node", "Properties are surfaced per node, so you can verify values without reading source."],
+        ["Mechanics in view", "The mechanics the Architect added are visible and tied to the structure they affect."]
+      ]
+    },
+    {
+      "title": "Read the generated script",
+      "body": "When a node carries behaviour, you can open the generated script and read exactly what runs. The script viewer is for understanding and trust — it shows the logic the AI produced from your intent so you can confirm it matches what you asked for.",
+      "caps": [
+        ["See the logic", "Open generated scripts to understand the behaviour behind a node."],
+        ["No surprises", "What you read in the viewer is what the compiled build runs."]
+      ]
+    },
+    {
+      "title": "The GDD is the source of truth",
+      "body": "Generated source code isn't hand-edited in Geek Engine. The Game Design Document is authoritative — you change the game by describing changes to the Architect, which re-derives the structure and regenerates code. Scenes is your window into that model, kept honest and consistent because there's only one place the truth lives.",
+      "caps": [
+        ["One model, one truth", "Structure, scripts, and assets all derive from the same GDD."],
+        ["Inspect, don't hand-patch", "You verify in Scenes and steer through chat — no drifting hand edits to reconcile."]
+      ]
+    }
+  ],
+  "connect": {
+    "label": "How it connects",
+    "heading": "Inspect here, steer in the Architect.",
+    "body": "Scenes shows you the result of every Architect operation, snapshot, and self-heal. When something isn't right, you describe the fix to the Architect, watch the new snapshot land, and re-inspect — a tight loop between seeing and building."
+  },
+  "ctaStrip": {
+    "heading": "Transparency, built into the structure.",
+    "sub": "Geek Engine isn't live yet. Subscribe and we'll send the first access window and build notes.",
+    "cta": "Subscribe for launch updates"
+  }
+}

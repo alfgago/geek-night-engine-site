@@ -1,3 +1,4 @@
+import { getDictionary } from "@/lib/i18n";
 import { Avatar, Icon, I, PEOPLE } from "./icons";
 
 const inlCode = {
@@ -9,7 +10,9 @@ const inlCode = {
   color: "var(--lime)",
 };
 
-export function HeroProductMock() {
+export function HeroProductMock({ lang = "en" }) {
+  const t = getDictionary(lang, "common").productMock;
+
   return (
     <>
       <div
@@ -30,12 +33,11 @@ export function HeroProductMock() {
           <span style={{ width: 9, height: 9, borderRadius: 999, background: "#febc2e" }} />
           <span style={{ width: 9, height: 9, borderRadius: 999, background: "#28c840" }} />
           <span className="mono" style={{ marginLeft: 6, fontSize: 11, color: "var(--fg-2)" }}>
-            geekengine.ai / pebble-punks <span style={{ color: "var(--fg-4)" }}>/</span>{" "}
-            <span style={{ color: "var(--lime)" }}>Architect</span>
+            {t.shellTitle} <span style={{ color: "var(--fg-4)" }}>/</span> <span style={{ color: "var(--lime)" }}>{t.architect}</span>
           </span>
           <div style={{ flex: 1 }} />
           <span className="chip" style={{ height: 18, fontSize: 9.5 }}>
-            <span className="dot lime" /> build v0.4.7
+            <span className="dot lime" /> {t.build}
           </span>
           <Avatar {...PEOPLE.noor} size={18} />
           <Avatar {...PEOPLE.sam} size={18} style={{ marginLeft: -4 }} />
@@ -56,10 +58,10 @@ export function HeroProductMock() {
               <Avatar {...PEOPLE.you} size={20} />
               <div style={{ flex: 1 }}>
                 <div className="mono" style={{ fontSize: 10, color: "var(--fg-3)" }}>
-                  You · 12m
+                  {t.userTimestamp}
                 </div>
                 <div style={{ fontSize: 12, color: "var(--fg-1)", marginTop: 2 }} className="pretty">
-                  Add three pickup gems near each checkpoint, with a sparkly collect sound.
+                  {t.userPrompt}
                 </div>
               </div>
             </div>
@@ -81,37 +83,32 @@ export function HeroProductMock() {
               </div>
               <div style={{ flex: 1 }}>
                 <div className="gne-row mono" style={{ gap: 6 }}>
-                  <span style={{ fontSize: 10.5, color: "var(--lime)", fontWeight: 500 }}>Architect</span>
-                  <span style={{ fontSize: 10, color: "var(--fg-3)" }}>just now</span>
+                  <span style={{ fontSize: 10.5, color: "var(--lime)", fontWeight: 500 }}>{t.architect}</span>
+                  <span style={{ fontSize: 10, color: "var(--fg-3)" }}>{t.assistantTimestamp}</span>
                   <span className="chip ghost" style={{ height: 14, fontSize: 9, padding: "0 4px" }}>
-                    -36 cr
+                    {t.creditDelta}
                   </span>
                 </div>
                 <div style={{ fontSize: 12, color: "var(--fg-1)", marginTop: 2 }} className="pretty">
-                  Spawned <code style={inlCode}>Gem x3</code> under <code style={inlCode}>World/Pickups</code>, bound generated{" "}
-                  <code style={inlCode}>gem.png</code> + <code style={inlCode}>coin-pickup.wav</code>. HUD score now shows{" "}
-                  <code style={inlCode}>0/3</code>.
+                  {t.reply.spawned} <code style={inlCode}>{t.reply.gem}</code> {t.reply.under} <code style={inlCode}>{t.reply.parent}</code>,{" "}
+                  {t.reply.bound} <code style={inlCode}>{t.reply.asset}</code> + <code style={inlCode}>{t.reply.sound}</code>. {t.reply.hud}{" "}
+                  <code style={inlCode}>{t.reply.score}</code>.
                 </div>
                 <div style={{ marginTop: 8, border: "1px solid var(--border-1)", borderRadius: 4, background: "var(--bg-0)" }}>
-                  {[
-                    ["add_node", "Gem x 3", "World/Pickups"],
-                    ["bind_asset", "gem.png", "Gem.Sprite"],
-                    ["edit_script", "gem.gd", "+ collected signal"],
-                    ["trigger_build", "v0.4.7", "11.8s · success"],
-                  ].map(([kind, title, value], index) => (
+                  {t.operations.map((operation, index) => (
                     <div
-                      key={kind}
+                      key={`${operation.kind}-${operation.title}`}
                       className="gne-row mono"
                       style={{
                         fontSize: 9.5,
                         padding: "4px 8px",
                         gap: 8,
-                        borderBottom: index < 3 ? "1px solid var(--border-1)" : "none",
+                        borderBottom: index < t.operations.length - 1 ? "1px solid var(--border-1)" : "none",
                       }}
                     >
-                      <span style={{ color: "var(--lime)", flex: "0 0 70px" }}>{kind}</span>
-                      <span style={{ color: "var(--fg-0)", flex: "0 0 70px" }}>{title}</span>
-                      <span style={{ color: "var(--fg-2)" }}>{value}</span>
+                      <span style={{ color: "var(--lime)", flex: "0 0 70px" }}>{operation.kind}</span>
+                      <span style={{ color: "var(--fg-0)", flex: "0 0 70px" }}>{operation.title}</span>
+                      <span style={{ color: "var(--fg-2)" }}>{operation.value}</span>
                     </div>
                   ))}
                 </div>
@@ -121,7 +118,7 @@ export function HeroProductMock() {
             <div className="card" style={{ padding: "6px 8px", background: "var(--bg-1)" }}>
               <div className="mono" style={{ fontSize: 11, color: "var(--fg-1)" }}>
                 <span style={{ color: "var(--fg-3)", marginRight: 4 }}>›</span>
-                Tune the boss room - phase 2 should add stomp attacks...
+                {t.commandPrompt}
                 <span style={{ display: "inline-block", width: 6, height: 12, background: "var(--lime)", verticalAlign: "-2px", marginLeft: 2 }} />
               </div>
             </div>
@@ -162,10 +159,10 @@ export function HeroProductMock() {
               className="mono"
               style={{ position: "absolute", top: 10, left: 12, color: "var(--lime)", fontSize: 10, letterSpacing: "0.05em", textShadow: "0 0 8px rgba(200,247,60,0.4)" }}
             >
-              ♥♥♥ · ⛀ 0/3 · T 00:42
+              {t.hud}
             </div>
             <div className="gne-row mono" style={{ position: "absolute", bottom: 10, left: 12, gap: 6, fontSize: 9, color: "var(--fg-2)" }}>
-              <span className="dot lime" /> LIVE · v0.4.7
+              <span className="dot lime" /> {t.live}
             </div>
           </div>
         </div>
@@ -187,15 +184,16 @@ export function HeroProductMock() {
         <div className="gne-row" style={{ gap: 8, marginBottom: 6 }}>
           <span className="dot cyan" />
           <span className="mono" style={{ fontSize: 10, color: "var(--cyan)" }}>
-            SNAPSHOT #148 · NOW
+            {t.snapshot.label}
           </span>
         </div>
         <div className="mono pretty" style={{ fontSize: 11.5, color: "var(--fg-1)", lineHeight: 1.5 }}>
-          <span style={{ color: "var(--lime)" }}>+3</span> nodes · <span style={{ color: "var(--amber)" }}>~4</span> properties ·{" "}
-          <span style={{ color: "var(--violet)" }}>+1</span> asset
+          <span style={{ color: "var(--lime)" }}>{t.snapshot.nodeCount}</span> {t.snapshot.nodes}{" "}
+          <span style={{ color: "var(--amber)" }}>{t.snapshot.propertyCount}</span> {t.snapshot.properties}{" "}
+          <span style={{ color: "var(--violet)" }}>{t.snapshot.assetCount}</span> {t.snapshot.asset}
         </div>
         <div className="mono" style={{ fontSize: 9.5, color: "var(--fg-3)", marginTop: 6 }}>
-          revertable · safe to playtest
+          {t.snapshot.note}
         </div>
       </div>
     </>

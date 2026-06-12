@@ -1,7 +1,8 @@
 import { ImageResponse } from "next/og";
+import enCommon from "@/data/i18n/en/common.json";
 import { getDictionary } from "@/lib/i18n";
 
-export const alt = "Geek Engine - AI-assisted Godot in the browser";
+export const alt = enCommon.og.alt;
 export const size = {
   width: 1200,
   height: 630,
@@ -44,7 +45,7 @@ export default async function Image({ params }) {
           >
             G
           </div>
-          <div style={{ fontSize: 34, fontWeight: 700 }}>Geek Engine</div>
+          <div style={{ fontSize: 34, fontWeight: 700 }}>{og.brandName}</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
           <div style={{ color: "#c8f73c", fontSize: 24, letterSpacing: 2, textTransform: "uppercase" }}>

@@ -17,7 +17,7 @@ const addOnIcons = { seat: I.users, credits: I.zap, database: I.layers };
  * dictionary) with the canonical numbers in data/marketing-data.js, so
  * prices/credits/storage can never drift between locales.
  */
-function buildTiers(t) {
+function buildTiers(t, annual) {
   return tierOrder.map((id) => {
     const numbers = pricingNumbers.tiers[id];
     const copy = t.tiers[id];
@@ -25,12 +25,13 @@ function buildTiers(t) {
       id,
       featured: id === featuredTier,
       name: copy.name,
-      price: numbers.price,
-      per: copy.per,
+      price: annual ? numbers.priceAnnual : numbers.price,
+      per: annual ? copy.perAnnual : copy.per,
       seats: format(copy.seatsLabel, { seats: numbers.seats }),
-      credits: format(copy.creditsLabel, { credits: numbers.credits }),
+      credits: format(copy.creditsLabel, { credits: numbers.credits, monthly: numbers.monthlyCredits }),
+      creditsNote: copy.creditsNote,
       storage: format(copy.storageLabel, { gb: numbers.storageGb, rate: numbers.storageOveragePerGb }),
-      features: copy.features,
+      features: copy.features.map((feature) => format(feature, { exportCredits: pricingNumbers.storeExportCredits })),
       cta: copy.cta,
     };
   });
@@ -38,6 +39,7 @@ function buildTiers(t) {
 
 export function PricingPage({ lang }) {
   const t = getDictionary(lang, "pricing");
+  const [annual, setAnnual] = useState(false);
 
   return (
     <>
@@ -48,7 +50,7 @@ export function PricingPage({ lang }) {
         heading={t.hero.heading}
         sub={format(t.hero.sub, pricingNumbers.creditUnit)}
       />
-      <PricingTiers lang={lang} t={t} />
+      <PricingTiers lang={lang} t={t} annual={annual} setAnnual={setAnnual} />
       <AddOns t={t} />
       <PricingFAQ t={t} />
       <CtaStrip lang={lang} heading={t.ctaStrip.heading} sub={t.ctaStrip.sub} cta={t.ctaStrip.cta} />
@@ -57,13 +59,74 @@ export function PricingPage({ lang }) {
   );
 }
 
-function PricingTiers({ lang, t }) {
+function BillingToggle({ t, annual, setAnnual }) {
+  return (
+    <div data-anim="reveal" className="gne-row" style={{ justifyContent: "center", gap: 0, marginBottom: 36 }}>
+      <div
+        className="gne-row"
+        role="group"
+        aria-label={t.billing.annual}
+        style={{ gap: 4, padding: 4, background: "var(--bg-2)", border: "1px solid var(--border-1)", borderRadius: 999 }}
+      >
+        <button
+          type="button"
+          onClick={() => setAnnual(false)}
+          aria-pressed={!annual}
+          className="mono"
+          style={{
+            padding: "8px 18px",
+            borderRadius: 999,
+            fontSize: 13,
+            background: annual ? "transparent" : "var(--lime)",
+            color: annual ? "var(--fg-1)" : "var(--lime-ink)",
+            fontWeight: 500,
+          }}
+        >
+          {t.billing.monthly}
+        </button>
+        <button
+          type="button"
+          onClick={() => setAnnual(true)}
+          aria-pressed={annual}
+          className="gne-row mono"
+          style={{
+            padding: "8px 18px",
+            borderRadius: 999,
+            fontSize: 13,
+            gap: 8,
+            background: annual ? "var(--lime)" : "transparent",
+            color: annual ? "var(--lime-ink)" : "var(--fg-1)",
+            fontWeight: 500,
+          }}
+        >
+          {t.billing.annual}
+          <span
+            className="chip"
+            style={{
+              height: 16,
+              fontSize: 9,
+              padding: "0 6px",
+              background: annual ? "var(--lime-ink)" : "var(--lime-bg)",
+              color: annual ? "var(--lime)" : "var(--lime)",
+              borderColor: "transparent",
+            }}
+          >
+            {t.billing.annualBadge}
+          </span>
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function PricingTiers({ lang, t, annual, setAnnual }) {
   const r = localizedRoutes(lang);
-  const tiers = buildTiers(t);
+  const tiers = buildTiers(t, annual);
 
   return (
     <section data-anim-section="pricing" className="site-section" style={{ background: "var(--bg-1)" }}>
       <div className="site-wrap">
+        <BillingToggle t={t} annual={annual} setAnnual={setAnnual} />
         <div data-anim-grid className="site-grid-3">
           {tiers.map((tier) => (
             <div
@@ -118,6 +181,11 @@ function PricingTiers({ lang, t }) {
                   {tier.storage}
                 </span>
               </div>
+              {tier.creditsNote && (
+                <div className="mono" style={{ fontSize: 11, color: "var(--fg-3)", marginTop: 8 }}>
+                  {tier.creditsNote}
+                </div>
+              )}
               <ul style={{ margin: "22px 0 20px", padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 10 }}>
                 {tier.features.map((feature) => (
                   <li key={feature} className="gne-row" style={{ gap: 10, fontSize: 13.5, alignItems: "flex-start" }}>
@@ -212,7 +280,7 @@ function PricingFAQ({ t }) {
         </h2>
         <div>
           {t.faq.items.map((item, index) => (
-            <FAQ key={item.q} q={item.q} a={item.a} open={index === 0} />
+            <FAQ key={item.q} q={item.q} a={format(item.a, { exportCredits: pricingNumbers.storeExportCredits })} open={index === 0} />
           ))}
         </div>
       </div>

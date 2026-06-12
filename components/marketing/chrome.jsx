@@ -41,7 +41,7 @@ export function SiteNav({ lang, current }) {
     >
       <div className="nav-shell">
         <Link href={r.home} style={{ textDecoration: "none" }} aria-label={t.aria.homeLink}>
-          <GNELockup size={17} />
+          <GNELockup size={17} brand={t.brand} />
         </Link>
         <nav className="gne-row nav-links" aria-label={t.aria.marketingNav}>
           {navLinks.map((link) => (
@@ -150,11 +150,11 @@ function buildFooterCols(lang) {
     {
       head: t.product.head,
       links: [
-        [t.product.links.architect, `${r.product}#ai`],
-        [t.product.links.scene, `${r.product}#scene`],
-        [t.product.links.assets, `${r.product}#assets`],
-        [t.product.links.playtest, `${r.product}#playtest`],
-        [t.product.links.hub, `${r.product}#hub`],
+        [t.product.links.architect, r.productArchitect],
+        [t.product.links.scene, r.productScenes],
+        [t.product.links.assets, r.productAssetStudios],
+        [t.product.links.playtest, r.productPlaytest],
+        [t.product.links.hub, r.productWorkspace],
       ],
     },
     {
@@ -168,19 +168,19 @@ function buildFooterCols(lang) {
     {
       head: t.learn.head,
       links: [
-        [t.learn.links.docs, "#"],
-        [t.learn.links.guides, "#"],
+        [t.learn.links.docs, r.docs],
+        [t.learn.links.guides, r.guides],
         [t.learn.links.news, r.news],
-        [t.learn.links.status, "#"],
+        [t.learn.links.status, r.status],
       ],
     },
     {
       head: t.company.head,
       links: [
-        [t.company.links.about, "#"],
-        [t.company.links.updates, r.newsletter],
+        [t.company.links.about, r.about],
+        [t.company.links.updates, r.launchUpdates],
         [t.company.links.contact, r.contact],
-        [t.company.links.careers, "#"],
+        [t.company.links.careers, r.careers],
       ],
     },
     {
@@ -188,15 +188,16 @@ function buildFooterCols(lang) {
       links: [
         [t.legal.links.privacy, r.privacy],
         [t.legal.links.terms, r.terms],
-        [t.legal.links.security, "#"],
-        [t.legal.links.dmca, `mailto:${contacts.dmca}`],
+        [t.legal.links.security, r.security],
+        [t.legal.links.dmca, r.dmca],
       ],
     },
   ];
 }
 
 export function SiteFooter({ lang }) {
-  const t = getDictionary(lang, "common").footer;
+  const common = getDictionary(lang, "common");
+  const t = common.footer;
   const r = localizedRoutes(lang);
   const footerCols = buildFooterCols(lang);
 
@@ -223,7 +224,7 @@ export function SiteFooter({ lang }) {
               WebkitTextStroke: "1px var(--border-3)",
             }}
           >
-            geek<span style={{ fontStyle: "italic", fontWeight: 500 }}> engine</span>
+            {common.brand.footerFirst}<span style={{ fontStyle: "italic", fontWeight: 500 }}> {common.brand.footerSecond}</span>
           </span>
           {/* fill layer — scroll reveals it via clip-path (data-anim-wordmark-fill) */}
           <span
@@ -237,7 +238,7 @@ export function SiteFooter({ lang }) {
               willChange: "clip-path",
             }}
           >
-            geek<span style={{ fontStyle: "italic", fontWeight: 500 }}> engine</span>
+            {common.brand.footerFirst}<span style={{ fontStyle: "italic", fontWeight: 500 }}> {common.brand.footerSecond}</span>
           </span>
         </div>
         <div
@@ -251,7 +252,7 @@ export function SiteFooter({ lang }) {
           className="site-footer-grid"
         >
           <div>
-            <GNELockup size={15} />
+            <GNELockup size={15} brand={common.brand} />
             <div className="mono pretty" style={{ fontSize: 12, color: "var(--fg-3)", marginTop: 12, maxWidth: 280 }}>
               {t.blurb}
             </div>
@@ -272,12 +273,13 @@ export function SiteFooter({ lang }) {
           <Link href={r.terms} style={{ color: "inherit", textDecoration: "none" }}>
             {t.terms}
           </Link>
-          <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
+          <Link href={r.security} style={{ color: "inherit", textDecoration: "none" }}>
             {t.security}
-          </a>
+          </Link>
           <div style={{ flex: 1 }} />
-          <span style={{ color: "var(--lime)" }}>● </span>
-          <span>{t.status}</span>
+          <Link href={r.status} style={{ color: "var(--lime)", textDecoration: "none" }}>
+            ● {t.status}
+          </Link>
         </div>
       </div>
     </footer>

@@ -1,0 +1,57 @@
+{
+  "seo": {
+    "title": "Architect — AI chat that builds your game",
+    "description": "The Architect is Geek Engine's AI chat builder. Describe a change in plain language and it edits your Game Design Document through typed operations, with snapshots and self-healing builds."
+  },
+  "hero": {
+    "eyebrow": "Product · Architect",
+    "heading": "Describe the change. The Architect builds it.",
+    "sub": "The Architect is the AI chat at the centre of Geek Engine. You type what you want in plain language; it edits your game's Game Design Document through typed operations, snapshots every change, and compiles a fresh Godot web build you can play.",
+    "primaryCta": "Join launch newsletter",
+    "secondaryCta": "See how it works"
+  },
+  "sections": [
+    {
+      "title": "Typed operations, not loose code edits",
+      "body": "Every request the Architect acts on becomes a list of explicit, typed operations against your JSON Game Design Document — add a node, set a property, attach a script, bind an asset, add a mechanic, reorder nodes, set a 3D transform. Because each operation is validated before it is applied, the AI can't quietly corrupt your project: changes are structured, reviewable, and reversible.",
+      "caps": [
+        ["A defined vocabulary", "Operations cover the real shape of a Godot project: nodes, properties, scripts, mechanics, asset bindings, and transforms."],
+        ["Validated before applied", "Each operation passes through a validator and applier, so malformed changes are rejected instead of breaking your build."]
+      ]
+    },
+    {
+      "title": "Snapshots before and after every change",
+      "body": "The Architect records a snapshot of your Game Design Document before it touches anything and another once the change lands. The full history is append-only, so you can always see what a request did and roll back to any earlier state. Snapshots are tagged by what triggered them — a chat turn, a self-heal, a manual save, or a revert.",
+      "caps": [
+        ["Append-only history", "Nothing is overwritten. Every meaningful state is preserved so you can compare and revert."],
+        ["Honest provenance", "Snapshots are tagged by trigger so you know whether the AI, a heal, or you made the change."]
+      ]
+    },
+    {
+      "title": "Self-healing when a build fails",
+      "body": "Compiling a real Godot project doesn't always succeed on the first try. When a build fails, the Architect can read the compile log, reason about the error, and attempt a fix — then rebuild. It's a credit-checked, bounded loop, not an infinite retry, so a failing build gets one honest repair attempt rather than silently burning your balance.",
+      "caps": [
+        ["Reads the actual error", "The self-heal step works from the real compile log, not a guess about what might have gone wrong."],
+        ["Bounded and metered", "Healing is credit-checked and limited, so recovery is predictable instead of runaway."]
+      ]
+    },
+    {
+      "title": "Metered so you stay in control",
+      "body": "Architect actions consume credits, and the cost is tied to the work: a chat request starts around 20 credits, a compile is 10, and heavier jobs cost more. Your plan includes a monthly credit pool, and you can top up when a project hits a busy stretch. You always know roughly what a request will draw down before you send it.",
+      "caps": [
+        ["Cost follows the work", "Small edits cost little; large generations or heals cost more. Nothing is hidden."],
+        ["Shared team pool", "Credits live at the organization level, so your whole team draws from one balance."]
+      ]
+    }
+  ],
+  "connect": {
+    "label": "How it connects",
+    "heading": "The Architect feeds the rest of the workspace.",
+    "body": "Everything the Architect does lands in the same Game Design Document that powers the Scene inspector, the asset studios, and your playtest builds. Edit in chat, inspect the result in Scenes, and play it in the browser — one source of truth, no copy-paste between tools."
+  },
+  "ctaStrip": {
+    "heading": "Build by describing. Verify by inspecting.",
+    "sub": "Geek Engine isn't live yet. Subscribe and we'll send the first access window and build notes.",
+    "cta": "Subscribe for launch updates"
+  }
+}

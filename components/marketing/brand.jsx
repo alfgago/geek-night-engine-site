@@ -24,11 +24,16 @@ export function GNEMark({ size = 36, glow = true }) {
   );
 }
 
-export function GNELockup({ size = 22, color = "var(--fg-0)" }) {
+const emptyBrand = {
+  first: "",
+  second: "",
+};
+
+export function GNELockup({ size = 22, color = "var(--fg-0)", brand = emptyBrand }) {
   return (
     <span className="gne-row" style={{ gap: 9 }}>
       <GNEMark size={size + 4} />
-      <span style={{ fontSize: size, fontWeight: 600, letterSpacing: 0, color }}>Geek</span>
+      <span style={{ fontSize: size, fontWeight: 600, letterSpacing: 0, color }}>{brand.first}</span>
       <span
         style={{
           fontSize: size,
@@ -39,7 +44,7 @@ export function GNELockup({ size = 22, color = "var(--fg-0)" }) {
           textShadow: "0 0 6px var(--lime-edge)",
         }}
       >
-        Engine
+        {brand.second}
       </span>
     </span>
   );

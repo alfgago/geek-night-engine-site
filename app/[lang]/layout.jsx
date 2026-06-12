@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import { MarketingAnimations } from "@/components/marketing/marketing-animations";
-import { buildMetadata, siteConfig } from "@/lib/seo";
+import { buildMetadata } from "@/lib/seo";
 import { getDictionary, locales } from "@/lib/i18n";
 
 const geist = Geist({
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }) {
     lang,
     title: {
       default: t.seo.defaultTitle,
-      template: `%s | ${siteConfig.name}`,
+      template: `%s | ${t.brand.name}`,
     },
     description: t.seo.description,
     canonical: "/",

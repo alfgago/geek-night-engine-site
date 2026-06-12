@@ -31,7 +31,7 @@ export async function generateMetadata({ params }) {
     publishedTime: post.datetime,
     modifiedTime: post.datetime,
     authors: [post.author],
-    tags: [post.category, "Godot", "AI game development", "Build with Gemini XPRIZE"],
+    tags: post.seoTags,
   });
 }
 

@@ -1,13 +1,31 @@
 {
   "seo": {
     "defaultTitle": "Geek Engine - AI-assisted Godot, in the browser",
-    "description": "The professional cloud workspace for AI-native Godot game production."
+    "description": "The professional cloud workspace for AI-native Godot game production.",
+    "keywords": [
+      "Geek Engine",
+      "AI game development",
+      "Godot game engine",
+      "browser game development",
+      "AI game studio",
+      "cloud game compiler",
+      "indie game development",
+      "Godot 4"
+    ]
   },
   "og": {
     "alt": "Geek Engine - AI-assisted Godot in the browser",
+    "brandName": "Geek Engine",
     "kicker": "AI-native Godot production",
     "headline": "Imagine the game. Speak it into existence.",
     "footer": "Browser workspace. Structured AI tickets. Cloud builds. Playtests."
+  },
+  "brand": {
+    "first": "Geek",
+    "second": "Engine",
+    "footerFirst": "geek",
+    "footerSecond": "engine",
+    "name": "Geek Engine"
   },
   "nav": {
     "home": "Home",
@@ -105,5 +123,44 @@
     "terms": "terms",
     "security": "security",
     "status": "all systems operational"
+  },
+  "productMock": {
+    "shellTitle": "geekengine.ai / pebble-punks",
+    "architect": "Architect",
+    "build": "build v0.4.7",
+    "userTimestamp": "You · 12m",
+    "userPrompt": "Add three pickup gems near each checkpoint, with a sparkly collect sound.",
+    "assistantTimestamp": "just now",
+    "creditDelta": "-36 cr",
+    "reply": {
+      "spawned": "Spawned",
+      "gem": "Gem x3",
+      "under": "under",
+      "parent": "World/Pickups",
+      "bound": "bound generated",
+      "asset": "gem.png",
+      "sound": "coin-pickup.wav",
+      "hud": "HUD score now shows",
+      "score": "0/3"
+    },
+    "operations": [
+      { "kind": "add_node", "title": "Gem x 3", "value": "World/Pickups" },
+      { "kind": "bind_asset", "title": "gem.png", "value": "Gem.Sprite" },
+      { "kind": "edit_script", "title": "gem.gd", "value": "+ collected signal" },
+      { "kind": "trigger_build", "title": "v0.4.7", "value": "11.8s · success" }
+    ],
+    "commandPrompt": "Tune the boss room - phase 2 should add stomp attacks...",
+    "hud": "♥♥♥ · ⛀ 0/3 · T 00:42",
+    "live": "LIVE · v0.4.7",
+    "snapshot": {
+      "label": "SNAPSHOT #148 · NOW",
+      "nodeCount": "+3",
+      "nodes": "nodes ·",
+      "propertyCount": "~4",
+      "properties": "properties ·",
+      "assetCount": "+1",
+      "asset": "asset",
+      "note": "revertable · safe to playtest"
+    }
   }
 }

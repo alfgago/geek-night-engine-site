@@ -5,6 +5,7 @@
     "date": "June 1, 2026",
     "readTime": "7 min read",
     "category": "Build in public",
+    "seoTags": ["Build in public", "Godot", "AI game development", "Build with Gemini XPRIZE"],
     "excerpt": "Why the Build with Gemini XPRIZE finally gave us a reason to turn a decade-old indie studio dream into a web-native Godot platform.",
     "dek": "Geek Engine is our attempt to make the game studio we wished existed when we first tried to build one: browser-native, AI-assisted, cloud-compiled, and priced so a lack of resources is not the thing that ends a good idea.",
     "heroStats": [

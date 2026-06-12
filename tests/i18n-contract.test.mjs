@@ -1,5 +1,7 @@
 import assert from "node:assert/strict";
-import { existsSync, readFileSync, readdirSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { test } from "node:test";
 
 const root = new URL("../", import.meta.url);
@@ -16,12 +18,61 @@ const NAMESPACES = [
   "common",
   "home",
   "product",
+  "product-architect",
+  "product-scenes",
+  "product-asset-studios",
+  "product-playtest",
+  "product-workspace",
   "how-it-works",
   "pricing",
   "contact",
+  "about",
+  "careers",
+  "launch-updates",
+  "docs",
+  "guides",
+  "status",
   "legal",
+  "security",
+  "dmca",
   "news",
   "news-posts",
+];
+
+const SOURCE_SCAN_DIRS = ["app", "components", "lib", "data"];
+const SOURCE_SCAN_SKIP_DIRS = new Set(["data/i18n"]);
+const USER_VISIBLE_ATTRIBUTES = ["aria-label", "placeholder", "title", "alt"];
+const VISIBLE_PROPERTY_NAMES = [
+  "alt",
+  "author",
+  "badge",
+  "blurb",
+  "body",
+  "copy",
+  "copyright",
+  "cta",
+  "defaultTitle",
+  "description",
+  "emptyBody",
+  "eyebrow",
+  "footer",
+  "head",
+  "headline",
+  "heading",
+  "helper",
+  "hint",
+  "kicker",
+  "label",
+  "message",
+  "name",
+  "placeholder",
+  "prompt",
+  "reply",
+  "status",
+  "sub",
+  "subtitle",
+  "text",
+  "title",
 ];
 
 test("middleware redirects locale-less requests with a scoped matcher", () => {
@@ -143,6 +194,60 @@ function comparePlaceholders(en, es, path, mismatches) {
   }
 }
 
+test("Spanish marketing dictionaries avoid known mistranslations", () => {
+  const forbidden = [
+    "Hablalo",
+    "todos los sistemas operativos",
+    "Lanzar boletín",
+    "todas auditable,",
+    "nativa a IA",
+    "nativo a IA",
+    "nativo de web",
+    "Rastrear instantáneamente",
+    "Rastrear cursores",
+    "cosechar información",
+    "copiables por derechos de autor",
+    "e yo intentamos",
+    "superficie técnica cool",
+    "guardos",
+    "se convierte en el factor decisivo",
+    "Geek Engine se une",
+  ];
+
+  const failures = [];
+  for (const namespace of NAMESPACES) {
+    const values = flattenStrings(readJson(`data/i18n/es/${namespace}.json`));
+    for (const { path: keyPath, value } of values) {
+      for (const phrase of forbidden) {
+        if (value.includes(phrase)) {
+          failures.push(`${namespace}.${keyPath}: ${phrase}`);
+        }
+      }
+    }
+  }
+
+  assert.deepEqual(failures, [], `Spanish translation quality issues:\n${failures.join("\n")}`);
+});
+
+function flattenStrings(value, pathKey = "") {
+  if (typeof value === "string") {
+    return [{ path: pathKey, value }];
+  }
+
+  if (Array.isArray(value)) {
+    return value.flatMap((item, index) => flattenStrings(item, `${pathKey}[${index}]`));
+  }
+
+  if (value && typeof value === "object") {
+    return Object.entries(value).flatMap(([key, item]) => {
+      const nextPath = pathKey ? `${pathKey}.${key}` : key;
+      return flattenStrings(item, nextPath);
+    });
+  }
+
+  return [];
+}
+
 test("dictionaries load through a static import map (SSG-safe)", () => {
   const i18n = read("lib/i18n.js");
   assert.match(i18n, /getDictionary/);
@@ -198,4 +303,263 @@ test("pricing numbers and contact emails live in exactly one place", () => {
   const pricingPage = read("components/marketing/pricing-page.jsx");
   assert.match(pricingPage, /pricingNumbers/);
   assert.doesNotMatch(pricingPage, /"\$\d+/);
+
+  // Annual prices and the store-export credit cost are canonical numbers in
+  // marketing-data, interpolated into copy — never hard-coded in dictionaries.
+  assert.match(data, /priceAnnual:\s*"\$290"/);
+  assert.match(data, /priceAnnual:\s*"\$990"/);
+  assert.match(data, /storeExportCredits/);
+  // The annual billing toggle is wired into the pricing page.
+  assert.match(pricingPage, /setAnnual/);
+  assert.match(pricingPage, /priceAnnual/);
 });
+
+test("product mock and pipeline UI copy is dictionary-owned, not hardcoded in JSX", () => {
+  const sourceFiles = [
+    "components/marketing/hero-product-mock.jsx",
+    "components/marketing/module-previews.jsx",
+    "components/marketing/how-it-works-page.jsx",
+  ];
+
+  const hardcodedPhrases = [
+    "You · 12m",
+    "just now",
+    "Spawned",
+    "Tune the boss room",
+    "SNAPSHOT #148",
+    "nodes ·",
+    "revertable · safe to playtest",
+    "STUDIO ACTIVITY",
+    "sam rebuilt goldcrest-run",
+    "Make the boss room",
+    "Architect · 6 tickets",
+    "READY",
+    "Adjust phase 3",
+    "INSPECTOR · PLAYER",
+    "STORAGE",
+    "UNUSED",
+    "auto-bind on save",
+    "EVT",
+    "SESS",
+    "COMP",
+    "SCAFFOLDING · CHOOSE A STARTER",
+    "described by you",
+    "DECOMPOSE · 6 ATOMIC TICKETS",
+    "CLOUD COMPILE",
+    "godot --headless",
+    "SELF-HEAL",
+    "CollisionShape3D null",
+    "DEPLOY · SNAPSHOTS",
+    "PINNED",
+    "HEAD",
+    "LIVE URL",
+  ];
+
+  const failures = [];
+  for (const file of sourceFiles) {
+    const source = read(file);
+    for (const phrase of hardcodedPhrases) {
+      if (source.includes(phrase)) {
+        failures.push(`${file}: ${phrase}`);
+      }
+    }
+  }
+
+  assert.deepEqual(failures, [], `hardcoded user-facing mock copy:\n${failures.join("\n")}`);
+
+  const common = readJson("data/i18n/en/common.json");
+  const product = readJson("data/i18n/en/product.json");
+  const how = readJson("data/i18n/en/how-it-works.json");
+  assert.ok(common.productMock, "common.json owns the homepage product mock copy");
+  assert.ok(product.previewMock, "product.json owns the module preview mock copy");
+  assert.ok(how.pipelineMock, "how-it-works.json owns the pipeline mock copy");
+});
+
+test("visible brand wordmarks are dictionary-owned", () => {
+  const common = readJson("data/i18n/en/common.json");
+  assert.ok(common.brand, "common.json owns visible brand wordmark copy");
+
+  const brand = read("components/marketing/brand.jsx");
+  assert.doesNotMatch(brand, />Geek</);
+  assert.doesNotMatch(brand, />Engine</);
+
+  const chrome = read("components/marketing/chrome.jsx");
+  assert.doesNotMatch(chrome, /geek<span/);
+  assert.match(chrome, /brand=\{t\.brand\}/);
+  assert.match(chrome, /brand=\{common\.brand\}/);
+
+  const mobile = read("components/marketing/mobile-nav.jsx");
+  assert.match(mobile, /brand=\{t\.brand\}/);
+
+  const og = read("app/[lang]/opengraph-image.jsx");
+  assert.doesNotMatch(og, />Geek Engine</);
+  assert.match(og, /og\.brandName/);
+});
+
+test("source-visible text is owned by EN dictionaries with ES translations", () => {
+  const dictionaryIndex = indexDictionaries();
+  const violations = findSourceVisibleText();
+  const missing = violations.filter((violation) => !dictionaryIndex.hasTranslationPathFor(violation.value));
+
+  if (missing.length > 0) {
+    const preview = missing
+      .slice(0, 80)
+      .map((violation) => `${violation.file}:${violation.line} ${violation.kind} "${violation.value}"`)
+      .join("\n");
+    assert.fail(`Found ${missing.length} source-visible strings without EN/ES dictionary ownership:\n${preview}`);
+  }
+});
+
+function indexDictionaries() {
+  const englishPathsByValue = new Map();
+  const spanishByPath = new Map();
+
+  for (const namespace of NAMESPACES) {
+    collectDictionaryLeaves(readJson(`data/i18n/en/${namespace}.json`), namespace, englishPathsByValue);
+    collectDictionaryLeaves(readJson(`data/i18n/es/${namespace}.json`), namespace, spanishByPath, { keyByPath: true });
+  }
+
+  return {
+    hasTranslationPathFor(value) {
+      const paths = englishPathsByValue.get(value);
+      return Boolean(paths?.some((pathKey) => {
+        const spanish = spanishByPath.get(pathKey);
+        return typeof spanish === "string" && spanish.trim() !== "";
+      }));
+    },
+  };
+}
+
+function collectDictionaryLeaves(value, pathKey, target, options = {}) {
+  if (typeof value === "string") {
+    if (options.keyByPath) {
+      target.set(pathKey, value);
+    } else {
+      const paths = target.get(value) || [];
+      paths.push(pathKey);
+      target.set(value, paths);
+    }
+    return;
+  }
+
+  if (Array.isArray(value)) {
+    value.forEach((item, index) => collectDictionaryLeaves(item, `${pathKey}[${index}]`, target, options));
+    return;
+  }
+
+  if (value && typeof value === "object") {
+    for (const [key, item] of Object.entries(value)) {
+      collectDictionaryLeaves(item, `${pathKey}.${key}`, target, options);
+    }
+  }
+}
+
+function findSourceVisibleText() {
+  const rootDir = fileURLToPath(root);
+  return SOURCE_SCAN_DIRS
+    .flatMap((dir) => walkSource(path.join(rootDir, dir), rootDir))
+    .flatMap((file) => scanSourceFile(file, rootDir))
+    .sort((a, b) => a.file.localeCompare(b.file) || a.line - b.line || a.value.localeCompare(b.value));
+}
+
+function walkSource(dir, rootDir, files = []) {
+  const relativeDir = path.relative(rootDir, dir).replace(/\\/g, "/");
+  if (SOURCE_SCAN_SKIP_DIRS.has(relativeDir)) {
+    return files;
+  }
+
+  for (const entry of readdirSync(dir)) {
+    const fullPath = path.join(dir, entry);
+    const relativePath = path.relative(rootDir, fullPath).replace(/\\/g, "/");
+    const stats = statSync(fullPath);
+
+    if (stats.isDirectory()) {
+      if (!SOURCE_SCAN_SKIP_DIRS.has(relativePath)) {
+        walkSource(fullPath, rootDir, files);
+      }
+      continue;
+    }
+
+    if (/\.(jsx|js)$/.test(entry)) {
+      files.push(fullPath);
+    }
+  }
+
+  return files;
+}
+
+function scanSourceFile(file, rootDir) {
+  const source = readFileSync(file, "utf8");
+  const relative = path.relative(rootDir, file).replace(/\\/g, "/");
+  const violations = [];
+  const attrPattern = new RegExp(`\\b(${USER_VISIBLE_ATTRIBUTES.join("|")})\\s*=\\s*["']([^"']*[A-Za-z][^"']*)["']`, "g");
+  const propPattern = new RegExp(`\\b(${VISIBLE_PROPERTY_NAMES.join("|")})\\s*:\\s*["']([^"']*[A-Za-z][^"']*)["']`, "g");
+  const jsxTextPattern = />\s*([^<>{}\n]*[A-Za-z][^<>{}\n]*)\s*</g;
+  const indexedArrayPattern = /\b(keywords|tags)\s*:\s*\[([\s\S]*?)\]/g;
+
+  for (const match of source.matchAll(attrPattern)) {
+    pushSourceViolation(violations, relative, source, match.index, `attribute:${match[1]}`, match[2]);
+  }
+
+  for (const match of source.matchAll(propPattern)) {
+    pushSourceViolation(violations, relative, source, match.index, `property:${match[1]}`, match[2]);
+  }
+
+  for (const match of source.matchAll(jsxTextPattern)) {
+    pushSourceViolation(violations, relative, source, match.index, "jsx-text", match[1]);
+  }
+
+  for (const block of source.matchAll(indexedArrayPattern)) {
+    for (const item of block[2].matchAll(/["']([^"']*[A-Za-z][^"']*)["']/g)) {
+      pushSourceViolation(violations, relative, source, block.index + item.index, block[1], item[1]);
+    }
+  }
+
+  return violations;
+}
+
+function pushSourceViolation(violations, file, source, index, kind, value) {
+  const normalized = value.replace(/\s+/g, " ").trim();
+  if (!looksUserVisible(normalized)) {
+    return;
+  }
+
+  violations.push({
+    file,
+    line: source.slice(0, index).split(/\r?\n/).length,
+    kind,
+    value: normalized,
+  });
+}
+
+function looksUserVisible(text) {
+  if (!text || !/[A-Za-z]/.test(text)) {
+    return false;
+  }
+
+  if (text.includes("{") || text.includes("}")) {
+    return false;
+  }
+
+  if (text.includes("&&") || text.includes("[^") || text.includes("&gt;")) {
+    return false;
+  }
+
+  if (/^(https?:|mailto:|\/|#|[a-z]+:|[A-Z_]+$)/.test(text)) {
+    return false;
+  }
+
+  if (/^(var\(|rgba?\(|linear-gradient|radial-gradient|clamp\(|calc\(|inset\(|translate|rotate|url\()/.test(text)) {
+    return false;
+  }
+
+  if (/^[a-z0-9_.:/#-]+$/.test(text) && !text.includes(" ")) {
+    return false;
+  }
+
+  if (/^[MLHVCSQTAZmlhvcsqtaz0-9.,\-\s]+$/.test(text)) {
+    return false;
+  }
+
+  return true;
+}

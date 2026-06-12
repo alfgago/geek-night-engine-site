@@ -13,16 +13,23 @@
 export const pricingNumbers = {
   // 1,000 credits == $1.00 of background processing / AI consumption.
   creditUnit: { credits: "1,000", value: "$1.00" },
+  // Studio Pro native store export costs this many credits per export.
+  storeExportCredits: "250",
   tiers: {
     hobbyist: {
+      // Free tier: 5,000 credits granted on signup, then refills to
+      // 1,500/month (does not accumulate).
       price: "$0",
+      priceAnnual: "$0",
       seats: "1",
       credits: "5,000",
+      monthlyCredits: "1,500",
       storageGb: "1",
       storageOveragePerGb: null,
     },
     core: {
       price: "$29",
+      priceAnnual: "$290",
       seats: "3",
       credits: "30,000",
       storageGb: "25",
@@ -30,6 +37,7 @@ export const pricingNumbers = {
     },
     studio: {
       price: "$99",
+      priceAnnual: "$990",
       seats: "10",
       credits: "100,000",
       storageGb: "100",

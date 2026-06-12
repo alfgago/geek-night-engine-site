@@ -1,0 +1,44 @@
+{
+  "seo": {
+    "title": "Launch updates — what's built and what's next",
+    "description": "A truthful look at where Geek Engine stands: the wizard, Architect, playtesting, billing, and i18n are built; launch and expanded docs are next. Subscribe for the first access window."
+  },
+  "hero": {
+    "eyebrow": "Company · Launch updates",
+    "heading": "Where the build actually stands.",
+    "sub": "No vapor, no vague promises. Here's what's already working inside Geek Engine, what we're heading toward, and how to be first in line when access opens.",
+    "primaryCta": "Subscribe for updates",
+    "secondaryCta": "Read the build log"
+  },
+  "built": {
+    "label": "Shipped",
+    "heading": "What's built today",
+    "items": [
+      ["The 7-step wizard", "Describe a game and move through Idea, an AI interview on gameplay, style, and scope, an AI-suggested foundation template, an editable build plan with a refine chat, and a final Game Design Document review."],
+      ["The Architect", "AI chat that edits the Game Design Document through typed operations, snapshots every change, and runs a credit-checked self-heal when a build fails."],
+      ["Scenes and the GDD", "A scene-node tree inspector with node properties, mechanics, and a script viewer, all derived from the GDD as the single source of truth."],
+      ["Asset studios", "Sprite, sound, and 3D generation alongside uploads and bring-your-own files, organized in a per-project file tree and counted against storage."],
+      ["Playtest and Vision QA", "Hosted web builds, share links with optional passwords, tester feedback and telemetry, and Vision QA that screenshots each deploy to confirm it rendered."],
+      ["Billing and credits", "Plans, a shared credit pool, top-ups, and per-organization storage quotas with metered overage."],
+      ["English and Spanish", "The product and this site are built for both English and Spanish from the ground up."]
+    ]
+  },
+  "next": {
+    "label": "In progress",
+    "heading": "What's next",
+    "items": [
+      ["Public launch", "We're working toward opening access. The launch newsletter is where the first window will be announced."],
+      ["Expanded documentation", "Deeper guides and reference material as more creators come on board and tell us where the gaps are."],
+      ["More build-log writing", "In-depth articles on how the engine works, published over on the news page."]
+    ]
+  },
+  "distinct": {
+    "label": "Note",
+    "body": "This page is the short, honest changelog. For long-form, behind-the-scenes build-log articles, head to the news page."
+  },
+  "ctaStrip": {
+    "heading": "Be first when access opens.",
+    "sub": "Geek Engine isn't live yet. Subscribe and we'll send the first availability window and milestone notes.",
+    "cta": "Subscribe for updates"
+  }
+}

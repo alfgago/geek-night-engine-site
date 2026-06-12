@@ -1,0 +1,45 @@
+{
+  "seo": {
+    "title": "Careers — no open roles yet, but say hello",
+    "description": "Geek Engine has no open roles yet. Here's what working at a small AI-native game studio will look like, and how to reach us if you'd be a fit later."
+  },
+  "hero": {
+    "eyebrow": "Company · Careers",
+    "heading": "No open roles yet. Worth a conversation anyway.",
+    "sub": "We're a small pre-launch studio, and we're not hiring right now. We'd still rather meet good people early than scramble later — so if what we're building resonates, reach out."
+  },
+  "sections": [
+    {
+      "title": "Where we are",
+      "body": [
+        "Geek Engine is pre-launch and deliberately small. We don't have job postings, a hiring pipeline, or a headcount target to fill. Pretending otherwise would waste your time, so we won't.",
+        "What we do have is a product we believe in and a clear sense of the kind of people who'd thrive building it. When roles open, this is where they'll appear first."
+      ]
+    },
+    {
+      "title": "What working here will look like",
+      "body": [
+        "Small team, real ownership. With a team this size, there's no hiding behind layers — people own meaningful surfaces of the product and see their work reach users directly.",
+        "Honest engineering. We build on open foundations like Godot, we keep changes structured and inspectable, and we'd rather ship something we trust than something that demos well and breaks quietly. We expect the same instinct from anyone who joins.",
+        "Async-friendly and outcomes-first. We care about what gets made, not hours logged. Costa Rica is home base; thoughtful collaboration across time zones matters more than a shared desk."
+      ]
+    },
+    {
+      "title": "If you'd be a fit later",
+      "body": [
+        "If you're an engineer, designer, or game-maker who lights up at the idea of making game creation accessible to everyone, we'd like to know you exist.",
+        "Send a short note about what you do and what you'd want to build. We read everything, and we'll keep good introductions on file for when the time is right."
+      ]
+    }
+  ],
+  "contactCard": {
+    "label": "Say hello",
+    "lead": "Introduce yourself at",
+    "detail": "↳ a few honest sentences beat a perfect résumé"
+  },
+  "ctaStrip": {
+    "heading": "Not hiring yet. Still worth knowing you.",
+    "sub": "Geek Engine isn't live yet. Subscribe to follow the build and catch roles when they open.",
+    "cta": "Follow the build"
+  }
+}

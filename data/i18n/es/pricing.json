@@ -1,103 +1,123 @@
 {
   "seo": {
-    "title": "Precios",
-    "description": "Revisa los precios de Geek Engine para creadores y estudios solitarios, incluyendo créditos, asientos de colaboración, almacenamiento y complementos de producción."
+    "title": "Pricing",
+    "description": "Review Geek Engine pricing for solo creators and studios, including credits, collaboration seats, storage, and production add-ons."
   },
   "hero": {
-    "eyebrow": "Precios",
-    "heading": "Planes predecibles respaldados por recursos.",
-    "sub": "Cada nivel presenta mapeo de créditos transparente. {credits} créditos del espacio de trabajo se convierten directamente a {value} de valor de consumo de IA y procesamiento de fondo bruto — manteniendo tus costos completamente abiertos."
+    "eyebrow": "Pricing",
+    "heading": "Predictable, resource-backed plans.",
+    "sub": "Every tier features transparent credit mapping. {credits} workspace credits converts directly to {value} of raw background processing and AI consumption value — keeping your costs entirely open."
   },
-  "featuredBadge": "MÁS POPULAR",
+  "featuredBadge": "MOST POPULAR",
+  "billing": {
+    "monthly": "Monthly",
+    "annual": "Annual",
+    "annualBadge": "2 months free",
+    "perMonth": "per month",
+    "perYear": "per year",
+    "freeForever": "Free forever"
+  },
   "tiers": {
     "hobbyist": {
       "name": "Hobbyist",
-      "per": "Gratis por siempre",
-      "seatsLabel": "{seats} asiento",
-      "creditsLabel": "{credits} créditos / mes",
-      "storageLabel": "{gb} GB almacenamiento",
+      "per": "Free forever",
+      "perAnnual": "Free forever",
+      "seatsLabel": "{seats} seat",
+      "creditsLabel": "{credits} credits on signup, then {monthly}/mo",
+      "creditsNote": "Monthly refill does not accumulate.",
+      "storageLabel": "{gb} GB storage (hard cap)",
       "features": [
-        "Edición de juegos basada en navegador y acceso a plantillas",
-        "Cola de compilación en la nube con prioridad estándar",
-        "Publicación solo web a través del reproductor de plataforma alojado",
-        "Almacenamiento local del lado del cliente para guardos de juegos predeterminados",
-        "Características básicas de carga y generación de bibliotecas de activos"
+        "Browser-based game editing & template access",
+        "5,000 credits to start, refilling to 1,500 each month",
+        "Standard priority cloud build queue",
+        "Web-only publishing via hosted platform player",
+        "Basic asset library uploads and generation features"
       ],
-      "cta": "Unirse a la lista de espera"
+      "cta": "Join waitlist"
     },
     "core": {
       "name": "Core Creator",
-      "per": "por mes",
-      "seatsLabel": "{seats} asientos",
-      "creditsLabel": "{credits} créditos / mes",
-      "storageLabel": "{gb} GB almacenamiento, luego {rate}/GB",
+      "per": "per month",
+      "perAnnual": "per year",
+      "seatsLabel": "{seats} seats",
+      "creditsLabel": "{credits} credits / mo",
+      "storageLabel": "{gb} GB storage, then {rate}/GB",
       "features": [
-        "Colaboración de espacio de trabajo de equipo multijugador en tiempo real",
-        "Acceso a cola de compilación en la nube de alta prioridad",
-        "Publicación web con soporte de etiqueta blanca y dominio personalizado",
-        "Herramientas completas de comparación de versiones de snapshots",
-        "Librerías de activos de organización compartida"
+        "Real-time multiplayer team workspace collaboration",
+        "High-priority cloud build queue access",
+        "Web publishing with white-label & custom domain support",
+        "Comprehensive snapshot version comparison tools",
+        "Shared organization asset libraries"
       ],
-      "cta": "Unirse a la lista de espera de Core"
+      "cta": "Join Core waitlist"
     },
     "studio": {
       "name": "Studio Pro",
-      "per": "por mes",
-      "seatsLabel": "{seats} asientos",
-      "creditsLabel": "{credits} créditos / mes",
-      "storageLabel": "{gb} GB almacenamiento, luego {rate}/GB",
+      "per": "per month",
+      "perAnnual": "per year",
+      "seatsLabel": "{seats} seats",
+      "creditsLabel": "{credits} credits / mo",
+      "storageLabel": "{gb} GB storage, then {rate}/GB",
       "features": [
-        "Exportación comercial multiplataforma directa a tiendas Steam y Mobile",
-        "Acceso a cola de compilación en la nube de prioridad Turbo (instancias de trabajador aisladas)",
-        "Análisis avanzado de modelos 3D y coincidencia de canalización de animación",
-        "Extracción y descarga completa de código fuente de proyecto bruto",
-        "Ventana extendida de retención de historial de compilación"
+        "Commercial export to Steam and Mobile stores (costs {exportCredits} credits per export)",
+        "Full raw project source-code zip extraction and downloading",
+        "Advanced 3D model parsing and animation pipeline matching",
+        "Turbo priority cloud build queue (isolated worker instances)",
+        "Extended build history retention window"
       ],
-      "cta": "Unirse a la lista de espera de Studio"
+      "cta": "Join Studio waitlist"
     }
   },
   "addOns": {
-    "label": "Complementos",
-    "heading": "Escala tu espacio de trabajo del estudio bajo demanda.",
+    "label": "Add-ons",
+    "heading": "Scale your studio workspace on demand.",
     "items": {
       "seat": {
-        "name": "Licencia de asiento adicional",
-        "per": "/ usuario / mes",
-        "body": "Disponible en todos los planes de suscripción. Añadir un asiento de usuario adicional a tu organización desbloquea instantáneamente vías de colaboración avanzada e inyecta {credits} créditos de creación adicionales en el saldo de espacio de trabajo mensual compartido de tu equipo."
+        "name": "Additional seat licensing",
+        "per": "/ user / month",
+        "body": "Available across all subscription plans. Adding an extra user seat to your organization instantly unlocks advanced collaboration pathways and injects an additional {credits} creation credits into your team's shared monthly workspace balance."
       },
       "credits": {
-        "name": "Recargas de exceso de créditos medido",
-        "per": "/ {credits} créditos",
-        "body": "Mantén tu canalización de diseño activa. Compra capacidad de procesamiento adicional cuando tu estudio alcance ciclos de desarrollo máximos."
+        "name": "Metered credit overage top-ups",
+        "per": "/ {credits} credits",
+        "body": "Keep your design pipeline active. Purchase extra processing capacity whenever your studio hits peak development cycles."
       },
       "database": {
-        "name": "Complemento de base de datos en la nube en vivo",
-        "per": "/ mes / proyecto",
-        "body": "Desbloquea persistencia en línea. La plataforma aprovisiona automáticamente una base de datos relacional segura y alojada en la nube para tu juego. La IA genera automáticamente los scripts de lógica de red remota requeridos para ejecutar tablas de clasificación multijugador en vivo, cuentas de jugador seguras y guardos en la nube."
+        "name": "Live cloud database add-on",
+        "per": "/ month / project",
+        "body": "Unlock online persistence. The platform automatically provisions a secure, cloud-hosted relational database for your game. The AI automatically generates the remote network logic scripts required to run live multiplayer leaderboards, secure player accounts, and cloud saves."
       }
     }
   },
   "faq": {
-    "label": "Preguntas frecuentes",
-    "heading": "Preguntas frecuentes sobre precios.",
+    "label": "FAQ",
+    "heading": "Frequently asked pricing questions.",
     "items": [
       {
-        "q": "¿Cómo se calculan los créditos durante la producción?",
-        "a": "Nuestro sistema de créditos se asigna exactamente al costo de procesamiento de fondo de tus cambios. Pequeños ajustes de texto o tareas de reorden de nodos cuestan créditos mínimos, mientras que generar activos 3D profundos o ejecutar bucles de análisis de errores de autorreparación intensivos consume volúmenes más altos de tu grupo asignado."
+        "q": "How are credits calculated during production?",
+        "a": "Our credit system maps exactly to the background processing cost of your changes. Minor text tweaks or node reorder tasks cost minimal credits, whereas generating deep 3D assets or running intensive self-healing error analysis loops burns higher volumes of your allocated pool."
       },
       {
-        "q": "¿Pueden los equipos agrupar sus créditos juntos?",
-        "a": "Sí. Todos los créditos incluidos en tu plan base, junto con cualquier crédito añadido comprando asientos de usuarios adicionales, se colocan en un grupo centralizado accesible por todos los editores autorizados dentro de ese espacio de trabajo organizacional específico."
+        "q": "Can teams pool their credits together?",
+        "a": "Yes. All credits included in your base plan, alongside any credits added by purchasing extra user seats, are placed into a centralized pool accessible by all authorized editors within that specific organization workspace."
       },
       {
-        "q": "¿Qué sucede si nuestro proyecto no compra la base de datos en la nube?",
-        "a": "Por defecto, tus juegos utilizan marcos de almacenamiento local del lado del cliente. Esto sigue las reglas estándar de plataforma para juegos de un solo jugador, guardos de configuración sin conexión y progreso de máquina local. Solo requieres el complemento de base de datos si deseas que tu juego lea y escriba registros en una red web global persistente."
+        "q": "What happens if our project does not buy the cloud database?",
+        "a": "By default, your games utilize client-side local storage frameworks. This follows standard platform rules for single-player games, offline settings saving, and local machine progress. You only require the database add-on if you want your game to read and write records across a persistent global web network."
+      },
+      {
+        "q": "How does annual billing work?",
+        "a": "Switch the toggle to annual and you pay for ten months instead of twelve — effectively two months free on Core Creator and Studio Pro. The Hobbyist tier is free on either cadence."
+      },
+      {
+        "q": "Does the Studio Pro store export cost extra credits?",
+        "a": "Yes. Studio Pro unlocks commercial export to Steam and mobile stores, and each native store export draws {exportCredits} credits from your pool. The credit cost is in addition to your subscription, and only applies when you actually run a store export — not to ordinary web builds."
       }
     ]
   },
   "ctaStrip": {
-    "heading": "Los precios se han publicado. El acceso próximamente.",
-    "sub": "Únete a la lista y enviaremos la primera ventana de disponibilidad.",
-    "cta": "Suscribirse para acceso"
+    "heading": "Pricing is published. Access is coming soon.",
+    "sub": "Join the list and we will send the first availability window.",
+    "cta": "Subscribe for access"
   }
 }

@@ -1,13 +1,31 @@
 {
   "seo": {
     "defaultTitle": "Geek Engine - Godot asistido por IA, en el navegador",
-    "description": "El espacio de trabajo profesional en la nube para la producción de juegos Godot nativa a IA."
+    "description": "El espacio de trabajo profesional en la nube para la producción de juegos Godot con IA nativa.",
+    "keywords": [
+      "Geek Engine",
+      "desarrollo de juegos con IA",
+      "motor de juegos Godot",
+      "desarrollo de juegos en navegador",
+      "estudio de juegos con IA",
+      "compilador de juegos en la nube",
+      "desarrollo de juegos indie",
+      "Godot 4"
+    ]
   },
   "og": {
     "alt": "Geek Engine - Godot asistido por IA en el navegador",
-    "kicker": "Producción Godot nativa a IA",
-    "headline": "Imagina el juego. Hablalo para que cobre vida.",
+    "brandName": "Geek Engine",
+    "kicker": "Producción Godot con IA nativa",
+    "headline": "Imagina el juego. Háblalo para que cobre vida.",
     "footer": "Espacio de trabajo en navegador. Tickets de IA estructurados. Compilaciones en la nube. Pruebas de juego."
+  },
+  "brand": {
+    "first": "Geek",
+    "second": "Engine",
+    "footerFirst": "geek",
+    "footerSecond": "engine",
+    "name": "Geek Engine"
   },
   "nav": {
     "home": "Inicio",
@@ -39,7 +57,7 @@
     "joinNewsletter": "Unirse al boletín"
   },
   "ctaStrip": {
-    "newsletterEyebrow": "Lanzar boletín",
+    "newsletterEyebrow": "Boletín de lanzamiento",
     "defaultHeading": "Únete a la lista de acceso prioritario",
     "newsletterSub": "Obtén las primeras notas de compilación públicas, acceso al lanzamiento y actualizaciones del fundador."
   },
@@ -52,7 +70,7 @@
     "footer": "El acceso al producto próximamente. Suscríbete para recibir notas de lanzamiento a través de {provider}."
   },
   "footer": {
-    "blurb": "El espacio de trabajo profesional en la nube para la producción de juegos nativa a IA.",
+    "blurb": "El espacio de trabajo profesional en la nube para la producción de juegos con IA nativa.",
     "cols": {
       "product": {
         "head": "Producto",
@@ -104,6 +122,45 @@
     "privacy": "privacidad",
     "terms": "términos",
     "security": "seguridad",
-    "status": "todos los sistemas operativos"
+    "status": "todos los sistemas funcionando"
+  },
+  "productMock": {
+    "shellTitle": "geekengine.ai / pebble-punks",
+    "architect": "Arquitecto",
+    "build": "compilación v0.4.7",
+    "userTimestamp": "Tú · 12m",
+    "userPrompt": "Agrega tres gemas coleccionables cerca de cada checkpoint, con un sonido brillante al recogerlas.",
+    "assistantTimestamp": "ahora",
+    "creditDelta": "-36 cr",
+    "reply": {
+      "spawned": "Generé",
+      "gem": "Gema x3",
+      "under": "bajo",
+      "parent": "World/Pickups",
+      "bound": "vinculé el activo generado",
+      "asset": "gem.png",
+      "sound": "coin-pickup.wav",
+      "hud": "El marcador del HUD ahora muestra",
+      "score": "0/3"
+    },
+    "operations": [
+      { "kind": "agregar_nodo", "title": "Gema x 3", "value": "World/Pickups" },
+      { "kind": "vincular_activo", "title": "gem.png", "value": "Gem.Sprite" },
+      { "kind": "editar_script", "title": "gem.gd", "value": "+ señal collected" },
+      { "kind": "iniciar_compilación", "title": "v0.4.7", "value": "11.8s · correcta" }
+    ],
+    "commandPrompt": "Ajusta la sala del jefe - la fase 2 debe agregar ataques de pisotón...",
+    "hud": "♥♥♥ · ⛀ 0/3 · T 00:42",
+    "live": "EN VIVO · v0.4.7",
+    "snapshot": {
+      "label": "SNAPSHOT #148 · AHORA",
+      "nodeCount": "+3",
+      "nodes": "nodos ·",
+      "propertyCount": "~4",
+      "properties": "propiedades ·",
+      "assetCount": "+1",
+      "asset": "activo",
+      "note": "reversible · listo para probar"
+    }
   }
 }

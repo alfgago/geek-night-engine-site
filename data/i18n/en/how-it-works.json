@@ -14,6 +14,85 @@
     "label": "The pipeline · live",
     "heading": "Four stages, all auditable, all reversible."
   },
+  "pipelineMock": {
+    "scaffold": {
+      "title": "SCAFFOLDING · CHOOSE A STARTER",
+      "templates": ["2D platformer", "3D platformer", "Top-down", "Shooter", "Puzzle", "3D collectathon", "Endless run", "From prompt"],
+      "describedByYou": "↳ described by you"
+    },
+    "decompose": {
+      "title": "DECOMPOSE · 6 ATOMIC TICKETS",
+      "subtitle": "drag · prioritize · approve",
+      "ready": "READY",
+      "columns": [
+        {
+          "label": "BACKLOG",
+          "items": [
+            ["#318", "tune dash cooldown"],
+            ["#319", "add fall damage"]
+          ]
+        },
+        {
+          "label": "QUEUED · 4",
+          "items": [
+            ["#312", "add_node Boss.Phase1"],
+            ["#313", "add_node Boss.Phase2 · Stomp"],
+            ["#314", "add_node Boss.Phase3 · Charge"],
+            ["#315", "edit_script boss.gd"]
+          ]
+        },
+        {
+          "label": "APPROVED · 2",
+          "items": [
+            ["#316", "bind boss-roar.wav"],
+            ["#317", "trigger build v0.5.0"]
+          ]
+        }
+      ]
+    },
+    "compile": {
+      "label": "CLOUD COMPILE · BUILD #149",
+      "heading": "godot --headless · self-healing",
+      "retryOk": "retry · ok",
+      "steps": [
+        { "label": "GDD validate", "time": "0.4s", "status": "ok" },
+        { "label": "Doctor", "time": "0.2s", "status": "ok" },
+        { "label": "Op resolve", "time": "1.1s", "status": "ok" },
+        { "label": "godot compile", "time": "13.8s", "status": "err" },
+        { "label": "Self-heal", "time": "2.1s", "status": "ok" },
+        { "label": "godot retry", "time": "9.4s", "status": "ok" },
+        { "label": "WebGL bundle", "time": "1.0s", "status": "ok" },
+        { "label": "Deploy", "time": "0.2s", "status": "ok" }
+      ],
+      "selfHealLabel": "SELF-HEAL · 1 ERROR PATCHED",
+      "selfHealDetail": "CollisionShape3D null · auto-bound",
+      "summary": "Snapshot #95 created before patch · build #149 succeeded on retry · revert one click"
+    },
+    "deploy": {
+      "title": "DEPLOY · SNAPSHOTS",
+      "timelineLabel": "Snapshot timeline",
+      "snapshots": [
+        { "id": 149, "text": "deployed · play.gne/pebble-punks", "color": "lime", "head": true },
+        { "id": 148, "text": "+ gem pickups · architect", "color": "lime" },
+        { "id": 147, "text": "drifter jitter", "color": "lime" },
+        { "id": 146, "text": "coyote time + speed", "color": "lime" },
+        { "id": 144, "text": "boss room attempt · failed", "color": "red" },
+        { "id": 138, "text": "pinned · pre-boss-pass", "color": "cyan", "pin": true }
+      ],
+      "pinned": "PINNED",
+      "head": "HEAD",
+      "distributionLabel": "Distribution",
+      "liveUrlLabel": "LIVE URL",
+      "liveUrl": "play.gne/pebble-punks",
+      "metrics": [
+        ["artifact", "3.42 MB · WebGL"],
+        ["CDN edge", "12 regions · 38ms p50"],
+        ["testers", "12 signed up · 1 live"],
+        ["snapshot", "#149 · 11.8s ago"]
+      ],
+      "actions": "revert · re-pin · re-deploy · anytime"
+    }
+  },
   "steps": [
     {
       "label": "Blueprint",
